@@ -6,6 +6,7 @@ const population = WORLDBANK.PER.indicators.filter(pop => {
   return pop.indicatorCode.slice(0, 6) === 'SP.POP';
 });
 
+console.log(population);
 
 const sortDataPop = population.sort(function (prev, next) {
   if (prev.indicatorName > next.indicatorName) {
@@ -16,7 +17,7 @@ const sortDataPop = population.sort(function (prev, next) {
   }
   return 0;
 })
-
+ console.log(sortDataPop)
 
 const violence = WORLDBANK.PER.indicators.filter(pop => {
   return pop.indicatorCode.slice(0, 6) === 'SG.VAW';
