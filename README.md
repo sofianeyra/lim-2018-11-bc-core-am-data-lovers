@@ -1,12 +1,20 @@
 #PROYECTO DATA LOVERS 👩‍💻
 
+<<<<<<< HEAD
 *Preámbulo*
+=======
+#*Preámbulo*
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
 
 #Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 #No obstante, los datos por sí mismos son de poca utilidad. Para que esas grandes cantidades de datos se conviertan en información fácil de leer para los usuarios, necesitamos entender y procesar estos datos. Una manera simple de hacerlo es creando interfaces y visualizaciones.
 
 
+<<<<<<< HEAD
 *Resumen del proyecto*
+=======
+#*Resumen del proyecto*
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
 
 #En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
 
@@ -34,11 +42,14 @@ A continuación, mostramos algunos ejemplos:
 •	El proyecto será entregado subiendo tu código a GitHub (commit/push) y la interfaz será desplegada usando GitHub Pages.
 
 
+<<<<<<< HEAD
 •	Tiempo para completarlo: Toma como referencia 3 semanas.
 
  Trabaja durante el primer Sprint (una semana) y al final, decide en cuántas semanas lo terminarás.
 
 
+=======
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
 #*Definición del producto*💡
 
 1)	Quiénes son los principales usuarios de producto
@@ -96,6 +107,13 @@ __México__
 
 ![Sin titulo](src/img/mexico.jpeg)
 
+<<<<<<< HEAD
+
+
+__Chile__
+
+![Sin titulo](src/img/chile.jpeg)
+=======
 
 
 __Chile__
@@ -108,9 +126,23 @@ __Brasil__
 2)Prototipo de alta fidelidad
 
 El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
 
 __Menú Principal__
 
+<<<<<<< HEAD
+__Brasil__
+
+2)Prototipo de alta fidelidad
+
+El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
+
+__Menú Principal__
+
+__Perú__
+
+__México__
+=======
 __Perú__
 
 __México__
@@ -118,3 +150,11 @@ __México__
 __Chile__
 
 __Brasil__
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
+
+__Chile__
+
+<<<<<<< HEAD
+__Brasil__
+=======
+>>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
