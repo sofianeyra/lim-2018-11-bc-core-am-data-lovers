@@ -64,12 +64,11 @@
     display: block;
 }
     
-#table-containerPer, #table-containerMex, #table-containerBra, #table-containerChile {
+.tables-peru {
     position: absolute;
-    bottom: 28%;
-    left: 20%;
-    right: 0%;
-    width: 76%;
+    margin-top: 7%;
+    margin-left: 26%;
+    width: 100%;
 }
 
 .boton-population, .boton-violence, .boton-unemployment, 

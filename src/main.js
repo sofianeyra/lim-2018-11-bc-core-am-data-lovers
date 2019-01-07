@@ -79,8 +79,7 @@ const peruAlf = document.getElementById('table-peruAlf');
 
 btnPopulation.addEventListener('click', () => {
   for (indicador of sortDataPop) {
-
-   const average =compute(indicador);
+    const average = compute(indicador);
     peruPop.innerHTML += indicador.indicatorName + '(' + average + ')<br>' ;
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
@@ -89,8 +88,7 @@ btnPopulation.addEventListener('click', () => {
     peruPop.style.display = 'block';
   }
 
-  //se calcula el promedio de todos los años de los indicadores de population
-
+  // se calcula el promedio de todos los años de los indicadores de population
 });
 
 btnViolence.addEventListener('click', () => {

@@ -248,36 +248,33 @@ const literacyBrasil = WORLDBANK.PER.indicators.filter(pop => {
  * @param {array} data
  */
 const compute = (indicador) => {
-
   const data = Object.entries(indicador.data);
-
-  let sum = 0
+  let sum = 0;
 
   // se almacena la cantidad de elementos para poder obtener el promedio
-    // una vez que se obtenga la suma
-    const length = data.length;
+  // una vez que se obtenga la suma
+  const length = data.length;
 
-    // se utliza la funcion forEach para reccorrer cada uno de los años
-    data.forEach(y => {
+  // se utliza la funcion forEach para reccorrer cada uno de los años
+  data.forEach(y => {
+    const stringValue = y[1];
+    let value = 0;
 
-      const stringValue = y[1];
-let value = 0;
+    if (stringValue !==  '')
+      value = parseFloat(stringValue);
 
-      if (stringValue != "")
-        value = parseFloat(stringValue);
+    sum += value;
+  });
 
-      sum += value;
-    });
+  // se calcula el average
+  let average = sum / length
 
-    // se calcula el average
-    let average = sum / length
-
-    // se redondea a 2 decimales despues de la coma
-    average = Math.round(average * 100) / 100;
+  // se redondea a 2 decimales despues de la coma
+  average = Math.round(average * 100) / 100;
 
 
-    return average;
-}
+  return average;
+};
 
 window.Worldbank = {
   population,
