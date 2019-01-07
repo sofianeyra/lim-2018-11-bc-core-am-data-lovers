@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>FIDL - Fuente Informativa de Desarrollo Latinoamericano</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   </head>
@@ -21,18 +21,9 @@
                  <a href="#" id = "inicio">INICIO</a>
               </li>
               <li>
-                 <a href="#" id = "peru-menu">PERÚ</a>
+                 <a href="#" id = "data-menu">DATA</a>
               </li>
-              <li>
-                 <a href="#" id = "mexico-menu">MÉXICO</a>
-              </li>
-              <li>
-                 <a href="#" id = "chile-menu">CHILE</a>
-              </li>
-              <li>
-                 <a href="#" id = "brasil-menu">BRASIL</a>
-              </li>
-           </ul>
+            </ul>  
         </nav>
       </section>
     </header>
@@ -43,29 +34,29 @@
       <div class = "image-banner"></div>
       <div class = "mision-container"><strong><br>NUESTRA MISIÓN</strong></div>
       <div class = "objetivo"><strong><br>Tenemos como objetivo:</strong></div>
-      <div class = "text-mision">Brindar datos actuales sobre los indicadores de Desarrollo Humano, ya que el desarrollo
-        de un país no puede ser entendido desde la perspectiva única del crecimiento económico.
-        El propósito final del desarrollo se encuentra en cada uno de sus habitantes y
-        en las posibilidades que ellos tienen para elegir una vida en la que puedan realizar
+      <div class = "text-mision">Brindar datos actuales sobre los indicadores de Desarrollo Humano, ya que el desarrollo 
+        de un país no puede ser entendido desde la perspectiva única del crecimiento económico. 
+        El propósito final del desarrollo se encuentra en cada uno de sus habitantes y 
+        en las posibilidades que ellos tienen para elegir una vida en la que puedan realizar 
         a plenitud su potencial como seres humanos.</div>
       <img class = "collage-image" src= "https://i.ibb.co/GpDkvL9/collage-new.jpg" alt = "collage">
     </section>
     <section id = "all-data">
-      <main>
-        <section id="one" class="panel-select color-white">
-          <div class="panel-select-title color-celeste text-color-white font-Prompt fomt-size-14 font-weight-bold">
+      <main>   
+        <section id="one" class="panel-select color-white">      
+          <div class="panel-select-title color-celeste text-color-white font-Arial font-size-14 font-weight-bold">
              Tipo de Indicadores </div>
-          <div class="panel-select-content center">
-            <label for="select-indicator">Filtrar por categoría</label>
+          <div class="panel-select-content center"> 
+            <label for="select-indicator">Filtrar por categoría:</label>
             <select id ="select-indicator" class="margin-bottom-30">
-              <option >Población</option>
-              <option >Educación primaria</option>
-              <option >Educación secundaria</option>
-              <option >Educación terciaria</option>
-              <option >Violencia</option>
-              <option >Empleo</option>
-              <option >Desempleo</option>
-              <option >Alfabetización</option>
+              <option value="1" >Población</option>
+              <option value="2">Educación primaria</option>
+              <option value="3">Educación secundaria</option>
+              <option value="4">Educación terciaria</option>
+              <option value="5">Violencia</option>
+              <option value="6">Empleo</option>
+              <option value="7">Desempleo</option>
+              <option value="8">Alfabetización</option>
             </select>
           </div>
      <!-- <ul class="padre">
@@ -74,11 +65,11 @@
         <li><a href="#" class="hijo">Link3</a></li>
     </ul>-->
     </section>
-<!---------- CÁLCULOS DE DATA (promedio y ordenado)---------->
+<!---------- PANEL DE CÁLCULOS DE DATA (promedio y ordenado)---------->
     <section id="section-data">
-
+        
         <div class="panel-select-indicators color-white" >
-          <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Desempleo:</p>
+          <p class = "indicador panel-select-title color-celeste text-color-white font-Arial font-size-14">Indicadores de Desempleo:</p>
           <p id="panel-average">El promedio es: <span id="show-average"></span> </p>
           <button id="btn-sort-data-down" >Descendente</button>
           <div id = "static-data" class="padding-25">
@@ -90,78 +81,78 @@
 <!---------- PANELES DE LA LISTA DE CADA CATEGORÍA ---------->
       <section id="two">
         <div class="panel-select-indicators color-white">
-          <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Población:</p>
-          <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">RELACIÓN DE LOS TIPO DE INDICADORES DE POBLACIÓN</p>
+          <p class = "indicador panel-select-title color-celeste text-color-white font-Arial font-size-14">INDICADORES DE POBLACIÓN:</p>
+          <p class="center font-Arial fomt-size-18 padding-top-bottom-25"></p> 
           <ol id = "population-container" class="padre padding-center"></ol>
         </div>
       </section>
 
       <section id="three">
         <div class="panel-select-indicators color-white">
-            <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Educación Nivel Terciaria</p>
-            <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE EDUCACION NIVEL PRIMARIA</p>
+            <p class = "indicador panel-select-title color-celeste text-color-white font-Arial font-size-14">Indicadores de Educación Nivel Terciaria</p>
+            <p class="center font-Arial font-size-18 padding-top-bottom-25">INDICADORES DE EDUCACION NIVEL PRIMARIA</p> 
             <ol id = "education-container" class="padre padding-center"></ol>
         </div>
       </section>
 
       <section id="four">
         <div class = "panel-select-indicators color-white">
-            <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Educación Nivel Secundaria</p>
-            <p class = "center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE EDUCACIÓN NIVEL SECUNDARIA</p>
+            <p class = "indicador panel-select-title color-celeste text-color-white font-Arial font-size-14">INDICADORES DE EDUCACIÓN SECUNDARIA</p>
+            <p class = "center font-Arial fomt-size-18 padding-top-bottom-25"></p> 
             <ol id = "second-education-container"  class="padre padding-center"></ol>
         </div>
       </section>
 
       <section id="five">
         <div class="panel-select-indicators color-white">
-            <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Educación Nivel Terciario:</p>
-            <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE EDUCACIÓN NIVEL TERCIARIA</p>
+            <p class = "indicador panel-select-title color-celeste text-color-white font-Arial font-size-14">INDICADORES DE EDUCACIÓN TERCIARIA</p>
+            <p class="center font-Arial font-size-18 padding-top-bottom-25"></p> 
             <ol id = "third-education-container"  class = "padre padding-center"></ol>
         </div>
       </section>
       <section id = "six">
         <div class="panel-select-indicators color-white">
-            <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Violencia:</p>
-            <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE VIOLENCIA</p>
+            <p class = "indicador panel-select-title color-celeste text-color-white font-Arial fomt-size-14">INDICADORES DE VIOLENCIA</p>
+            <p class="center font-Arial fomt-size-18 padding-top-bottom-25"></p> 
             <ol id = "violence-container"  class = "padre padding-center"></ol>
         </div>
       </section>
       <section id="seven">
         <div class="panel-select-indicators color-white">
-            <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Empleo:</p>
-            <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE EMPLEO</p>
+            <p class = "indicador panel-select-title color-celeste text-color-white font-Arial fomt-size-14">INDICADORES DE EMPLEO</p>
+            <p class="center font-Arial fomt-size-18 padding-top-bottom-25"></p> 
             <ol id = "job-container"  class = "padre padding-center"></ol>
         </div>
       </section>
 
       <section id="eight">
           <div class="panel-select-indicators color-white">
-              <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Desempleo:</p>
-              <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE DESEMPLEO</p>
+              <p class = "indicador panel-select-title color-celeste text-color-white font-Arial fomt-size-14">INDICADORES DE DESEMPLEO</p>
+              <p class="center font-Arial fomt-size-18 padding-top-bottom-25"></p> 
               <ol id = "unemployment-container"  class = "padre padding-center"></ol>
           </div>
       </section>
-
+      
       <section id="nine">
           <div class="panel-select-indicators color-white">
-              <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">Indicadores de Alfabetización:</p>
-              <p class="center font-Prompt fomt-size-18 padding-top-bottom-25">INDICADORES DE ALFABETIZACIÓN</p>
+              <p class = "indicador panel-select-title color-celeste text-color-white font-Prompt fomt-size-14">INDICADORES DE ALFABETIZACIÓN</p>
+              <p class="center font-Prompt font-size-18 padding-top-bottom-25"></p> 
               <ol id = "literacy-container"  class = "padre padding-center"></ol>
           </div>
       </section>
-
-      <section id="countries" class="panel-select color-white">
-        <div class="panel-select-title color-celeste text-color-white font-Prompt fomt-size-14 font-weight-bold
-         "> Tipo de Indicador: <span id="name-type-indicator"> </span>
+<!---------- BOTONES DE LOS PAÍSES ---------->
+      <section id="country" class="panel-select color-white">      
+        <div class="panel-select-title color-celeste text-color-white font-Prompt font-size-14 font-weight-bold
+         "> Tipo de Indicador: <span id="name-type-indicator"> </span> 
         </div>
 
-        <div class="panel-select-content center">
-         <p class="margin-bottom-30">Seleccione un país:</p>
-         <div id="group-flags" class="panel-flag padding-25">
-         <button id="flag-bra" class="button-img style-img-flag propety-button-flag" type="button"  value="BRA"></button>
-         <button id="flag-chl" class="button-img style-img-flag propety-button-flag" type="button" value="CHL"></button>
-         <button id="flag-mex" class="button-img style-img-flag propety-button-flag" type="button" value="MEX"></button>
-         <button id="flag-per" class="button-img style-img-flag propety-button-flag" type="button"  value="PER"></button>
+        <div class="panel-select-content center"> 
+         <p class="margin-bottom-30">Selecciona el país: </p>
+         <div id="countries" class="panel-country padding-25">
+         <button id="PER" class="button-img  propety-button-country" type="button"  value="PER">PERÚ</button>
+         <button id="MEX"  class="button-img  propety-button-country" type="button"  value="MEX">MÉXICO</button>  
+         <button id="CHL" class="button-img  propety-button-country" type="button" value="CHL">CHILE</button>
+         <button id="BRS" class="button-img  propety-button-country" type="button" value="BRA">BRASIL</button>
         </div>
         </div>
       </section>
@@ -179,3 +170,4 @@
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
+</html>
