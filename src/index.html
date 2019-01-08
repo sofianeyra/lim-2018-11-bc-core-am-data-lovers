@@ -9,7 +9,7 @@
    </head>
    <body>
 <!-- ENCABEZADO -->
-      <section class = "menu">
+      <div class = "menu">
          <nav class="navbar">
             <span class="navbar-toggle" id="js-navbar-toggle">
                <img src="https://i.ibb.co/Jtcb7kh/navbar.png" alt = "navbar" width = "30" height = "30">
@@ -33,9 +33,9 @@
                </li>
             </ul>
          </nav>
-      </section>
+      </div>
 <!-- PÁGINA DE INICIO -->
-      <section id = "pagina-inicio">
+      <div id = "pagina-inicio">
          <div class = "bar-3"></div>
          <div class = "text-bar-3">INDICADORES DE DESARROLLO <br> HUMANO</div>
          <div class = "image-banner"></div>
@@ -43,7 +43,7 @@
          <div class = "objetivo"><strong><br>Tenemos como objetivo:</strong></div>
          <div class = "text-mision">Brindar datos actualizados sobre los indicadores de Desarrollo Humano.</div>
          <img class = "collage-image" src= "https://i.ibb.co/GpDkvL9/collage-new.jpg" alt = "collage">
-      </section>
+      </div>
 <!-- PÁGINA DE BASE DE DATOS PERÚ-->
       <section id = "pagina-peru" >
          <div class = "lateral-bar"></div>
@@ -65,11 +65,14 @@
                <option value="2">Descendente</option>
             </select>
          </form>
+         <li ><a class="indicator-name"></a>
+         <div class = "tables-peru">
             <div id="table-peruPop"></div>
             <div id="table-peruVio"></div>
             <div id="table-peruEdu"></div>
             <div id="table-peruUnem"></div>
             <div id="table-peruAlf"></div>
+         </div>
        </section>
 <!-- PÁGINA DE LA BASE DE DATOS DE MÉXICO-->
       <section id = "pagina-mexico" >
@@ -93,11 +96,13 @@
                <option value="2">Descendente</option>
             </select>
                </form>
+              <div class = "tables-mex">
                <div id="table-mexPop"></div>
                <div id="table-mexVio"></div>
                <div id="table-mexEdu"></div>
                <div id="table-mexUnem"></div>
                <div id="table-mexAlf"></div>
+              </div>
       </section>
 <!-- PAGINA DE LA BASE DE DATOS DE CHILE-->
       <section id = "pagina-chile">
@@ -123,11 +128,13 @@
                  <option value="2">Descendente</option>
               </select>
            </form>
-           <div id="table-popCh"></div>
-           <div id="table-vioCh"></div>
-           <div id="table-eduCh"></div>
-           <div id="table-unemCh"></div>
-           <div id="table-alfCh"></div>
+           <div class = "tables-chl">
+            <div id="table-popCh"></div>
+            <div id="table-vioCh"></div>
+            <div id="table-eduCh"></div>
+            <div id="table-unemCh"></div>
+            <div id="table-alfCh"></div>
+          </div>
       </section>
       <!-- PAGINA DE LA BASE DE DATOS DE BRASIL-->
       <section id = "pagina-brasil">
@@ -150,18 +157,20 @@
                <option value="2">Descendente</option>
             </select>
          </form>
-         <div id="table-braPop"></div>
-         <div id="table-braVio"></div>
-         <div id="table-braEdu"></div>
-         <div id="table-braUnem"></div>
-         <div id="table-braAlf"></div>
+         <div class = "tables-brs">
+          <div id="table-braPop"></div>
+          <div id="table-braVio"></div>
+          <div id="table-braEdu"></div>
+          <div id="table-braUnem"></div>
+          <div id="table-braAlf"></div>
+        </div>
       </section>
 <!-- PIE DE PÁGINA -->
       <footer>
-         <section id= "pie-de-pagina">
+         <div id= "pie-de-pagina">
 			        <img class = "icon-footer" width="220" height="53"	src="https://i.ibb.co/yNPP88w/logo-white.png" alt="icon">
               <div class = "texto-footer">© 2018 Fuente Informativa de Desarrollo Latinoamericano.</div>
-         </section>
+         </div>
       </footer>
       <script src="./data/worldbank/worldbank.js"></script>
       <script src="data.js"></script>
