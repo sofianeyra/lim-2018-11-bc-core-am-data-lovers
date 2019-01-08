@@ -78,9 +78,10 @@ const peruAlf = document.getElementById('table-peruAlf');
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopulation.addEventListener('click', () => {
-  for (indicador of sortDataPop) {
-    const average = compute(indicador);
-    peruPop.innerHTML += indicador.indicatorName + '(' + average + ')<br>' ;
+
+  peruPop.innerHTML = "";
+  for (indicador of population) {
+    peruPop.innerHTML += indicador.indicatorName + "<br>";
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -92,8 +93,9 @@ btnPopulation.addEventListener('click', () => {
 });
 
 btnViolence.addEventListener('click', () => {
+  peruVio.innerHTML = "";
   for (indicador of violence) {
-    peruVio.innerHTML += indicador.indicatorName;
+    peruVio.innerHTML += indicador.indicatorName + "<br>";
     peruPop.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -103,8 +105,9 @@ btnViolence.addEventListener('click', () => {
 });
 
 btnEducation.addEventListener('click', () => {
+  peruEdu.innerHTML = "";
   for (indicador of primaryEducation) {
-    peruEdu.innerHTML += indicador.indicatorName;
+    peruEdu.innerHTML += indicador.indicatorName + "<br>";
     peruVio.style.display = 'none';
     peruPop.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -114,8 +117,9 @@ btnEducation.addEventListener('click', () => {
 });
 
 btnUnemployment.addEventListener('click', () => {
+  peruUnem.innerHTML = "";
   for (indicador of unemployment) {
-    peruUnem.innerHTML += indicador.indicatorName;
+    peruUnem.innerHTML += indicador.indicatorName + "<br>";
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruPop.style.display = 'none';
@@ -125,8 +129,9 @@ btnUnemployment.addEventListener('click', () => {
 });
 
 btnAlfabet.addEventListener('click', () => {
+  peruAlf.innerHTML = "";
   for (indicador of literacy) {
-    peruAlf.innerHTML += indicador.indicatorName;
+    peruAlf.innerHTML += indicador.indicatorName + "<br>";
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -156,8 +161,9 @@ const mexAlf = document.getElementById('table-mexAlf');
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopMex.addEventListener('click', () => {
+  mexPop.innerHTML = "";
   for (indicador of populationMex) {
-    mexPop.innerHTML += indicador.indicatorName;
+    mexPop.innerHTML += indicador.indicatorName + "<br>";
     mexVio.style.display = 'none';
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
@@ -167,8 +173,9 @@ btnPopMex.addEventListener('click', () => {
 });
 
 btnVioMex.addEventListener('click', () => {
+  mexVio.innerHTML = "";
   for (indicador of violenceMex) {
-    mexVio.innerHTML += indicador.indicatorName;
+    mexVio.innerHTML += indicador.indicatorName + "<br>";
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
     mexAlf.style.display = 'none';
@@ -178,8 +185,9 @@ btnVioMex.addEventListener('click', () => {
 });
 
 btnEduMex.addEventListener('click', () => {
+  mexEdu.innerHTML = "";
   for (indicador of primaryEducationMex) {
-    mexEdu.innerHTML += indicador.indicatorName;
+    mexEdu.innerHTML += indicador.indicatorName + "<br>";
     mexUnem.style.display = 'none';
     mexAlf.style.display = 'none';
     mexPop.style.display = 'none';
@@ -189,8 +197,9 @@ btnEduMex.addEventListener('click', () => {
 });
 
 btnUneMex.addEventListener('click', () => {
+  mexUnem.innerHTML = "";
   for (indicador of unemploymentMex) {
-    mexUnem.innerHTML += indicador.indicatorName;
+    mexUnem.innerHTML += indicador.indicatorName + "<br>";
     mexEdu.style.display = 'none';
     mexVio.style.display = 'none';
     mexAlf.style.display = 'none';
@@ -200,8 +209,9 @@ btnUneMex.addEventListener('click', () => {
 });
 
 btnAlfMex.addEventListener('click', () => {
+  mexAlf.innerHTML = "";
   for (indicador of literacyMex) {
-    mexAlf.innerHTML += indicador.indicatorName;
+    mexAlf.innerHTML += indicador.indicatorName + "<br>";
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
     mexVio.style.display = 'none';
@@ -233,8 +243,9 @@ const alfCh = document.getElementById('table-alfCh');
 
 
 btnPopCh.addEventListener('click', () => {
+  popCh.innerHTML = "";
   for (indicador of populationChl) {
-    popCh.innerHTML += indicador.indicatorName;
+    popCh.innerHTML += indicador.indicatorName + "<br>";
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -244,8 +255,9 @@ btnPopCh.addEventListener('click', () => {
 });
 
 btnVioCh.addEventListener('click', () => {
+  vioCh.innerHTML = "";
   for (indicador of violenceChl) {
-    vioCh.innerHTML += indicador.indicatorName;
+    vioCh.innerHTML += indicador.indicatorName + "<br>";
     eduCh.style.display = 'none';
     popCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -255,8 +267,9 @@ btnVioCh.addEventListener('click', () => {
 });
 
 btnEduCh.addEventListener('click', () => {
+  eduCh.innerHTML = "";
   for (indicador of primaryEducationChl) {
-    eduCh.innerHTML += indicador.indicatorName;
+    eduCh.innerHTML += indicador.indicatorName + "<br>";
     popCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -266,8 +279,9 @@ btnEduCh.addEventListener('click', () => {
 });
 
 btnUnemCh.addEventListener('click', () => {
+  unemCh.innerHTML = "";
   for (indicador of unemploymentChl) {
-    unemCh.innerHTML += indicador.indicatorName;
+    unemCh.innerHTML += indicador.indicatorName + "<br>";
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     popCh.style.display = 'none';
@@ -277,8 +291,9 @@ btnUnemCh.addEventListener('click', () => {
 });
 
 btnAlfCh.addEventListener('click', () => {
+  alfCh.innerHTML = "";
   for (indicador of literacyChl) {
-    alfCh.innerHTML += indicador.indicatorName;
+    alfCh.innerHTML += indicador.indicatorName + "<br>";
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -311,8 +326,9 @@ const braAlf = document.getElementById('table-braAlf');
 
 
 btnPopBra.addEventListener('click', () => {
+  braPop.innerHTML = "";
   for (indicador of populationBrasil) {
-    braPop.innerHTML += indicador.indicatorName;
+    braPop.innerHTML += indicador.indicatorName + "<br>";
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';
@@ -322,8 +338,9 @@ btnPopBra.addEventListener('click', () => {
 });
 
 btnVioBra.addEventListener('click', () => {
+  braVio.innerHTML = "";
   for (indicador of violenceBrasil) {
-    braVio.innerHTML += indicador.indicatorName;
+    braVio.innerHTML += indicador.indicatorName + "<br>";
     braEdu.style.display = 'none';
     braPop.style.display = 'none';
     braUnem.style.display = 'none';
@@ -333,8 +350,9 @@ btnVioBra.addEventListener('click', () => {
 });
 
 btnEduBra.addEventListener('click', () => {
+  braEdu.innerHTML = "";
   for (indicador of primaryEducationBrasil) {
-    braEdu.innerHTML += indicador.indicatorName;
+    braEdu.innerHTML += indicador.indicatorName + "<br>";
     braPop.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';
@@ -344,8 +362,9 @@ btnEduBra.addEventListener('click', () => {
 });
 
 btnUnemBra.addEventListener('click', () => {
+  braUnem.innerHTML = "";
   for (indicador of unemploymentBrasil) {
-    braUnem.innerHTML += indicador.indicatorName;
+    braUnem.innerHTML += indicador.indicatorName + "<br>";
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braPop.style.display = 'none';
@@ -356,8 +375,9 @@ btnUnemBra.addEventListener('click', () => {
 
 
 btnAlfBra.addEventListener('click', () => {
+  braAlf.innerHTML = "";
   for (indicador of literacyBrasil) {
-    braAlf.innerHTML += indicador.indicatorName;
+    braAlf.innerHTML += indicador.indicatorName + "<br>";
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';

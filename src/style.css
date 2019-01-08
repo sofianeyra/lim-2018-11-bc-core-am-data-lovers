@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
-.menu, .navbar, .main-nav li, .logo, 
+.menu, .navbar, .main-nav, .main-nav li, .logo,
 .navbar-toggle, .active {
     box-sizing: border-box;
     padding: 0;
@@ -8,7 +8,7 @@
 .menu {
     font-family: Asap;
 }
-  
+
 .navbar {
     width: 100%;
     z-index: 100;
@@ -23,8 +23,8 @@
     list-style-type: none;
     display: none;
 }
-  
-#inicio, #peru-menu, #chile-menu, 
+
+#inicio, #peru-menu, #chile-menu,
 #mexico-menu, #brasil-menu {
     text-decoration: none;
     color: #1b80c3;
@@ -33,23 +33,23 @@
     font-size: 21px;
 }
 
-#inicio:hover, #peru-menu:hover, #chile-menu:hover, 
+#inicio:hover, #peru-menu:hover, #chile-menu:hover,
 #mexico-menu:hover, #brasil-menu:hover {
     color: #0e2f53;
 }
-  
+
 .main-nav li {
     text-align: center;
     margin: 15px auto;
 }
-  
+
 .logo {
     display: inline-block;
     width: 18em;
     height: 4em;
     margin-left: 1%;
 }
-  
+
 .navbar-toggle {
     margin-top: 2.5%;
     position: absolute;
@@ -59,38 +59,16 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 24px;
 }
-  
+
 .active {
     display: block;
 }
-    
-.tables-peru {
+
+.tables-peru, .tables-mex, .tables-chl, .tables-brs {
     position: absolute;
-    margin-top: 7%;
+    margin-top: 10%;
     margin-left: 26%;
     width: 100%;
-}
-
-.boton-population, .boton-violence, .boton-unemployment, 
-.boton-alfabetizacion, .boton-job, 
-.boton-education, .boton-populationMex, 
-.boton-violenceMex, .boton-unemploymentMex, 
-.boton-alfabetizacionMex, .boton-jobMex, 
-.boton-educationMex, .boton-populationChil, 
-.boton-violenceChil, .boton-unemploymentChil, 
-.boton-alfabetizacionChil, .boton-jobChil, 
-.boton-educationChil, .boton-populationBra, 
-.boton-violenceBra, .boton-unemploymentBra, 
-.boton-alfabetizacionBra, .boton-jobBra, 
-.boton-educationBra {
-    margin: 30px 1px 6px;
-    text-decoration: none;
-    padding: 15px;
-    font-weight: 500;
-    font-size: 12px;
-    color: #ffffff;
-    background-color: #0071BC;
-    border-radius: 6px; border: 2px;
 }
 
 .bar-3 {
@@ -160,20 +138,20 @@
     position: absolute;
     width: 305px;
     height: 130%;
-    left: 0%;
-    top: 13%;
+    left: 0.87%;
+    top: 12%;
     background: #0e2f53;
     mix-blend-mode: normal;
 
 }
 
-.bandera-peru, .bandera-mexico, 
+.bandera-peru, .bandera-mexico,
 .bandera-chile, .bandera-brasil {
     position: absolute;
     width: 207px;
-    height: 113px;
-    left: 49px;
-    top: 135px;
+    height: 19%;
+    left: 4.5%;
+    top: 18%;
     mix-blend-mode: normal;
 }
 
@@ -182,7 +160,7 @@
     position: absolute;
     width: 20%;
     height: 29px;
-    left: 122px;
+    left: 10.5%;
     top: 258px;
     color: white;
     font-family: Asap;
@@ -192,15 +170,15 @@
     font-size: 24px;
 }
 
-.descripcion-peru, .descripcion-mexico, 
+.descripcion-peru, .descripcion-mexico,
 .descripcion-chile, .descripcion-brasil {
     position: absolute;
     width: 278px;
     height: 94px;
-    left: 13px;
+    left: 1.8%;
     top: 297px;
     color: white;
-    font-family: Roboto;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
@@ -216,7 +194,7 @@
     font-family: arial;
 }
 
-#order, #order-2, #order-3, 
+#order, #order-2, #order-3,
 #order-4 {
     z-index: 5;
     position: absolute;
@@ -228,15 +206,15 @@
 }
 
 
-#boton-population, #boton-violence, #boton-unemployment, 
+#boton-population, #boton-violence, #boton-unemployment,
 #boton-alfabetizacion, #boton-education,
-#boton-populationMex, #boton-violenceMex, 
-#boton-unemploymentMex, #boton-alfabetizacionMex, 
-#boton-educationMex, #boton-populationChil, 
-#boton-violenceChil, #boton-unemploymentChil, 
+#boton-populationMex, #boton-violenceMex,
+#boton-unemploymentMex, #boton-alfabetizacionMex,
+#boton-educationMex, #boton-populationChil,
+#boton-violenceChil, #boton-unemploymentChil,
 #boton-alfabetizacionChil, #boton-educationChil,
-#boton-populationBra, #boton-violenceBra, 
-#boton-unemploymentBra, #boton-alfabetizacionBra, 
+#boton-populationBra, #boton-violenceBra,
+#boton-unemploymentBra, #boton-alfabetizacionBra,
 #boton-educationBra {
   margin: 30px 1px 6px;
   text-decoration: none;
@@ -289,7 +267,7 @@
 
 
 /* RESPONSIVE */
-  
+
 @media screen and (min-width: 768px) {
     .navbar {
         display: flex;
@@ -298,19 +276,19 @@
         height: 70px;
         align-items: center;
     }
-  
+
     .main-nav {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
     }
-  
+
     .main-nav li {
         margin: 0;
     }
-  
-    #inicio, #peru-menu, #mexico-menu, 
+
+    #inicio, #peru-menu, #mexico-menu,
     #chile-menu, #brasil-menu {
         margin-left: 40px;
     }
@@ -318,7 +296,7 @@
     .logo {
         margin-top: 0;
     }
-  
+
     .navbar-toggle {
         display: none;
     }
