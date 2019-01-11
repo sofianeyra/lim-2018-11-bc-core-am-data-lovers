@@ -24,30 +24,37 @@
 .texto-chile, .texto-brasil {
     position: absolute;
     width: 20%;
-    height: 29px;
-    left: 10.5%;
-    top: 258px;
+    height: 15px;
+    left: 30%;
+    top: 108px;
     color: white;
     font-family: Asap;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 24px;
+    font-size: 170%;
+}
+
+@media (min-width: 400px) {
+  .descripcion-peru, .descripcion-mexico,
+  .descripcion-chile, .descripcion-brasil  {
+    font-size: 2%;
+  }
 }
 
 .descripcion-peru, .descripcion-mexico,
 .descripcion-chile, .descripcion-brasil {
     position: absolute;
-    width: 278px;
+    width: 100%;
     height: 94px;
-    left: 1.8%;
-    top: 297px;
+    left: 18%;
+    top: 127px;
     color: white;
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 16px;
+    font-size: 90%;
     text-align: center;
 }
 
@@ -176,9 +183,10 @@
 
 .fondo-bar {
     position: absolute;
-    width: 305px;
-    height: 130%;
-    left: 0.87%;
+    width: 100%;
+    height: 30%;
+    left: 0.5%;
+    right: 1%;
     top: 12%;
     background: #0e2f53;
     mix-blend-mode: normal;
