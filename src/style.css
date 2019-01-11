@@ -186,14 +186,6 @@
     text-align: center;
 }
 
-#catg {
-    position: absolute;
-    color: white;
-    top: 60%;
-    left: 4%;
-    font-family: arial;
-}
-
 #order, #order-2, #order-3,
 #order-4 {
     z-index: 5;
@@ -205,17 +197,18 @@
     font-family: arial;
 }
 
-
 #boton-population, #boton-violence, #boton-unemployment,
 #boton-alfabetizacion, #boton-education,
 #boton-populationMex, #boton-violenceMex,
-#boton-unemploymentMex, #boton-alfabetizacionMex,
-#boton-educationMex, #boton-populationChil,
-#boton-violenceChil, #boton-unemploymentChil,
-#boton-alfabetizacionChil, #boton-educationChil,
-#boton-populationBra, #boton-violenceBra,
-#boton-unemploymentBra, #boton-alfabetizacionBra,
-#boton-educationBra {
+#boton-job, #boton-unemploymentMex, 
+#boton-alfabetizacionMex, #boton-educationMex,
+#boton-jobMex,
+#boton-populationChil, #boton-violenceChil,
+#boton-jobChil, 
+#boton-unemploymentChil, #boton-alfabetizacionChil, 
+#boton-educationChil, #boton-populationBra, 
+#boton-violenceBra, #boton-jobBra, 
+#boton-unemploymentBra, #boton-alfabetizacionBra, #boton-educationBra {
   margin: 30px 1px 6px;
   text-decoration: none;
   padding: 15px;
@@ -264,7 +257,6 @@
     font-family: Arial;
     right: 0%;
 }
-
 
 /* RESPONSIVE */
 
