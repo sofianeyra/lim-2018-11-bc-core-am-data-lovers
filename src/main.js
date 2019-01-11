@@ -1,5 +1,5 @@
 // MENÚ DE NAVEGACIÓN
-const inicial = document.getElementById('pagina-inicio');
+const inicial = document.getElementById('contenedor');
 const per = document.getElementById('pagina-peru');
 const mex = document.getElementById('pagina-mexico');
 const chl = document.getElementById('pagina-chile');
