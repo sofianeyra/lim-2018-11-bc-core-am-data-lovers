@@ -1,7 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
 @import url(menu-navegador.css);
 
-.contenedor {
+/* GENERALES */
+
+.tables-peru, .tables-mex, .tables-chl, .tables-brs {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 26%;
+    width: 100%;
+}
+
+.bandera-peru, .bandera-mexico,
+.bandera-chile, .bandera-brasil {
+    position: absolute;
+    width: 207px;
+    height: 19%;
+    left: 4.5%;
+    top: 18%;
+    mix-blend-mode: normal;
+}
+
+.texto-peru, .texto-mexico,
+.texto-chile, .texto-brasil {
+    position: absolute;
+    width: 20%;
+    height: 29px;
+    left: 10.5%;
+    top: 258px;
+    color: white;
+    font-family: Asap;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+}
+
+.descripcion-peru, .descripcion-mexico,
+.descripcion-chile, .descripcion-brasil {
+    position: absolute;
+    width: 278px;
+    height: 94px;
+    left: 1.8%;
+    top: 297px;
+    color: white;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+#order, #order-2, #order-3,
+#order-4 {
+    z-index: 5;
+    position: absolute;
+    color: white;
+    top: 105%;
+    bottom: 120%;
+    left: 4%;
+    font-family: arial;
+}
+
+
+#boton-population, #boton-violence, #boton-unemployment,
+#boton-alfabetizacion, #boton-education,
+#boton-populationMex, #boton-violenceMex,
+#boton-unemploymentMex, #boton-alfabetizacionMex,
+#boton-educationMex, #boton-populationChil,
+#boton-violenceChil, #boton-unemploymentChil,
+#boton-alfabetizacionChil, #boton-educationChil,
+#boton-populationBra, #boton-violenceBra,
+#boton-unemploymentBra, #boton-alfabetizacionBra,
+#boton-educationBra {
+  margin: 30px 1px 6px;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #0071BC;
+  border-radius: 6px; border: 2px;
+}
+
+
+
+/* PÁGINA INICIO */
+
+#contenedor {
   margin-left: 0%;
 }
 
@@ -55,6 +142,10 @@
     color: white;
 }
 
+
+/* PERÚ */
+
+
 .lateral-bar {
     position: absolute;
     width: 305px;
@@ -65,93 +156,14 @@
     mix-blend-mode: normal;
 }
 
-.tables-peru, .tables-mex, .tables-chl, .tables-brs {
-    position: absolute;
-    margin-top: 10%;
-    margin-left: 26%;
-    width: 100%;
-}
-
-.bandera-peru, .bandera-mexico,
-.bandera-chile, .bandera-brasil {
-    position: absolute;
-    width: 207px;
-    height: 19%;
-    left: 4.5%;
-    top: 18%;
-    mix-blend-mode: normal;
-}
-
-.texto-peru, .texto-mexico,
-.texto-chile, .texto-brasil {
-    position: absolute;
-    width: 20%;
-    height: 29px;
-    left: 10.5%;
-    top: 258px;
-    color: white;
-    font-family: Asap;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 24px;
-}
-
-.descripcion-peru, .descripcion-mexico,
-.descripcion-chile, .descripcion-brasil {
-    position: absolute;
-    width: 278px;
-    height: 94px;
-    left: 1.8%;
-    top: 297px;
-    color: white;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 16px;
-    text-align: center;
-}
-
-#catg {
-    position: absolute;
-    color: white;
-    top: 60%;
-    left: 4%;
-    font-family: arial;
-}
-
-#order, #order-2, #order-3,
-#order-4 {
-    z-index: 5;
-    position: absolute;
-    color: white;
-    top: 105%;
-    bottom: 120%;
-    left: 4%;
-    font-family: arial;
-}
 
 
-#boton-population, #boton-violence, #boton-unemployment,
-#boton-alfabetizacion, #boton-education,
-#boton-populationMex, #boton-violenceMex,
-#boton-unemploymentMex, #boton-alfabetizacionMex,
-#boton-educationMex, #boton-populationChil,
-#boton-violenceChil, #boton-unemploymentChil,
-#boton-alfabetizacionChil, #boton-educationChil,
-#boton-populationBra, #boton-violenceBra,
-#boton-unemploymentBra, #boton-alfabetizacionBra,
-#boton-educationBra {
-  margin: 30px 1px 6px;
-  text-decoration: none;
-  padding: 15px;
-  font-weight: 500;
-  font-size: 12px;
-  color: #ffffff;
-  background-color: #0071BC;
-  border-radius: 6px; border: 2px;
-}
+
+
+
+
+/* PIE DE PÁGINA */
+
 
 #pie-de-pagina {
     margin-top: 1%;
