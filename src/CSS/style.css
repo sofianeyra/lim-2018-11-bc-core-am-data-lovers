@@ -83,6 +83,7 @@
   background-color: #0071BC;
   border-radius: 6px; border: 2px;
 }
+/* GENERALES */
 
 
 
@@ -90,6 +91,7 @@
 
 #contenedor {
   margin-left: 0%;
+  max-width: 1500px;
 }
 
 #pagina-inicio {
@@ -142,11 +144,37 @@
     color: white;
 }
 
+/* RESPONSIVE PÁGINA INICIO*/
+
+@media (min-width:480px) {
+  #pagina-inicio img {
+    font-size: 40px
+  }
+}
+
+@media (min-width: 800px) {
+  .bar-3 {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 800px) {
+  .mision-container {
+    font-size: 22px;
+  }
+}
+
+/* PÁGINA INICIO */
+
 
 /* PERÚ */
 
+#pagina-peru {
+  max-width: 1500px;
+}
 
-.lateral-bar {
+
+.fondo-bar {
     position: absolute;
     width: 305px;
     height: 130%;
@@ -157,9 +185,15 @@
 }
 
 
+@media (min-width: 850px) {
+  .barra-lateral {
+  }
+}
 
 
 
+
+/* PERÚ */
 
 
 /* PIE DE PÁGINA */
@@ -190,24 +224,4 @@
     font-family: Arial;
     right: 0%;
 }
-
-
-/* RESPONSIVE */
-
-@media (min-width:480px) {
-  #pagina-inicio img {
-    font-size: 40px
-  }
-}
-
-@media (min-width: 800px) {
-  .bar-3 {
-    font-size: 19px;
-  }
-}
-
-@media (min-width: 800px) {
-  .mision-container {
-    font-size: 22px;
-  }
-}
+/* PIE DE PÁGINA */
