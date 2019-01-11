@@ -1,8 +1,5 @@
-/* eslint-disable no-undef */
-/* global WORLDBANK*/
-
 // MENÚ DE NAVEGACIÓN
-const inicial = document.getElementById('pagina-inicio');
+const inicial = document.getElementById('contenedor');
 const per = document.getElementById('pagina-peru');
 const mex = document.getElementById('pagina-mexico');
 const chl = document.getElementById('pagina-chile');
@@ -78,10 +75,9 @@ const peruAlf = document.getElementById('table-peruAlf');
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopulation.addEventListener('click', () => {
-  for (indicador of sortDataPop) {
-
-   const average =compute(indicador);
-    peruPop.innerHTML += indicador.indicatorName + '(' + average + ')<br>' ;
+  peruPop.innerHTML = '';
+  for (indicador of filterPopPer) {
+    peruPop.innerHTML += indicador.indicatorName + '<br>';
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -89,13 +85,12 @@ btnPopulation.addEventListener('click', () => {
     peruPop.style.display = 'block';
   }
 
-  //se calcula el promedio de todos los años de los indicadores de population
-
 });
 
 btnViolence.addEventListener('click', () => {
-  for (indicador of violence) {
-    peruVio.innerHTML += indicador.indicatorName;
+  peruVio.innerHTML = '';
+  for (indicador of filterViolencePer) {
+    peruVio.innerHTML += indicador.indicatorName + '<br>';
     peruPop.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -105,8 +100,9 @@ btnViolence.addEventListener('click', () => {
 });
 
 btnEducation.addEventListener('click', () => {
-  for (indicador of primaryEducation) {
-    peruEdu.innerHTML += indicador.indicatorName;
+  peruEdu.innerHTML = '';
+  for (indicador of filterEduPer) {
+    peruEdu.innerHTML += indicador.indicatorName + '<br>';
     peruVio.style.display = 'none';
     peruPop.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -116,8 +112,9 @@ btnEducation.addEventListener('click', () => {
 });
 
 btnUnemployment.addEventListener('click', () => {
-  for (indicador of unemployment) {
-    peruUnem.innerHTML += indicador.indicatorName;
+  peruUnem.innerHTML = '';
+  for (indicador of filterUnemploymentPer) {
+    peruUnem.innerHTML += indicador.indicatorName + '<br>';
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruPop.style.display = 'none';
@@ -127,8 +124,9 @@ btnUnemployment.addEventListener('click', () => {
 });
 
 btnAlfabet.addEventListener('click', () => {
-  for (indicador of literacy) {
-    peruAlf.innerHTML += indicador.indicatorName;
+  peruAlf.innerHTML = '';
+  for (indicador of filterLiteracyPer) {
+    peruAlf.innerHTML += indicador.indicatorName + '<br>';
     peruVio.style.display = 'none';
     peruEdu.style.display = 'none';
     peruUnem.style.display = 'none';
@@ -158,8 +156,9 @@ const mexAlf = document.getElementById('table-mexAlf');
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopMex.addEventListener('click', () => {
-  for (indicador of populationMex) {
-    mexPop.innerHTML += indicador.indicatorName;
+  mexPop.innerHTML = '';
+  for (indicador of filterPopMex) {
+    mexPop.innerHTML += indicador.indicatorName + '<br>';
     mexVio.style.display = 'none';
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
@@ -169,8 +168,9 @@ btnPopMex.addEventListener('click', () => {
 });
 
 btnVioMex.addEventListener('click', () => {
-  for (indicador of violenceMex) {
-    mexVio.innerHTML += indicador.indicatorName;
+  mexVio.innerHTML = '';
+  for (indicador of filterViolenceMex) {
+    mexVio.innerHTML += indicador.indicatorName + '<br>';
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
     mexAlf.style.display = 'none';
@@ -180,8 +180,9 @@ btnVioMex.addEventListener('click', () => {
 });
 
 btnEduMex.addEventListener('click', () => {
-  for (indicador of primaryEducationMex) {
-    mexEdu.innerHTML += indicador.indicatorName;
+  mexEdu.innerHTML = '';
+  for (indicador of filterEduMex) {
+    mexEdu.innerHTML += indicador.indicatorName + '<br>';
     mexUnem.style.display = 'none';
     mexAlf.style.display = 'none';
     mexPop.style.display = 'none';
@@ -191,8 +192,9 @@ btnEduMex.addEventListener('click', () => {
 });
 
 btnUneMex.addEventListener('click', () => {
-  for (indicador of unemploymentMex) {
-    mexUnem.innerHTML += indicador.indicatorName;
+  mexUnem.innerHTML = '';
+  for (indicador of filterUnemploymentMex) {
+    mexUnem.innerHTML += indicador.indicatorName + '<br>';
     mexEdu.style.display = 'none';
     mexVio.style.display = 'none';
     mexAlf.style.display = 'none';
@@ -202,8 +204,9 @@ btnUneMex.addEventListener('click', () => {
 });
 
 btnAlfMex.addEventListener('click', () => {
-  for (indicador of literacyMex) {
-    mexAlf.innerHTML += indicador.indicatorName;
+  mexAlf.innerHTML = '';
+  for (indicador of filterLiteracyMex) {
+    mexAlf.innerHTML += indicador.indicatorName + '<br>';
     mexEdu.style.display = 'none';
     mexUnem.style.display = 'none';
     mexVio.style.display = 'none';
@@ -235,8 +238,9 @@ const alfCh = document.getElementById('table-alfCh');
 
 
 btnPopCh.addEventListener('click', () => {
-  for (indicador of populationChl) {
-    popCh.innerHTML += indicador.indicatorName;
+  popCh.innerHTML = '';
+  for (indicador of filterPopChl) {
+    popCh.innerHTML += indicador.indicatorName + '<br>';
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -246,8 +250,9 @@ btnPopCh.addEventListener('click', () => {
 });
 
 btnVioCh.addEventListener('click', () => {
-  for (indicador of violenceChl) {
-    vioCh.innerHTML += indicador.indicatorName;
+  vioCh.innerHTML = '';
+  for (indicador of filterViolenceChl) {
+    vioCh.innerHTML += indicador.indicatorName + '<br>';
     eduCh.style.display = 'none';
     popCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -257,8 +262,9 @@ btnVioCh.addEventListener('click', () => {
 });
 
 btnEduCh.addEventListener('click', () => {
-  for (indicador of primaryEducationChl) {
-    eduCh.innerHTML += indicador.indicatorName;
+  eduCh.innerHTML = '';
+  for (indicador of filterEduChl) {
+    eduCh.innerHTML += indicador.indicatorName + '<br>';
     popCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -268,8 +274,9 @@ btnEduCh.addEventListener('click', () => {
 });
 
 btnUnemCh.addEventListener('click', () => {
-  for (indicador of unemploymentChl) {
-    unemCh.innerHTML += indicador.indicatorName;
+  unemCh.innerHTML = '';
+  for (indicador of filterUnemploymentChl) {
+    unemCh.innerHTML += indicador.indicatorName + '<br>';
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     popCh.style.display = 'none';
@@ -279,8 +286,9 @@ btnUnemCh.addEventListener('click', () => {
 });
 
 btnAlfCh.addEventListener('click', () => {
-  for (indicador of literacyChl) {
-    alfCh.innerHTML += indicador.indicatorName;
+  alfCh.innerHTML = '';
+  for (indicador of filterLiteracyChl) {
+    alfCh.innerHTML += indicador.indicatorName + '<br>';
     eduCh.style.display = 'none';
     vioCh.style.display = 'none';
     unemCh.style.display = 'none';
@@ -313,8 +321,9 @@ const braAlf = document.getElementById('table-braAlf');
 
 
 btnPopBra.addEventListener('click', () => {
-  for (indicador of populationBrasil) {
-    braPop.innerHTML += indicador.indicatorName;
+  braPop.innerHTML = '';
+  for (indicador of filterPopBrs) {
+    braPop.innerHTML += indicador.indicatorName + '<br>' ;
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';
@@ -324,8 +333,9 @@ btnPopBra.addEventListener('click', () => {
 });
 
 btnVioBra.addEventListener('click', () => {
-  for (indicador of violenceBrasil) {
-    braVio.innerHTML += indicador.indicatorName;
+  braVio.innerHTML = '';
+  for (indicador of filterViolenceBrs) {
+    braVio.innerHTML += indicador.indicatorName + '<br>';
     braEdu.style.display = 'none';
     braPop.style.display = 'none';
     braUnem.style.display = 'none';
@@ -335,8 +345,9 @@ btnVioBra.addEventListener('click', () => {
 });
 
 btnEduBra.addEventListener('click', () => {
-  for (indicador of primaryEducationBrasil) {
-    braEdu.innerHTML += indicador.indicatorName;
+  braEdu.innerHTML = '';
+  for (indicador of filterEduBrs) {
+    braEdu.innerHTML += indicador.indicatorName + '<br>';
     braPop.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';
@@ -346,8 +357,9 @@ btnEduBra.addEventListener('click', () => {
 });
 
 btnUnemBra.addEventListener('click', () => {
-  for (indicador of unemploymentBrasil) {
-    braUnem.innerHTML += indicador.indicatorName;
+  braUnem.innerHTML = '';
+  for (indicador of filterUnemploymentBrs) {
+    braUnem.innerHTML += indicador.indicatorName + '<br>';
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braPop.style.display = 'none';
@@ -358,8 +370,9 @@ btnUnemBra.addEventListener('click', () => {
 
 
 btnAlfBra.addEventListener('click', () => {
-  for (indicador of literacyBrasil) {
-    braAlf.innerHTML += indicador.indicatorName;
+  braAlf.innerHTML = '';
+  for (indicador of filterLiteracyBrs) {
+    braAlf.innerHTML += indicador.indicatorName + '<br>';
     braEdu.style.display = 'none';
     braVio.style.display = 'none';
     braUnem.style.display = 'none';
@@ -367,6 +380,7 @@ btnAlfBra.addEventListener('click', () => {
     braAlf.style.display = 'block';
   }
 });
+
 // MENÚ
 let mainNav = document.getElementById('js-menu');
 let navBarToggle = document.getElementById('js-navbar-toggle');

@@ -1,24 +1,16 @@
-#PROYECTO DATA LOVERS 👩‍💻
+ **PROYECTO DATA LOVERS** 👩‍💻
 
-<<<<<<< HEAD
-*Preámbulo*
-=======
-#*Preámbulo*
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
+ **Preámbulo**
 
 #Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 #No obstante, los datos por sí mismos son de poca utilidad. Para que esas grandes cantidades de datos se conviertan en información fácil de leer para los usuarios, necesitamos entender y procesar estos datos. Una manera simple de hacerlo es creando interfaces y visualizaciones.
 
 
-<<<<<<< HEAD
-*Resumen del proyecto*
-=======
-#*Resumen del proyecto*
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
+ **Resumen del proyecto**
 
-#En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
+En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
 
-#La temática escogida fue “WorldBank”, que incluye una base de datos del Banco Mundial (contiene indicadores sociales, económicos, laborales, etc.). siendo los países considerados en la data: Perú, México, Chile y Brasil.
+La temática escogida fue “WorldBank”, que incluye una base de datos del Banco Mundial (contiene indicadores sociales, económicos, laborales, etc.). siendo los países considerados en la data: Perú, México, Chile y Brasil.
 
 A nivel local el Banco Mundial es un antiguo aliado en el desarrollo social del país.
 A continuación, mostramos algunos ejemplos:
@@ -30,27 +22,18 @@ A continuación, mostramos algunos ejemplos:
 -	2000s: el Perú inicia una etapa de crecimiento económico sostenible y se protege al país de la crisis financiera mundial con mayores líneas de crédito.
 
 
-#Como entregable final se tendrá una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún calculo agregado.
+Como entregable final del proyecto se tendrá una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún calculo agregado.
 
 
-#*Consideraciones generales* 📌
+**Consideraciones generales** 📌
 
 
 •	Este proyecto se debe resolver en duplas.
-
-
 •	El proyecto será entregado subiendo tu código a GitHub (commit/push) y la interfaz será desplegada usando GitHub Pages.
+•	Tiempo para completarlo: Toma como referencia 3 semanas. Trabaja durante el primer Sprint (una semana) y al final, decide en cuántas semanas lo terminarás.
 
 
-<<<<<<< HEAD
-•	Tiempo para completarlo: Toma como referencia 3 semanas.
-
- Trabaja durante el primer Sprint (una semana) y al final, decide en cuántas semanas lo terminarás.
-
-
-=======
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
-#*Definición del producto*💡
+**Definición del producto** 💡
 
 1)	Quiénes son los principales usuarios de producto
 -	Los principales usuarios del producto son profesionales que necesiten tener acceso a data relacionada a indicadores sociales en países de Latinoamérica.
@@ -67,94 +50,65 @@ A continuación, mostramos algunos ejemplos:
 
 
 
- #*Historias de usuario*👫
+  **Historias de usuario** 👫
 
 
  #Luego de realizar varias entrevistas a personas entre 25 a 35 años, relacionadas al sector social, salud y/o económico, estas fueron las 3 historias de usuario que nos permitieron definir quien sería nuestro publico objetivo para el desarrollo de esta web
 
 
- #Historia 1
- Yo, como analista de datos deseo ver los indicadores de Desarrollo (población, educación, etc.) en países de Latinoamérica, con el propósito de completar un proyecto colaborativo en la empresa en la que labora.
+  **Historia 1**
+ - Yo, como analista de datos deseo ver los indicadores de Desarrollo (población, educación, etc.) en países de Latinoamérica, con el propósito de completar un proyecto colaborativo en la empresa en la que laboro.
 
 
- #Historia 2
- Yo, como asistente social deseo brindar apoyo e información a través de información actualizada sobre educación, empleo, desempleo, población, alfabetización y violencia con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
+  **Historia 2**
+ - Yo, como asistente social deseo brindar apoyo e información a través de información actualizada sobre educación, empleo, desempleo, población, alfabetización y violencia con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
 
 
- #Historia 3
- Yo, como psicólogo(a) deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
+ **Historia 3**
+ - Yo, como psicólogo(a) deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
 
 
+ **Diseño de la Interfaz de Usuario** 🖌
 
-#*Diseño de la Interfaz de Usuario* 🖌
-
-1)Prototipo de baja fidelidad
-
-Para esta web las páginas consideradas se muestran a continuación:
+ Para esta web las páginas consideradas se muestran a continuación:
 
 __Menú Principal__
 
-![Sin titulo](src/img/principal.jpeg)
+![Sin titulo](https://i.ibb.co/7nJVKCX/incicio.jpg)
 
 
 __Perú__
 
-![Sin titulo](src/img/peru.jpeg)
+![Sin titulo](https://i.ibb.co/2vJ6FNQ/pagina-inicio.jpg)
 
 
 
 __México__
 
-![Sin titulo](src/img/mexico.jpeg)
+![Sin titulo](https://i.ibb.co/3Ns5fpK/2019-01-08-8-19-a-m-Office-Lens.jpg)
 
-<<<<<<< HEAD
-
-
-__Chile__
-
-![Sin titulo](src/img/chile.jpeg)
-=======
 
 
 __Chile__
 
-![Sin titulo](src/img/chile.jpeg)
+![Sin titulo](https://i.ibb.co/5254zVC/chil.jpg)
 
 
 __Brasil__
 
-2)Prototipo de alta fidelidad
-
-El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
-
-__Menú Principal__
-
-<<<<<<< HEAD
-__Brasil__
-
-2)Prototipo de alta fidelidad
+## Prototipo de alta fidelidad
 
 El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
 
-__Menú Principal__
+- __Menú Principal__
 
-__Perú__
+![alt text](https://i.ibb.co/Yj3NSGD/World-Bank-Page.png)
+- __Perú__
 
-__México__
-=======
-__Perú__
+- __México__
 
-__México__
+- __Chile__
 
-__Chile__
+- __Brasil__
 
-__Brasil__
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
-
-__Chile__
-
-<<<<<<< HEAD
-__Brasil__
-=======
->>>>>>> b9a0a7fe9e1f3d6be7298b824ff1684f320160ab
+- __Chile__
