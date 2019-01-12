@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // MENÚ DE NAVEGACIÓN
 const inicial = document.getElementById('contenedor');
 const per = document.getElementById('pagina-peru');
@@ -84,7 +85,6 @@ btnPopulation.addEventListener('click', () => {
     peruAlf.style.display = 'none';
     peruPop.style.display = 'block';
   }
-
 });
 
 btnViolence.addEventListener('click', () => {

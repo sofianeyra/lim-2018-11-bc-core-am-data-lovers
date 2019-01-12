@@ -66,9 +66,9 @@
 
 .tables-peru, .tables-mex, .tables-chl, .tables-brs {
     position: absolute;
-    margin-top: 10%;
-    margin-left: 26%;
-    width: 100%;
+    margin-bottom: 0%;
+    margin-left: 6%;
+    width: 50%;
 }
 
 .bar-3 {
@@ -89,7 +89,7 @@
     left: 1%;
     top: 35%;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 12%;
     color: white;
     opacity: 1;
 }
@@ -136,8 +136,8 @@
 
 .lateral-bar {
     position: absolute;
-    width: 305px;
-    height: 130%;
+    width: 100%;
+    height: 140%;
     left: 0.87%;
     top: 12%;
     background: #0e2f53;
@@ -191,9 +191,9 @@
     z-index: 5;
     position: absolute;
     color: white;
-    top: 105%;
-    bottom: 120%;
-    left: 4%;
+    top: 20%;
+    bottom: 80%;
+    right: 4%;
     font-family: arial;
 }
 
@@ -213,10 +213,11 @@
   text-decoration: none;
   padding: 15px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 3%;
   color: #ffffff;
   background-color: #0071BC;
   border-radius: 6px; border: 2px;
+  margin-top: 10%;
 }
 
 .mision-container {
@@ -234,17 +235,19 @@
 }
 
 #pie-de-pagina {
+    z-index: 100;
     position: absolute;
     width: 100%;
     height: 8%;
     left: 0%;
     bottom: 0%;
-    top: 140%;
     background: #000000;
 }
 
 .icon-footer {
     left: 0%;
+    width: 50%;
+    height: 20%;
 }
 
 .texto-footer {
@@ -253,7 +256,7 @@
     left: 70%;
     position: absolute;
     color: white;
-    font-size: 12px;
+    font-size: 3%;
     font-family: Arial;
     right: 0%;
 }

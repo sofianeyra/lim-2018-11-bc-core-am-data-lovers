@@ -199,6 +199,138 @@ const input = [ {
   'indicatorName': 'Educacin terciaria, profesores (% de mujeres)',
   'indicatorCode': 'SE.TER.TCHR.FE.ZS'
 },
+{
+  'data': {
+    '1960': '',
+    '1961': '',
+    '1962': '',
+    '1963': '',
+    '1964': '',
+    '1965': '',
+    '1966': '',
+    '1967': '',
+    '1968': '',
+    '1969': '',
+    '1970': '',
+    '1971': '',
+    '1972': '',
+    '1973': '',
+    '1974': '',
+    '1975': '',
+    '1976': '',
+    '1977': '',
+    '1978': '',
+    '1979': '',
+    '1980': '',
+    '1981': '',
+    '1982': '',
+    '1983': '',
+    '1984': '',
+    '1985': '',
+    '1986': '',
+    '1987': '',
+    '1988': '',
+    '1989': '',
+    '1990': '',
+    '1991': '',
+    '1992': '',
+    '1993': '',
+    '1994': '',
+    '1995': '',
+    '1996': '',
+    '1997': '',
+    '1998': '',
+    '1999': '',
+    '2000': '',
+    '2001': '',
+    '2002': '',
+    '2003': '',
+    '2004': '',
+    '2005': '',
+    '2006': '',
+    '2007': '',
+    '2008': '',
+    '2009': 1,
+    '2010': '',
+    '2011': 1,
+    '2012': '',
+    '2013': 1,
+    '2014': '',
+    '2015': 1,
+    '2016': '',
+    '2017': 1
+  },
+  'countryName': 'Perú',
+  'countryCode': 'PER',
+  'indicatorName': 'Las mujeres no embarazadas y que no amamantan pueden hacer los mismos trabajos que los hombres (1=sí; 0=no)',
+  'indicatorCode': 'SG.JOB.NOPN.EQ'
+},
+{
+  'data': {
+    '1960': '',
+    '1961': '',
+    '1962': '',
+    '1963': '',
+    '1964': '',
+    '1965': '',
+    '1966': '',
+    '1967': '',
+    '1968': '',
+    '1969': 5.90000009536743,
+    '1970': 4.84000015258789,
+    '1971': 4.57000017166138,
+    '1972': 4.40000009536743,
+    '1973': 4.23000001907349,
+    '1974': 4,
+    '1975': 4.92000007629395,
+    '1976': 5.19999980926514,
+    '1977': 5.82000017166138,
+    '1978': 6.5,
+    '1979': 7.11999988555908,
+    '1980': 6.96999979019165,
+    '1981': 6.76999998092651,
+    '1982': 6.98000001907349,
+    '1983': 9.19999980926514,
+    '1984': 10.5,
+    '1985': 11.789999961853,
+    '1986': '',
+    '1987': 3.63000011444092,
+    '1988': '',
+    '1989': 7.92000007629395,
+    '1990': 8.60000038146973,
+    '1991': 5.80000019073486,
+    '1992': 9.39999961853027,
+    '1993': '',
+    '1994': '',
+    '1995': '',
+    '1996': 7.07000017166138,
+    '1997': 7.69000005722046,
+    '1998': 7.75,
+    '1999': 7.98999977111816,
+    '2000': '',
+    '2001': 7.88000011444092,
+    '2002': '',
+    '2003': '',
+    '2004': '',
+    '2005': '',
+    '2006': '',
+    '2007': '',
+    '2008': '',
+    '2009': '',
+    '2010': '',
+    '2011': '',
+    '2012': '',
+    '2013': '',
+    '2014': '',
+    '2015': '',
+    '2016': '',
+    '2017': ''
+  },
+  'countryName': 'Perú',
+  'countryCode': 'PER',
+  'indicatorName': 'Desempleo, total (% de participación total en la fuerza laboral) (estimación nacional)',
+  'indicatorCode': 'SL.UEM.TOTL.NE.ZS'
+},
 ];
 
 const outputViolence = [
@@ -337,15 +469,259 @@ const outputpopulation = [{
   'indicatorCode': 'SP.POP.7579.FE.5Y'
 }];
 
+const outputeducation = [
+  {
+    'data': {
+      '1960': '',
+      '1961': '',
+      '1962': '',
+      '1963': '',
+      '1964': '',
+      '1965': '',
+      '1966': '',
+      '1967': '',
+      '1968': '',
+      '1969': '',
+      '1970': 15.2815504074097,
+      '1971': 13.3423204421997,
+      '1972': 14.1351003646851,
+      '1973': 13.7966899871826,
+      '1974': 14.5591802597046,
+      '1975': 14.3904104232788,
+      '1976': 16.3112506866455,
+      '1977': '',
+      '1978': '',
+      '1979': '',
+      '1980': '',
+      '1981': '',
+      '1982': '',
+      '1983': '',
+      '1984': '',
+      '1985': '',
+      '1986': '',
+      '1987': '',
+      '1988': '',
+      '1989': '',
+      '1990': '',
+      '1991': '',
+      '1992': '',
+      '1993': '',
+      '1994': '',
+      '1995': '',
+      '1996': '',
+      '1997': '',
+      '1998': '',
+      '1999': '',
+      '2000': '',
+      '2001': '',
+      '2002': '',
+      '2003': '',
+      '2004': '',
+      '2005': '',
+      '2006': '',
+      '2007': '',
+      '2008': '',
+      '2009': '',
+      '2010': '',
+      '2011': '',
+      '2012': '',
+      '2013': '',
+      '2014': '',
+      '2015': '',
+      '2016': '',
+      '2017': ''
+    },
+    'countryName': 'Perú',
+    'countryCode': 'PER',
+    'indicatorName': 'Educacin terciaria, profesores (% de mujeres)',
+    'indicatorCode': 'SE.TER.TCHR.FE.ZS'
+  },
+];
+
+const outputjob = [
+  {
+    'data': {
+      '1960': '',
+      '1961': '',
+      '1962': '',
+      '1963': '',
+      '1964': '',
+      '1965': '',
+      '1966': '',
+      '1967': '',
+      '1968': '',
+      '1969': '',
+      '1970': '',
+      '1971': '',
+      '1972': '',
+      '1973': '',
+      '1974': '',
+      '1975': '',
+      '1976': '',
+      '1977': '',
+      '1978': '',
+      '1979': '',
+      '1980': '',
+      '1981': '',
+      '1982': '',
+      '1983': '',
+      '1984': '',
+      '1985': '',
+      '1986': '',
+      '1987': '',
+      '1988': '',
+      '1989': '',
+      '1990': '',
+      '1991': '',
+      '1992': '',
+      '1993': '',
+      '1994': '',
+      '1995': '',
+      '1996': '',
+      '1997': '',
+      '1998': '',
+      '1999': '',
+      '2000': '',
+      '2001': '',
+      '2002': '',
+      '2003': '',
+      '2004': '',
+      '2005': '',
+      '2006': '',
+      '2007': '',
+      '2008': '',
+      '2009': 1,
+      '2010': '',
+      '2011': 1,
+      '2012': '',
+      '2013': 1,
+      '2014': '',
+      '2015': 1,
+      '2016': '',
+      '2017': 1
+    },
+    'countryName': 'Perú',
+    'countryCode': 'PER',
+    'indicatorName': 'Las mujeres no embarazadas y que no amamantan pueden hacer los mismos trabajos que los hombres (1=sí; 0=no)',
+    'indicatorCode': 'SG.JOB.NOPN.EQ'
+  },
+];
+
+const outputunemployment = [
+  {
+    'data': {
+      '1960': '',
+      '1961': '',
+      '1962': '',
+      '1963': '',
+      '1964': '',
+      '1965': '',
+      '1966': '',
+      '1967': '',
+      '1968': '',
+      '1969': 5.90000009536743,
+      '1970': 4.84000015258789,
+      '1971': 4.57000017166138,
+      '1972': 4.40000009536743,
+      '1973': 4.23000001907349,
+      '1974': 4,
+      '1975': 4.92000007629395,
+      '1976': 5.19999980926514,
+      '1977': 5.82000017166138,
+      '1978': 6.5,
+      '1979': 7.11999988555908,
+      '1980': 6.96999979019165,
+      '1981': 6.76999998092651,
+      '1982': 6.98000001907349,
+      '1983': 9.19999980926514,
+      '1984': 10.5,
+      '1985': 11.789999961853,
+      '1986': '',
+      '1987': 3.63000011444092,
+      '1988': '',
+      '1989': 7.92000007629395,
+      '1990': 8.60000038146973,
+      '1991': 5.80000019073486,
+      '1992': 9.39999961853027,
+      '1993': '',
+      '1994': '',
+      '1995': '',
+      '1996': 7.07000017166138,
+      '1997': 7.69000005722046,
+      '1998': 7.75,
+      '1999': 7.98999977111816,
+      '2000': '',
+      '2001': 7.88000011444092,
+      '2002': '',
+      '2003': '',
+      '2004': '',
+      '2005': '',
+      '2006': '',
+      '2007': '',
+      '2008': '',
+      '2009': '',
+      '2010': '',
+      '2011': '',
+      '2012': '',
+      '2013': '',
+      '2014': '',
+      '2015': '',
+      '2016': '',
+      '2017': ''
+    },
+    'countryName': 'Perú',
+    'countryCode': 'PER',
+    'indicatorName': 'Desempleo, total (% de participación total en la fuerza laboral) (estimación nacional)',
+    'indicatorCode': 'SL.UEM.TOTL.NE.ZS'
+  },
+];
 describe('worldbank', () => {
   it('debería ser un objeto', () => {
     expect(typeof worldbank).toBe('object');
   });
 });
 
-describe('worldbank.population', () => {
+describe('filtrado de population', () => {
   it('debería ser una función', () => {
-    expect(typeof worldbank.population).toBe('function');
+    expect(typeof worldbank.filterByIndicator).toBe('function');
+  });
+  it('debería retornar indicador de acuerdo a indicatorCode', () => {
+    expect(worldbank.filterByIndicator(input, 'population')).toEqual(outputpopulation);
   });
 });
 
+describe('filtrado de education', () => {
+  it('debería ser una función', () => {
+    expect(typeof worldbank.filterByIndicator).toBe('function');
+  });
+  it('debería retornar indicador de acuerdo a indicatorCode', () => {
+    expect(worldbank.filterByIndicator(input, 'education')).toEqual(outputeducation);
+  });
+});
+
+describe('filtrado de violence', () => {
+  it('debería ser una función', () => {
+    expect(typeof worldbank.filterByIndicator).toBe('function');
+  });
+  it('debería retornar indicador de acuerdo a indicatorCode', () => {
+    expect(worldbank.filterByIndicator(input, 'violence')).toEqual(outputViolence);
+  });
+});
+
+describe('filtrado de job', () => {
+  it('debería ser una función', () => {
+    expect(typeof worldbank.filterByIndicator).toBe('function');
+  });
+  it('debería retornar indicador de acuerdo a indicatorCode', () => {
+    expect(worldbank.filterByIndicator(input, 'job')).toEqual(outputjob);
+  });
+});
+
+describe('fltrado de unemployment', () => {
+  it('debería ser una función', () => {
+    expect(typeof worldbank.filterByIndicator).toBe('function');
+  });
+  it('debería retornar indicador de acuerdo a indicatorCode', () => {
+    expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
+  });
+});
