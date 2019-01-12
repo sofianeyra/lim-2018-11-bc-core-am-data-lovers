@@ -98,9 +98,6 @@ __México__
 
 ![Sin titulo](src/img/mexico.jpeg)
 
-<<<<<<< HEAD
-
-
 __Chile__
 
 ![Sin titulo](src/img/chile.jpeg)
@@ -120,18 +117,6 @@ El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuació
 
 __Menú Principal__
 
-__Brasil__
-
-2)Prototipo de alta fidelidad
-
-El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
-
-__Menú Principal__
-
-__Perú__
-
-__México__
-
 __Perú__
 
 __México__
@@ -140,6 +125,3 @@ __Chile__
 
 __Brasil__
 
-__Chile__
-
-__Brasil__
