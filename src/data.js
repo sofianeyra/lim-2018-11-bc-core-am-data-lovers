@@ -1,4 +1,3 @@
-// Convirtiendo Worldbank
 const arrData = Object.entries(WORLDBANK);
 const copyData = (wbank) => {
   const wbankData = [];
@@ -57,6 +56,7 @@ const literacy = (element) => {
 };
 
 // FILTRADO DE INDICADORES
+
 // ----------------- POBLACIÓN ----------------- //
 const filterPopulation = (data) => {
   let arrayFilter = data.filter(population);
@@ -72,11 +72,11 @@ const filterEducation = (data) => {
   let arrayFilter = data.filter(education);
   return arrayFilter;
 };
-const filterEduPer = filterPopulation(indicatorsPER);
-const filterEduMex = filterPopulation(indicatorsMEX);
-const filterEduChl = filterPopulation(indicatorsCHL);
-const filterEduBrs = filterPopulation(indicatorsBRS);
-//console.log(filterEduPeru);
+const filterEduPer = filterEducation(indicatorsPER);
+const filterEduMex = filterEducation(indicatorsMEX);
+const filterEduChl = filterEducation(indicatorsCHL);
+const filterEduBrs = filterEducation(indicatorsBRS);
+// console.log(filterEduPeru);
 
 // ----------------- VIOLENCIA----------------- //
 
@@ -102,8 +102,8 @@ const filterJobBrs = filterJob(indicatorsBRS);
 
 // ----------------- DESEMPLEO----------------- //
 
-const filterUnemployment = (data)=>{
-  let arrayFilter=data.filter(unemployment);
+const filterUnemployment = (data) => {
+  let arrayFilter = data.filter(unemployment);
   return arrayFilter;
 };
 const filterUnemploymentPer = filterUnemployment(indicatorsPER);
@@ -124,7 +124,6 @@ const filterLiteracyChl = filterLiteracy(indicatorsCHL);
 const filterLiteracyBrs = filterLiteracy(indicatorsBRS);
 
 // ORDENADO
-
 
 // PROMEDIO
 const compute = (indicador) => {
@@ -156,6 +155,18 @@ const compute = (indicador) => {
   return average;
 };
 
+
+
 window.worldbank = {
   population,
+  violence,
+  education,
+  job,
+  unemployment,
+  filterByIndicator,
+  filterPopulation,
+  filterViolence,
+  filterEducation,
+  filterUnemployment,
+  filterJob,
 };

@@ -8,7 +8,6 @@
 .menu {
     font-family: Asap;
 }
-
 .navbar {
     width: 100%;
     z-index: 100;
@@ -17,13 +16,11 @@
     background: white;
     border: 1px solid #e4e4e4;
 }
-
 .main-nav {
     background: white;
     list-style-type: none;
     display: none;
 }
-
 #inicio, #peru-menu, #chile-menu,
 #mexico-menu, #brasil-menu {
     text-decoration: none;
@@ -32,24 +29,20 @@
     font-family: Asap;
     font-size: 21px;
 }
-
 #inicio:hover, #peru-menu:hover, #chile-menu:hover,
 #mexico-menu:hover, #brasil-menu:hover {
     color: #0e2f53;
 }
-
 .main-nav li {
     text-align: center;
     margin: 15px auto;
 }
-
 .logo {
     display: inline-block;
     width: 18em;
     height: 4em;
     margin-left: 1%;
 }
-
 .navbar-toggle {
     margin-top: 2.5%;
     position: absolute;
@@ -59,18 +52,15 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 24px;
 }
-
 .active {
     display: block;
 }
-
 .tables-peru, .tables-mex, .tables-chl, .tables-brs {
     position: absolute;
-    margin-top: 10%;
-    margin-left: 26%;
-    width: 100%;
+    margin-bottom: 0%;
+    margin-left: 6%;
+    width: 50%;
 }
-
 .bar-3 {
     position: absolute;
     z-index: 3;
@@ -80,7 +70,6 @@
     bottom: 55%;
     background: rgba(0, 0, 0, 0.82);
 }
-
 .text-bar-3 {
     z-index: 4;
     position: absolute;
@@ -89,11 +78,10 @@
     left: 1%;
     top: 35%;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 12%;
     color: white;
     opacity: 1;
 }
-
 .image-banner {
     z-index: 2;
     position: absolute;
@@ -103,7 +91,6 @@
     top: 10.7%;
     background: url(https://i.ibb.co/xMM20hy/sentisis-inside-feb17-grano01.png);
 }
-
 .objetivo {
     bottom: 30%;
     left: 0%;
@@ -125,7 +112,6 @@
     font-family: Arial;
     color: white;
 }
-
 .collage-image {
     position: absolute;
     width: 100%;
@@ -133,28 +119,24 @@
     top: 63%;
     left: 0%;
 }
-
 .lateral-bar {
     position: absolute;
-    width: 305px;
-    height: 130%;
+    width: 100%;
+    height: 140%;
     left: 0.87%;
     top: 12%;
     background: #0e2f53;
     mix-blend-mode: normal;
-
 }
-
 .bandera-peru, .bandera-mexico,
 .bandera-chile, .bandera-brasil {
     position: absolute;
-    width: 207px;
-    height: 19%;
+    width: 100px;
+    height: 5%;
     left: 4.5%;
     top: 18%;
     mix-blend-mode: normal;
 }
-
 .texto-peru, .texto-mexico,
 .texto-chile, .texto-brasil {
     position: absolute;
@@ -169,7 +151,6 @@
     line-height: normal;
     font-size: 24px;
 }
-
 .descripcion-peru, .descripcion-mexico,
 .descripcion-chile, .descripcion-brasil {
     position: absolute;
@@ -185,18 +166,16 @@
     font-size: 16px;
     text-align: center;
 }
-
 #order, #order-2, #order-3,
 #order-4 {
     z-index: 5;
     position: absolute;
     color: white;
-    top: 105%;
-    bottom: 120%;
-    left: 4%;
+    top: 20%;
+    bottom: 80%;
+    right: 4%;
     font-family: arial;
 }
-
 #boton-population, #boton-violence, #boton-unemployment,
 #boton-alfabetizacion, #boton-education,
 #boton-populationMex, #boton-violenceMex,
@@ -213,12 +192,12 @@
   text-decoration: none;
   padding: 15px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 3%;
   color: #ffffff;
   background-color: #0071BC;
   border-radius: 6px; border: 2px;
+  margin-top: 10%;
 }
-
 .mision-container {
     background-color: #009fda;
     bottom: 37%;
@@ -230,36 +209,32 @@
     text-align: center;
     font-family: Asap;
     color: white;
-
 }
-
 #pie-de-pagina {
+    z-index: 100;
     position: absolute;
     width: 100%;
     height: 8%;
     left: 0%;
     bottom: 0%;
-    top: 140%;
     background: #000000;
 }
-
 .icon-footer {
     left: 0%;
+    width: 50%;
+    height: 20%;
 }
-
 .texto-footer {
     z-index: 5;
     bottom: 40%;
     left: 70%;
     position: absolute;
     color: white;
-    font-size: 12px;
+    font-size: 3%;
     font-family: Arial;
     right: 0%;
 }
-
 /* RESPONSIVE */
-
 @media screen and (min-width: 768px) {
     .navbar {
         display: flex;
@@ -268,27 +243,22 @@
         height: 70px;
         align-items: center;
     }
-
     .main-nav {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
     }
-
     .main-nav li {
         margin: 0;
     }
-
     #inicio, #peru-menu, #mexico-menu,
     #chile-menu, #brasil-menu {
         margin-left: 40px;
     }
-
     .logo {
         margin-top: 0;
     }
-
     .navbar-toggle {
         display: none;
     }
