@@ -148,8 +148,8 @@
 .bandera-peru, .bandera-mexico,
 .bandera-chile, .bandera-brasil {
     position: absolute;
-    width: 207px;
-    height: 19%;
+    width: 100px;
+    height: 5%;
     left: 4.5%;
     top: 18%;
     mix-blend-mode: normal;
@@ -200,14 +200,14 @@
 #boton-population, #boton-violence, #boton-unemployment,
 #boton-alfabetizacion, #boton-education,
 #boton-populationMex, #boton-violenceMex,
-#boton-job, #boton-unemploymentMex, 
+#boton-job, #boton-unemploymentMex,
 #boton-alfabetizacionMex, #boton-educationMex,
 #boton-jobMex,
 #boton-populationChil, #boton-violenceChil,
-#boton-jobChil, 
-#boton-unemploymentChil, #boton-alfabetizacionChil, 
-#boton-educationChil, #boton-populationBra, 
-#boton-violenceBra, #boton-jobBra, 
+#boton-jobChil,
+#boton-unemploymentChil, #boton-alfabetizacionChil,
+#boton-educationChil, #boton-populationBra,
+#boton-violenceBra, #boton-jobBra,
 #boton-unemploymentBra, #boton-alfabetizacionBra, #boton-educationBra {
   margin: 30px 1px 6px;
   text-decoration: none;
