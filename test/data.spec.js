@@ -716,3 +716,4 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
   });
 });
+
