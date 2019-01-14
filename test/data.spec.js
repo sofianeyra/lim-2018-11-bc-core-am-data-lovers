@@ -725,3 +725,14 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
   });
 });
+
+describe('worldbank', () => {
+  it('deberia ser un objeto', () => {
+    expect(typeof worldbank).toBe('object');
+  });
+  describe('worldbank.compute', () => {
+    it('deberia ser una funcion', () => {
+      expect(typeof worldbank.compute).toBe('function');
+    });
+  });
+});

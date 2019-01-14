@@ -66,8 +66,8 @@
 
 .tables-peru, .tables-mex, .tables-chl, .tables-brs {
     position: absolute;
-    margin-bottom: 0%;
-    margin-left: 6%;
+    margin-top: 8%;
+    margin-left: 25%;
     width: 50%;
 }
 
@@ -89,7 +89,7 @@
     left: 1%;
     top: 35%;
     font-family: Arial;
-    font-size: 12%;
+    font-size: 20px;
     color: white;
     opacity: 1;
 }
@@ -97,7 +97,7 @@
 .image-banner {
     z-index: 2;
     position: absolute;
-    width: 100%;
+    max-width: 100%;
     height: 35%;
     left: 0px;
     top: 10.7%;
@@ -133,25 +133,24 @@
     top: 63%;
     left: 0%;
 }
-
+    
 .lateral-bar {
     position: absolute;
-    width: 100%;
-    height: 140%;
-    left: 0.87%;
-    top: 12%;
+    width: 305px;
+    height: 130%;
+    left: 0%;
+    top: 13%;
     background: #0e2f53;
     mix-blend-mode: normal;
-
 }
 
-.bandera-peru, .bandera-mexico,
+.bandera-peru, .bandera-mexico, 
 .bandera-chile, .bandera-brasil {
     position: absolute;
-    width: 100px;
-    height: 5%;
-    left: 4.5%;
-    top: 18%;
+    width: 207px;
+    height: 113px;
+    left: 49px;
+    top: 135px;
     mix-blend-mode: normal;
 }
 
@@ -160,7 +159,7 @@
     position: absolute;
     width: 20%;
     height: 29px;
-    left: 10.5%;
+    left: 122px;
     top: 258px;
     color: white;
     font-family: Asap;
@@ -170,15 +169,15 @@
     font-size: 24px;
 }
 
-.descripcion-peru, .descripcion-mexico,
+.descripcion-peru, .descripcion-mexico, 
 .descripcion-chile, .descripcion-brasil {
     position: absolute;
     width: 278px;
     height: 94px;
-    left: 1.8%;
+    left: 13px;
     top: 297px;
     color: white;
-    font-family: Arial;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
@@ -186,38 +185,44 @@
     text-align: center;
 }
 
-#order, #order-2, #order-3,
+#catg {
+    position: absolute;
+    color: white;
+    top: 60%;
+    left: 4%;
+    font-family: arial;
+}
+
+#order, #order-2, #order-3, 
 #order-4 {
     z-index: 5;
     position: absolute;
     color: white;
-    top: 20%;
-    bottom: 80%;
-    right: 4%;
+    top: 108%;
+    bottom: 120%;
+    left: 4%;
     font-family: arial;
 }
 
-#boton-population, #boton-violence, #boton-unemployment,
+
+#boton-population, #boton-violence, #boton-unemployment, 
 #boton-alfabetizacion, #boton-education,
-#boton-populationMex, #boton-violenceMex,
-#boton-job, #boton-unemploymentMex,
-#boton-alfabetizacionMex, #boton-educationMex,
-#boton-jobMex,
-#boton-populationChil, #boton-violenceChil,
-#boton-jobChil,
-#boton-unemploymentChil, #boton-alfabetizacionChil,
-#boton-educationChil, #boton-populationBra,
-#boton-violenceBra, #boton-jobBra,
-#boton-unemploymentBra, #boton-alfabetizacionBra, #boton-educationBra {
+#boton-populationMex, #boton-violenceMex, 
+#boton-unemploymentMex, #boton-alfabetizacionMex, 
+#boton-educationMex, #boton-populationChil, 
+#boton-violenceChil, #boton-unemploymentChil, 
+#boton-alfabetizacionChil, #boton-educationChil,
+#boton-populationBra, #boton-violenceBra, 
+#boton-unemploymentBra, #boton-alfabetizacionBra, 
+#boton-educationBra {
   margin: 30px 1px 6px;
   text-decoration: none;
   padding: 15px;
   font-weight: 500;
-  font-size: 3%;
+  font-size: 12px;
   color: #ffffff;
   background-color: #0071BC;
   border-radius: 6px; border: 2px;
-  margin-top: 10%;
 }
 
 .mision-container {
@@ -235,19 +240,17 @@
 }
 
 #pie-de-pagina {
-    z-index: 100;
     position: absolute;
     width: 100%;
     height: 8%;
     left: 0%;
     bottom: 0%;
+    top: 140%;
     background: #000000;
 }
 
 .icon-footer {
     left: 0%;
-    width: 50%;
-    height: 20%;
 }
 
 .texto-footer {
@@ -256,13 +259,14 @@
     left: 70%;
     position: absolute;
     color: white;
-    font-size: 3%;
+    font-size: 12px;
     font-family: Arial;
     right: 0%;
 }
 
-/* RESPONSIVE */
 
+/* RESPONSIVE */
+  
 @media screen and (min-width: 768px) {
     .navbar {
         display: flex;
@@ -271,19 +275,19 @@
         height: 70px;
         align-items: center;
     }
-
+  
     .main-nav {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
     }
-
+  
     .main-nav li {
         margin: 0;
     }
-
-    #inicio, #peru-menu, #mexico-menu,
+  
+    #inicio, #peru-menu, #mexico-menu, 
     #chile-menu, #brasil-menu {
         margin-left: 40px;
     }
@@ -291,8 +295,8 @@
     .logo {
         margin-top: 0;
     }
-
+  
     .navbar-toggle {
         display: none;
     }
-}
+}   
