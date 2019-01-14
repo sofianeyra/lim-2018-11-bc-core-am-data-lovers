@@ -56,6 +56,28 @@ const literacy = (element) => {
   return initialsLiteracy === 'SE.ADT';
 };
 
+
+
+function showDetalle(code){
+	peruTableContainer.innerHTML = ''
+	let tbl = document.createElement("table");
+
+    let hrow = tbl.insertRow();
+    createTableCell('Año', hrow);
+    createTableCell('Cantidad', hrow);
+	//
+    for (indicador of filterPopPer) {
+	  if(indicador.indicatorCode==code){
+		for(let i in indicators.data){
+			let row = tbl.insertRow();
+			createTableCell(i, row);
+			createTableCell(indicador.data[i], row);
+		  }
+	  }
+
+    }    peruTableContainer.appendChild(tbl);
+    }
+
 // FILTRADO DE INDICADORES
 
 // ----------------- POBLACIÓN ----------------- //
@@ -131,11 +153,8 @@ const compute = (indicador) => {
   const data = Object.entries(indicador.data);
   let sum = 0;
 
-  // se almacena la cantidad de elementos para poder obtener el promedio
-  // una vez que se obtenga la suma
   const length = data.length;
 
-  // se utliza la funcion forEach para recorrer cada uno de los años
   data.forEach(x => {
     const stringValue = x[1];
     let value = 0;
@@ -146,15 +165,13 @@ const compute = (indicador) => {
     sum += value;
   });
 
-  // se calcula el average
   let average = sum / length;
 
-  // se redondea a 2 decimales despues de la coma
   average = Math.round(average * 100) / 100;
-
-
   return average;
 };
+
+
 
 
 
