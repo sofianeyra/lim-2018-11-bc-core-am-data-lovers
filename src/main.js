@@ -680,7 +680,7 @@ function createTableCell(value, parent) {
 }
 
 
-function showDetalle(code){
+function showDetalle(code) {
 	peruTableContainer.innerHTML = ''
 	let tbl = document.createElement("table");
 
@@ -699,3 +699,4 @@ function showDetalle(code){
 
     }    peruTableContainer.appendChild(tbl);
     }
+
