@@ -1,4 +1,3 @@
-
 const arrData = Object.entries(WORLDBANK);
 const copyData = (wbank) => {
   const wbankData = [];
@@ -170,9 +169,6 @@ const compute = (indicador) => {
   average = Math.round(average * 100) / 100;
   return average;
 };
-
-
-
 
 
 window.worldbank = {

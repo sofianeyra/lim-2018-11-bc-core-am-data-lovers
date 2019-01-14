@@ -678,3 +678,25 @@ function createTableCell(value, parent) {
     var text = document.createTextNode(value)
     newCell.appendChild(text);
 }
+
+
+function showDetalle(code) {
+	peruTableContainer.innerHTML = ''
+	let tbl = document.createElement("table");
+
+    let hrow = tbl.insertRow();
+    createTableCell('Año', hrow);
+    createTableCell('Cantidad', hrow);
+	//
+    for (indicador of filterPopPer) {
+	  if(indicador.indicatorCode==code){
+		for(let i in indicador.data){
+			let row = tbl.insertRow();
+			createTableCell(i, row);
+			createTableCell(indicador.data[i], row);
+		  }
+	  }
+
+    }    peruTableContainer.appendChild(tbl);
+    }
+

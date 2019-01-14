@@ -1,4 +1,4 @@
-#PROYECTO DATA LOVERS 👩‍💻
+ **PROYECTO DATA LOVERS** 👩‍💻
 
 *Preámbulo*
 
@@ -10,9 +10,9 @@
 
 #Resumen del proyecto*
 
-#En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
+En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
 
-#La temática escogida fue “WorldBank”, que incluye una base de datos del Banco Mundial (contiene indicadores sociales, económicos, laborales, etc.). siendo los países considerados en la data: Perú, México, Chile y Brasil.
+La temática escogida fue “WorldBank”, que incluye una base de datos del Banco Mundial (contiene indicadores sociales, económicos, laborales, etc.). siendo los países considerados en la data: Perú, México, Chile y Brasil.
 
 A nivel local el Banco Mundial es un antiguo aliado en el desarrollo social del país.
 A continuación, mostramos algunos ejemplos:
@@ -24,24 +24,18 @@ A continuación, mostramos algunos ejemplos:
 -	2000s: el Perú inicia una etapa de crecimiento económico sostenible y se protege al país de la crisis financiera mundial con mayores líneas de crédito.
 
 
-#Como entregable final se tendrá una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún calculo agregado.
+Como entregable final del proyecto se tendrá una página web que permita visualizar la data, filtrarla, ordenarla y hacer algún calculo agregado.
 
 
-#*Consideraciones generales* 📌
+**Consideraciones generales** 📌
 
 
 •	Este proyecto se debe resolver en duplas.
-
-
 •	El proyecto será entregado subiendo tu código a GitHub (commit/push) y la interfaz será desplegada usando GitHub Pages.
+•	Tiempo para completarlo: Toma como referencia 3 semanas. Trabaja durante el primer Sprint (una semana) y al final, decide en cuántas semanas lo terminarás.
 
 
-•	Tiempo para completarlo: Toma como referencia 3 semanas.
-
- Trabaja durante el primer Sprint (una semana) y al final, decide en cuántas semanas lo terminarás.
-
-
-#*Definición del producto*💡
+**Definición del producto** 💡
 
 1)	Quiénes son los principales usuarios de producto
 -	Los principales usuarios del producto son profesionales que necesiten tener acceso a data relacionada a indicadores sociales en países de Latinoamérica.
@@ -58,70 +52,91 @@ A continuación, mostramos algunos ejemplos:
 
 
 
- #*Historias de usuario*👫
+  **Historias de usuario** 👫
 
 
  #Luego de realizar varias entrevistas a personas entre 25 a 35 años, relacionadas al sector social, salud y/o económico, estas fueron las 3 historias de usuario que nos permitieron definir quien sería nuestro publico objetivo para el desarrollo de esta web
 
 
- #Historia 1
- Yo, como analista de datos deseo ver los indicadores de Desarrollo (población, educación, etc.) en países de Latinoamérica, con el propósito de completar un proyecto colaborativo en la empresa en la que labora.
+  **Historia 1**
+ - Yo, como analista de datos deseo ver los indicadores de Desarrollo (población, educación, etc.) en países de Latinoamérica, con el propósito de completar un proyecto colaborativo en la empresa en la que laboro.
 
 
- #Historia 2
- Yo, como asistente social deseo brindar apoyo e información a través de información actualizada sobre educación, empleo, desempleo, población, alfabetización y violencia con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
+  **Historia 2**
+ - Yo, como asistentx social deseo brindar apoyo e información a través de información actualizada sobre empleo y desempleo, con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
 
 
- #Historia 3
- Yo, como psicólogo(a) deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
+ **Historia 3**
+ - Yo, como psicólogx deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
 
 
+ **Diseño de la Interfaz de Usuario** 🖌
 
-#*Diseño de la Interfaz de Usuario* 🖌
-
-1)Prototipo de baja fidelidad
-
-Para esta web las páginas consideradas se muestran a continuación:
+ Para esta web las páginas consideradas se muestran a continuación:
 
 __Menú Principal__
 
-![Sin titulo](src/img/principal.jpeg)
+![Sin titulo](https://i.ibb.co/7nJVKCX/incicio.jpg)
 
 
 __Perú__
 
-![Sin titulo](src/img/peru.jpeg)
-
+![Sin titulo](https://i.ibb.co/2vJ6FNQ/pagina-inicio.jpg)
 
 
 __México__
 
-![Sin titulo](src/img/mexico.jpeg)
-
-__Chile__
-
-![Sin titulo](src/img/chile.jpeg)
-=======
+![Sin titulo](https://i.ibb.co/3Ns5fpK/2019-01-08-8-19-a-m-Office-Lens.jpg)
 
 
 __Chile__
 
-![Sin titulo](src/img/chile.jpeg)
+![Sin titulo](https://i.ibb.co/5254zVC/chil.jpg)
 
 
 __Brasil__
 
-2)Prototipo de alta fidelidad
+![Sin titulo](https://i.ibb.co/G2fcqgZ/brasil-sketch.jpg)
+
+## Prototipo de alta fidelidad
+
 
 El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
 
-__Menú Principal__
 
-__Perú__
+- __Menú Principal__
 
-__México__
+![alt text](https://i.ibb.co/Yj3NSGD/World-Bank-Page.png)
 
-__Chile__
+- __Perú__
+![alt text](https://i.ibb.co/DRsMrQR/zeplin-peru.jpg)
 
-__Brasil__
+- __México__
 
+![alt text](https://i.ibb.co/QpTsvVF/zeplin-mexico.jpg)
+
+- __Chile__
+
+![alt text](https://i.ibb.co/3W2v6fw/zeplin-chile.jpg)
+
+- __Brasil__
+
+![alt text](https://i.ibb.co/n78vpGM/zeplin-brasil.jpg)
+
+
+**Test de usabilidad**
+
+-Testeo de primer prototipo de baja fidelidad:
+
+En el primer testeo del prototipo de baja fideldiad el squad planteó que se muestren todos los indicadores, independientemente del tipo, en una sola pantalla por país.
+Al mostrar este prototipo a los usuarios encuestados, manifestaron que les era dificil encontrar la información que requerían y les tomaría más tiempo encontrarla.
+En términos de usabilidad , la web no era muy amigable con el usuario.
+Adicional a ello mencionaron que la pantalla de inicio les parecía dinámica.
+
+-Testeo de segundo prototipo de baja fidelidad:
+
+En el segundo testeo del prototipo de baja fidelidad, tomando en cuenta lo mencionado en el primer testeo , se añadieron los botones por indicador.
+
+De esta manera se puede visualizar el listado de indicadores por tipo y por cada pais. También se añadió el valor de su promedio al costado.
+
+También se añadió una bandera por cada país, una breve reseña y un link para mayor información para que la web sea más dinámica.
