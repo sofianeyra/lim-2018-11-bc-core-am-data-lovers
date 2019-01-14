@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const arrData = Object.entries(WORLDBANK);
 const copyData = (wbank) => {
   const wbankData = [];
