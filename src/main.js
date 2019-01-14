@@ -85,20 +85,19 @@ btnPopulation.addEventListener('click', () => {
 
 
   for (indicador of filterPopPer) {
-	  //CREAR LINK
-		let link = document.createElement('a');
-		let linkText = document.createTextNode("Ver");
-		link.onclick = function () { showDetalle(code = indicador.indicatorCode); };
-		link.href = "#";
-		link.appendChild(linkText);
+	  //CREAR LINK//
+    let link = document.createElement('a');
+    let linkText = document.createTextNode("Ver");
+    link.onclick = function () { showDetalle(code = indicador.indicatorCode); };
+    link.href = "#";
+    link.appendChild(linkText);
 
-      const average = compute(indicador);
-      let row = tbl.insertRow();
+    const average = compute(indicador);
+    let row = tbl.insertRow();
 
-      createTableCell(indicador.indicatorName, row);
-      createTableCell(average, row);
+    createTableCell(indicador.indicatorName, row);
+    createTableCell(average, row);
 	  row.appendChild(link);
-
   }
   peruTableContainer.appendChild(tbl);
 });
@@ -303,7 +302,6 @@ btnEduMex.addEventListener('click', () => {
   }
   mexicoTableContainer.appendChild(tbl);
 
-});
 
 btnUneMex.addEventListener('click', () => {
   mexicoTableContainer.innerHTML = '';
