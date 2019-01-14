@@ -717,6 +717,7 @@ describe('fltrado de unemployment', () => {
   });
 });
 
+<<<<<<< HEAD
 // TEST DE FUNCION PROMEDIO //
 
 
@@ -728,3 +729,5 @@ describe('fltrado de unemployment', () => {
   it('calculate', () => {
     const result = compute(input);
     expect(result).toBe(output);
+=======
+>>>>>>> 53801672003ad5d6b1d13859e7f4ad92b5097049
