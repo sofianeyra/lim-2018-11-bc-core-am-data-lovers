@@ -155,9 +155,6 @@ const compute = (indicador) => {
   return average;
 };
 
-  return average;
-};
-
 
 window.worldbank = {
   population,
@@ -165,7 +162,6 @@ window.worldbank = {
   education,
   job,
   unemployment,
-  filterByIndicator,
   filterPopulation,
   filterViolence,
   filterEducation,

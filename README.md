@@ -63,11 +63,11 @@ Como entregable final del proyecto se tendrá una página web que permita visual
 
 
   **Historia 2**
- - Yo, como asistente social deseo brindar apoyo e información a través de información actualizada sobre educación, empleo, desempleo, población, alfabetización y violencia con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
+ - Yo, como asistentx social deseo brindar apoyo e información a través de información actualizada sobre empleo y desempleo, con el propósito de mejorar el bienestar social de la comunidad en la que laboro.
 
 
  **Historia 3**
- - Yo, como psicólogo(a) deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
+ - Yo, como psicólogx deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
 
 
  **Diseño de la Interfaz de Usuario** 🖌
@@ -84,11 +84,9 @@ __Perú__
 ![Sin titulo](https://i.ibb.co/2vJ6FNQ/pagina-inicio.jpg)
 
 
-
 __México__
 
 ![Sin titulo](https://i.ibb.co/3Ns5fpK/2019-01-08-8-19-a-m-Office-Lens.jpg)
-
 
 
 __Chile__
@@ -98,19 +96,47 @@ __Chile__
 
 __Brasil__
 
+![Sin titulo](https://i.ibb.co/G2fcqgZ/brasil-sketch.jpg)
+
 ## Prototipo de alta fidelidad
 
+
 El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
+
 
 - __Menú Principal__
 
 ![alt text](https://i.ibb.co/Yj3NSGD/World-Bank-Page.png)
+
 - __Perú__
+![alt text](https://i.ibb.co/DRsMrQR/zeplin-peru.jpg)
 
 - __México__
 
+![alt text](https://i.ibb.co/QpTsvVF/zeplin-mexico.jpg)
+
 - __Chile__
+
+![alt text](https://i.ibb.co/3W2v6fw/zeplin-chile.jpg)
 
 - __Brasil__
 
-- __Chile__
+![alt text](https://i.ibb.co/n78vpGM/zeplin-brasil.jpg)
+
+
+**Test de usabilidad**
+
+-Testeo de primer prototipo de baja fidelidad:
+
+En el primer testeo del prototipo de baja fideldiad el squad planteó que se muestren todos los indicadores, independientemente del tipo, en una sola pantalla por país.
+Al mostrar este prototipo a los usuarios encuestados, manifestaron que les era dificil encontrar la información que requerían y les tomaría más tiempo encontrarla.
+En términos de usabilidad , la web no era muy amigable con el usuario.
+Adicional a ello mencionaron que la pantalla de inicio les parecía dinámica.
+
+-Testeo de segundo prototipo de baja fidelidad:
+
+En el segundo testeo del prototipo de baja fidelidad, tomando en cuenta lo mencionado en el primer testeo , se añadieron los botones por indicador.
+
+De esta manera se puede visualizar el listado de indicadores por tipo y por cada pais. También se añadió el valor de su promedio al costado.
+
+También se añadió una bandera por cada país, una breve reseña y un link para mayor información para que la web sea más dinámica.
