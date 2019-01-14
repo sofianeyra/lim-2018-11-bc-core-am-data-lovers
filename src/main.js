@@ -299,7 +299,7 @@ btnEduMex.addEventListener('click', () => {
     row.appendChild(link);
   }
   mexicoTableContainer.appendChild(tbl);
-});
+
 
 btnUneMex.addEventListener('click', () => {
   mexicoTableContainer.innerHTML = '';
@@ -660,10 +660,6 @@ function createTableCell(value, parent) {
   newCell.appendChild(text);
 }
 
-
-//let resultsPERU = dataForYear.filter(number => number > 1);
-
-
 const showDetalle = (code) => {
   peruTableContainer.innerHTML = '';
 
@@ -673,7 +669,6 @@ const showDetalle = (code) => {
   createTableCell('Año', hrow);
   createTableCell('Cantidad', hrow);
   //
-
   for (indicador of filterPopPer) {
     if (indicador.indicatorCode === code) {
       for (let i in indicador.data) {
@@ -913,5 +908,3 @@ const showDetalleBras = (code) => {
 
     } brasilTableContainer.appendChild(tbl);
   }
-
-};
