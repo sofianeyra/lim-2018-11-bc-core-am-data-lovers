@@ -676,8 +676,8 @@ const outputunemployment = [
   },
 ];
 describe('worldbank', () => {
-  it('debería ser un objeto', () => {
-    expect(typeof worldbank).toBe('object');
+  it.only('debería ser un objeto', () => {
+    expect(typeof WORLDBANK).toBe('object');
   });
 });
 
@@ -716,3 +716,15 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
   });
 });
+
+// TEST DE FUNCION PROMEDIO //
+
+
+ describe('compute', () => {
+ it('is a function', () => {
+    expect(typeof compute).toBe('function');
+  });
+
+  it('calculate', () => {
+    const result = compute(input);
+    expect(result).toBe(output);

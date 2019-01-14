@@ -403,16 +403,16 @@ const filterByIndicator = (data, filterValue) => {
   if (filterValue === 'population') {
     newData = filterPopulation(data);
   } else if (filterValue === 'violence') {
-    newData = filterViolence(data); 
+    newData = filterViolence(data);
   } else if (filterValue === 'education') {
-    newData = filterEducation(data); 
+    newData = filterEducation(data);
   } else if (filterValue === 'job') {
     newData = filterJob(data);
   } else if (filterValue === 'unemployment') {
-    newData = filterUnemployment(data); 
+    newData = filterUnemployment(data);
   } else if (filterValue === 'literacy') {
-    newData = filterLiteracy(data); 
-  } 
+    newData = filterLiteracy(data);
+  }
   // let newData = data.filter(funcFiltroPob);
   return newData;
 };
@@ -555,7 +555,7 @@ const compute = (indicador) => {
 
     sum += value;
   });
-  
+
   // se calcula el average
   let average = sum / length;
 
