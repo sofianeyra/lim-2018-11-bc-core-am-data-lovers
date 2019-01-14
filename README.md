@@ -1,12 +1,14 @@
  **PROYECTO DATA LOVERS** 👩‍💻
 
- **Preámbulo**
+*Preámbulo*
+
 
 #Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 #No obstante, los datos por sí mismos son de poca utilidad. Para que esas grandes cantidades de datos se conviertan en información fácil de leer para los usuarios, necesitamos entender y procesar estos datos. Una manera simple de hacerlo es creando interfaces y visualizaciones.
 
 
- **Resumen del proyecto**
+
+#Resumen del proyecto*
 
 En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
 

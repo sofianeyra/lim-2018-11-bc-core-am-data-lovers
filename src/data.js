@@ -155,6 +155,8 @@ const compute = (indicador) => {
   return average;
 };
 
+  return average;
+};
 
 
 window.worldbank = {
