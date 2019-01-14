@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 require('../src/data.js');
-
 const input = [ {
   'data': {
     '1960': 0.567483954656432,
@@ -65,7 +64,7 @@ const input = [ {
   },
   'countryName': 'Perú',
   'countryCode': 'PER',
-  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
+  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
   'indicatorCode': 'SP.POP.7579.FE.5Y'
 },
 {
@@ -334,34 +333,7 @@ const input = [ {
 },
 ];
 
-beforeEach(() => {
-
-  // TEST DE FUNCION PROMEDIO //
-  const input  = {
-          "data": {
-            "2015": 10,
-            "2016": 10,
-            "2017": 10
-          } ,
-          "countryName": "Perú",
-          "countryCode": "PER",
-          "indicatorName": "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)",
-          "indicatorCode": "SL.TLF.PART.FE.ZS"
-        } ;
-  const output = 10;
-
-});
-
-describe('compute', () => {
- it('is a function', () => {
-    expect(typeof compute).toBe('function');
-  });
-
-  it('calculate', () => {
-    const result = compute(input);
-    expect(result[0]).toBe(output);
-
-    const outputViolence = [
+const outputViolence = [
   {
     'data': {
       '1960': '',
@@ -493,7 +465,7 @@ const outputpopulation = [{
   },
   'countryName': 'Perú',
   'countryCode': 'PER',
-  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
+  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
   'indicatorCode': 'SP.POP.7579.FE.5Y'
 }];
 
@@ -716,7 +688,6 @@ describe('filtrado de population', () => {
   it('debería retornar indicador de acuerdo a indicatorCode', () => {
     expect(worldbank.filterByIndicator(input, 'population')).toEqual(outputpopulation);
   });
-
 });
 
 describe('filtrado de education', () => {
@@ -737,31 +708,11 @@ describe('filtrado de violence', () => {
   });
 });
 
-describe('filtrado de job', () => {
-  it('debería ser una función', () => {
-    expect(typeof worldbank.filterByIndicator).toBe('function');
-  });
-  it('debería retornar indicador de acuerdo a indicatorCode', () => {
-    expect(worldbank.filterByIndicator(input, 'job')).toEqual(outputjob);
-  });
-});
-
 describe('fltrado de unemployment', () => {
   it('debería ser una función', () => {
     expect(typeof worldbank.filterByIndicator).toBe('function');
   });
   it('debería retornar indicador de acuerdo a indicatorCode', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
-  });
-});
-
-describe('worldbank', () => {
-  it('deberia ser un objeto', () => {
-    expect(typeof worldbank).toBe('object');
-  });
-  describe('worldbank.compute', () => {
-    it('deberia ser una funcion', () => {
-      expect(typeof worldbank.compute).toBe('function');
-    });
   });
 });

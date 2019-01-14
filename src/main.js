@@ -661,15 +661,14 @@ function createTableCell(value, parent) {
   newCell.appendChild(text);
 }
 
-
-function showDetalle(code) {
+const showDetalle = (code) => {
   peruTableContainer.innerHTML = '';
   let tbl = document.createElement('table');
 
   let hrow = tbl.insertRow();
   createTableCell('Año', hrow);
   createTableCell('Cantidad', hrow);
-  //
+
   for (indicador of filterPopPer) {
     if (indicador.indicatorCode === code) {
       for (let i in indicador.data) {
@@ -679,5 +678,5 @@ function showDetalle(code) {
       }
     }
   } peruTableContainer.appendChild(tbl);
-}
+};
 
