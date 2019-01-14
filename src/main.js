@@ -88,8 +88,8 @@ btnPopulation.addEventListener('click', () => {
     // CREAR LINK
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -118,7 +118,7 @@ btnViolence.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -144,7 +144,7 @@ btnEducation.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -170,7 +170,7 @@ btnUnemployment.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -196,7 +196,7 @@ btnAlfabet.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -235,7 +235,7 @@ btnPopMex.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -260,8 +260,8 @@ btnVioMex.addEventListener('click', () => {
   for (indicador of filterViolenceMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -286,8 +286,8 @@ btnEduMex.addEventListener('click', () => {
   for (indicador of filterEduMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -312,8 +312,8 @@ btnUneMex.addEventListener('click', () => {
   for (indicador of filterUnemploymentMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -338,8 +338,8 @@ btnAlfMex.addEventListener('click', () => {
   for (indicador of filterLiteracyMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -379,8 +379,8 @@ btnPopCh.addEventListener('click', () => {
   for (indicador of filterPopChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -406,7 +406,7 @@ btnVioCh.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode); 
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -431,8 +431,8 @@ btnEduCh.addEventListener('click', () => {
   for (indicador of filterEduChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -457,8 +457,8 @@ btnUnemCh.addEventListener('click', () => {
   for (indicador of filterUnemploymentChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -483,8 +483,8 @@ btnAlfCh.addEventListener('click', () => {
   for (indicador of filterLiteracyChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -523,8 +523,8 @@ btnPopBra.addEventListener('click', () => {
   for (indicador of filterPopBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -549,8 +549,8 @@ btnVioBra.addEventListener('click', () => {
   for (indicador of filterViolenceBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -575,8 +575,8 @@ btnEduBra.addEventListener('click', () => {
   for (indicador of filterEduBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -601,8 +601,8 @@ btnUnemBra.addEventListener('click', () => {
   for (indicador of filterUnemploymentBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -628,8 +628,8 @@ btnAlfBra.addEventListener('click', () => {
   for (indicador of filterLiteracyBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() { 
-      showDetalle(code = indicador.indicatorCode); 
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -651,7 +651,7 @@ navBarToggle.addEventListener('click', function() {
   mainNav.classList.toggle('active');
 });
 
-// TABLA 
+// TABLA
 function createTableCell(value, parent) {
   // inserta una celda en la fila creada
   let newCell = parent.insertCell();
@@ -664,6 +664,7 @@ function createTableCell(value, parent) {
 
 function showDetalle(code) {
   peruTableContainer.innerHTML = '';
+
   let tbl = document.createElement('table');
 
   let hrow = tbl.insertRow();
@@ -679,5 +680,46 @@ function showDetalle(code) {
       }
     }
   } peruTableContainer.appendChild(tbl);
-}
 
+  for (indicador of filterEduPer) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } peruTableContainer.appendChild(tbl);
+
+  for (indicador of filterViolencePer) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } peruTableContainer.appendChild(tbl);
+
+    for (indicador of filterUnemploymentPer) {
+      if (indicador.indicatorCode === code) {
+        for (let i in indicador.data) {
+          let row = tbl.insertRow();
+          createTableCell(i, row);
+          createTableCell(indicador.data[i], row);
+        }
+      }
+    } peruTableContainer.appendChild(tbl);
+
+    for (indicador of filterLiteracyPer) {
+      if (indicador.indicatorCode === code) {
+        for (let i in indicador.data) {
+          let row = tbl.insertRow();
+          createTableCell(i, row);
+          createTableCell(indicador.data[i], row);
+        }
+
+    } peruTableContainer.appendChild(tbl);
+  }
+
+};
