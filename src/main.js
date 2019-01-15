@@ -77,7 +77,6 @@ const mexicoTableContainer = document.getElementById('tables-mex');
 const chilTableContainer = document.getElementById('tables-chile');
 const brasilTableContainer = document.getElementById('tables-brasil');
 
-
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopulation.addEventListener('click', () => {
@@ -89,13 +88,12 @@ btnPopulation.addEventListener('click', () => {
   createTableCell('Valor', hrow);
   createTableCell('', hrow);
 
-
   for (indicador of filterPopPer) {
     // CREAR LINK
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -119,12 +117,11 @@ btnViolence.addEventListener('click', () => {
   createTableCell('Valor', hrow);
   createTableCell('', hrow);
 
-
   for (indicador of filterViolencePer) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -150,7 +147,7 @@ btnEducation.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -176,7 +173,7 @@ btnUnemployment.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -202,7 +199,7 @@ btnAlfabet.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -218,14 +215,12 @@ btnAlfabet.addEventListener('click', () => {
 
 // ------------------------- MEXICO ----------------------------------- //
 
-
 // BOTONES MÉXICO
 const btnPopMex = document.getElementById('boton-populationMex');
 const btnVioMex = document.getElementById('boton-violenceMex');
 const btnEduMex = document.getElementById('boton-educationMex');
 const btnUneMex = document.getElementById('boton-unemploymentMex');
 const btnAlfMex = document.getElementById('boton-alfabetizacionMex');
-
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
@@ -241,7 +236,7 @@ btnPopMex.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -266,8 +261,8 @@ btnVioMex.addEventListener('click', () => {
   for (indicador of filterViolenceMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -292,8 +287,8 @@ btnEduMex.addEventListener('click', () => {
   for (indicador of filterEduMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -305,7 +300,7 @@ btnEduMex.addEventListener('click', () => {
     row.appendChild(link);
   }
   mexicoTableContainer.appendChild(tbl);
-
+});
 
 btnUneMex.addEventListener('click', () => {
   mexicoTableContainer.innerHTML = '';
@@ -318,8 +313,8 @@ btnUneMex.addEventListener('click', () => {
   for (indicador of filterUnemploymentMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -344,8 +339,8 @@ btnAlfMex.addEventListener('click', () => {
   for (indicador of filterLiteracyMex) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -359,7 +354,6 @@ btnAlfMex.addEventListener('click', () => {
   mexicoTableContainer.appendChild(tbl);
 });
 
-
 // ------------------------- CHILE ----------------------------------- //
 
 // botones CHILE
@@ -370,9 +364,7 @@ const btnEduCh = document.getElementById('boton-educationChil');
 const btnUnemCh = document.getElementById('boton-unemploymentChil');
 const btnAlfCh = document.getElementById('boton-alfabetizacionChil');
 
-
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-
 
 btnPopCh.addEventListener('click', () => {
   chilTableContainer.innerHTML = '';
@@ -385,8 +377,8 @@ btnPopCh.addEventListener('click', () => {
   for (indicador of filterPopChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -412,7 +404,7 @@ btnVioCh.addEventListener('click', () => {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalleChilc(code = indicador.indicatorCode);
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -437,8 +429,8 @@ btnEduCh.addEventListener('click', () => {
   for (indicador of filterEduChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -463,8 +455,8 @@ btnUnemCh.addEventListener('click', () => {
   for (indicador of filterUnemploymentChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -489,8 +481,8 @@ btnAlfCh.addEventListener('click', () => {
   for (indicador of filterLiteracyChl) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -504,7 +496,6 @@ btnAlfCh.addEventListener('click', () => {
   chilTableContainer.appendChild(tbl);
 });
 
-
 // ------------------------- BRASIL ----------------------------------- //
 
 // botones BRASIL
@@ -517,7 +508,6 @@ const btnAlfBra = document.getElementById('boton-alfabetizacionBra');
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
-
 btnPopBra.addEventListener('click', () => {
   brasilTableContainer.innerHTML = '';
   let tbl = document.createElement('table');
@@ -529,8 +519,8 @@ btnPopBra.addEventListener('click', () => {
   for (indicador of filterPopBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -555,8 +545,8 @@ btnVioBra.addEventListener('click', () => {
   for (indicador of filterViolenceBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -581,8 +571,8 @@ btnEduBra.addEventListener('click', () => {
   for (indicador of filterEduBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -607,8 +597,8 @@ btnUnemBra.addEventListener('click', () => {
   for (indicador of filterUnemploymentBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -633,8 +623,8 @@ btnAlfBra.addEventListener('click', () => {
   for (indicador of filterLiteracyBrs) {
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
+    link.onclick = function() { 
+      showDetalle(code = indicador.indicatorCode); 
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -656,7 +646,7 @@ navBarToggle.addEventListener('click', function() {
   mainNav.classList.toggle('active');
 });
 
-// TABLA
+// TABLA 
 function createTableCell(value, parent) {
   // inserta una celda en la fila creada
   let newCell = parent.insertCell();
@@ -668,13 +658,12 @@ function createTableCell(value, parent) {
 
 const showDetalle = (code) => {
   peruTableContainer.innerHTML = '';
-
   let tbl = document.createElement('table');
 
   let hrow = tbl.insertRow();
   createTableCell('Año', hrow);
   createTableCell('Cantidad', hrow);
-  //
+
   for (indicador of filterPopPer) {
     if (indicador.indicatorCode === code) {
       for (let i in indicador.data) {
@@ -684,233 +673,4 @@ const showDetalle = (code) => {
       }
     }
   } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduPer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolencePer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-    for (indicador of filterUnemploymentPer) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-      }
-    } peruTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyPer) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } peruTableContainer.appendChild(tbl);
-  }
-
 };
-
-const showDetalleMex = (code) => {
-  mexicoTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-    for (indicador of filterUnemploymentMex) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-      }
-    } mexicoTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyMex) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } mexicoTableContainer.appendChild(tbl);
-  }
-
-};
-
-const showDetalleChil = (code) => {
-  chilTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-    for (indicador of filterUnemploymentChl) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-      }
-    } chilTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyChl) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } chilTableContainer.appendChild(tbl);
-  }
-
-};
-
-const showDetalleBras = (code) => {
-  brasilTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-    for (indicador of filterUnemploymentBrs) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-      }
-    } brasilTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyBrs) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } brasilTableContainer.appendChild(tbl);
-  };
