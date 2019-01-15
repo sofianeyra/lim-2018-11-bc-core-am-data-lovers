@@ -106,12 +106,6 @@ const selectChangeTextPopulationPeru = () => {
   peruTableContainer.appendChild(tbl);
 };
 
-// selectValue.addEventListener('click', () => {
-//   let selValue = selectValue.options[selectValue.selectedIndex].text;
-//   console.log('selValue', selValue);
-// });
-
-// MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
 btnPopulation.addEventListener('click', () => {
   peruTableContainer.innerHTML = '';
