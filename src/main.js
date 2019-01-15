@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+// Obteniendo data worldbank
+const arrData = Object.entries(WORLDBANK);
+const data = copyData(arrData);
 // MENÚ DE NAVEGACIÓN
 const inicial = document.getElementById('pagina-inicio');
 const per = document.getElementById('pagina-peru');
@@ -549,9 +552,43 @@ const btnEduBra = document.getElementById('boton-educationBra');
 const btnUnemBra = document.getElementById('boton-unemploymentBra');
 const btnAlfBra = document.getElementById('boton-alfabetizacionBra');
 
+// Obteniendo indicadores por pais
+const indicatorsPER = getData(data, 0);
+const indicatorsMEX = getData(data, 1);
+const indicatorsCHL = getData(data, 2);
+const indicatorsBRS = getData(data, 3);
+
+// Obteniendo indicadores de población
+const filterPopPer = filterPopulation(indicatorsPER);
+const filterPopMex = filterPopulation(indicatorsMEX);
+const filterPopChl = filterPopulation(indicatorsCHL);
+const filterPopBrs = filterPopulation(indicatorsBRS);
+
+// Obteniendo indicadores de educación
+const filterEduPer = filterPopulation(indicatorsPER);
+const filterEduMex = filterPopulation(indicatorsMEX);
+const filterEduChl = filterPopulation(indicatorsCHL);
+const filterEduBrs = filterPopulation(indicatorsBRS);
+
+// Obteniendo indicadores de violencia
+const filterViolencePer = filterViolence(indicatorsPER);
+const filterViolenceMex = filterViolence(indicatorsMEX);
+const filterViolenceChl = filterViolence(indicatorsCHL);
+const filterViolenceBrs = filterViolence(indicatorsBRS);
+
+// Obteniendo indicadores de desempleo
+const filterUnemploymentPer = filterUnemployment(indicatorsPER);
+const filterUnemploymentMex = filterUnemployment(indicatorsMEX);
+const filterUnemploymentChl = filterUnemployment(indicatorsCHL);
+const filterUnemploymentBrs = filterUnemployment(indicatorsBRS);
+
+// Obteniendo indicadores de literacy
+const filterLiteracyPer = filterLiteracy(indicatorsPER);
+const filterLiteracyMex = filterLiteracy(indicatorsMEX);
+const filterLiteracyChl = filterLiteracy(indicatorsCHL);
+const filterLiteracyBrs = filterLiteracy(indicatorsBRS);
+
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-
-
 btnPopBra.addEventListener('click', () => {
   brasilTableContainer.innerHTML = '';
   let tbl = document.createElement('table');
