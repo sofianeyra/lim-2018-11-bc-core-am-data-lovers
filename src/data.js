@@ -446,7 +446,19 @@ const filterLiteracyMex = filterLiteracy(indicatorsMEX);
 const filterLiteracyChl = filterLiteracy(indicatorsCHL);
 const filterLiteracyBrs = filterLiteracy(indicatorsBRS);
 
-// ORDENADO: Falta crear la función general para aplicar en select
+// ORDENADO
+const sortData = (data, sortBy) => {
+  let arrayOrder = [];
+  let tempData = [...data];
+  if (sortBy === 'Original') {
+    arrayOrder = tempData;
+  } else if (sortBy === 'Alfabéticamente') {
+    arrayOrder = tempData.sort((prevEl, nextEl) => {
+      return prevEl.indicatorName < nextEl.indicatorName ? 1 : -1;
+    });
+  }
+  return arrayOrder;
+};
 
 // PROMEDIO
 const compute = (indicador) => {

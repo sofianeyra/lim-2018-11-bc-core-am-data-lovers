@@ -60,9 +60,9 @@
       </div>
       <form id = "order" name="formulario" method="post">
          Ordenar por:
-         <select name="ordenar">
-            <option value="1" selected>Ascendente</option>
-            <option value="2">Descendente</option>
+         <select id="populationPeruSelect" name="ordenar" onchange="selectChangeTextPopulationPeru()">
+            <option value="0" selected>Original</option>
+            <option value="3">Alfabéticamente</option>
          </select>
       </form>
          <li><a class="indicator-name"></a></li>

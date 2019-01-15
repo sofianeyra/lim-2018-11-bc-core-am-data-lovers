@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/*/* eslint-disable no-undef */
 // MENÚ DE NAVEGACIÓN
 const inicial = document.getElementById('pagina-inicio');
 const per = document.getElementById('pagina-peru');
@@ -77,8 +77,41 @@ const mexicoTableContainer = document.getElementById('tables-mex');
 const chilTableContainer = document.getElementById('tables-chile');
 const brasilTableContainer = document.getElementById('tables-brasil');
 
+// SELECT
 
-// MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
+const selectChangeTextPopulationPeru = () => {
+  let elSelect = document.getElementById('populationPeruSelect');
+  let selectOp = elSelect.options[elSelect.selectedIndex].text;
+  peruTableContainer.innerHTML = '';
+
+  let tbl = document.createElement('table');
+  let hrow = tbl.insertRow();
+  createTableCell('Indicador', hrow);
+  createTableCell('Valor', hrow);
+  createTableCell('', hrow);
+
+  let sortedData = sortData(filterPopPer, selectOp);
+
+  for (indicador of sortedData) {
+    // CREAR LINK
+    let link = document.createElement('a');
+    let linkText = document.createTextNode('Ver');
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
+    };
+    link.href = '#';
+    link.appendChild(linkText);
+
+    const average = compute(indicador);
+    let row = tbl.insertRow();
+
+    createTableCell(indicador.indicatorName, row);
+    createTableCell(average, row);
+    row.appendChild(link);
+  }
+  peruTableContainer.appendChild(tbl);
+};
+
 
 btnPopulation.addEventListener('click', () => {
   peruTableContainer.innerHTML = '';
@@ -912,4 +945,5 @@ const showDetalleBras = (code) => {
       }
     } brasilTableContainer.appendChild(tbl);
   }
+};
 };
