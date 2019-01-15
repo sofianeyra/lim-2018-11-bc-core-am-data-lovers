@@ -1,4 +1,5 @@
-/*/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // MENÚ DE NAVEGACIÓN
 const inicial = document.getElementById('pagina-inicio');
 const per = document.getElementById('pagina-peru');
@@ -945,5 +946,4 @@ const showDetalleBras = (code) => {
       }
     } brasilTableContainer.appendChild(tbl);
   }
-};
 };
