@@ -648,26 +648,3 @@ describe('fltrado de unemployment', () => {
   });
 });
 
-// TEST DE FUNCION PROMEDIO //
-const inputAverage  = {
-  "data": {
-    "2015": 10,
-    "2016": 10,
-    "2017": 10
-  } ,
-  "countryName": "Perú",
-  "countryCode": "PER",
-  "indicatorName": "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)",
-  "indicatorCode": "SL.TLF.PART.FE.ZS"
-} ;
-const outputAverage = 10;
-
-
-describe('compute', () => {
-  it('is a function', () => {
-    expect(typeof compute).toBe('function');
-    });
-
-  it('calculate', () => {
-    const result = compute(inputAverage);
-    expect(result[0]).toBe(outputAverage);

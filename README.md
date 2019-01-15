@@ -1,6 +1,6 @@
  ## **PROYECTO DATA LOVERS**👩‍💻
 
-*Preámbulo*
+**Preámbulo**
 
 
 #Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
@@ -8,7 +8,7 @@
 
 
 
-## Resumen del proyecto
+**Resumen del proyecto**
 
 En este proyecto se construirá una página web para visualizar un conjunto (set) de datos que se adecúe a lo que descubras que tu usuario necesita.
 
@@ -72,7 +72,7 @@ Como entregable final del proyecto se tendrá una página web que permita visual
  - Yo, como psicólogx deseo tener acceso a fuente de información que me brinde data referida a tasas de empleo y educación en mujeres con el propósito de realizar una investigación para brindar asesoramiento y consultoría externa.
 
 
- ## Diseño de la Interfaz de Usuario 
+ ## Diseño de la Interfaz de Usuario
 
  Para esta web las páginas consideradas se muestran a continuación:
 
@@ -100,46 +100,67 @@ __Brasil__
 
 ![Sin titulo](https://i.ibb.co/G2fcqgZ/brasil-sketch.jpg)
 
-## Prototipo de alta fidelidad
+**Prototipo de alta fidelidad**
 
 
-El prototipo de alta fidelidad fue realizado en Figma. Se adjunta a continuación
+El prototipo de alta fidelidad fue realizado en Figma y luego en zeplin.
+Se adjunta a continuación
 
 
 - __Menú Principal__
 
+
 ![alt text](https://i.ibb.co/Yj3NSGD/World-Bank-Page.png)
+
 
 - __Perú__
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53801672003ad5d6b1d13859e7f4ad92b5097049
 ![alt text](https://i.ibb.co/DRsMrQR/zeplin-peru.jpg)
+
 
 - __México__
 
+
 ![alt text](https://i.ibb.co/QpTsvVF/zeplin-mexico.jpg)
+
 
 - __Chile__
 
+
 ![alt text](https://i.ibb.co/3W2v6fw/zeplin-chile.jpg)
+
+
 
 - __Brasil__
 
+
 ![alt text](https://i.ibb.co/n78vpGM/zeplin-brasil.jpg)
+
 
 
 **Test de usabilidad**
 
 *Testeo de primer prototipo de baja fidelidad*
 
-En el primer testeo del prototipo de baja fideldiad el squad planteó que se muestren todos los indicadores, independientemente del tipo, en una sola pantalla por país.
+En el primer testeo del prototipo de baja fideldiad el squad planteó que se muestren todos los indicadores, independientemente del tipo, en una sola pantalla por país
+
+
 Al mostrar este prototipo a los usuarios encuestados, manifestaron que les era dificil encontrar la información que requerían y les tomaría más tiempo encontrarla.
+
+
 En términos de usabilidad , la web no era muy amigable con el usuario.
+
+
 Adicional a ello mencionaron que la pantalla de inicio les parecía dinámica.
 
 *Testeo de segundo prototipo de baja fidelidad:*
 
 En el segundo testeo del prototipo de baja fidelidad, tomando en cuenta lo mencionado en el primer testeo , se añadieron los botones por indicador.
 
-De esta manera se puede visualizar el listado de indicadores por tipo y por cada pais. También se añadió el valor de su promedio al costado.
+De esta manera se puede visualizar el listado de indicadores por tipo y por cada pais(se añadió el valor de su promedio al costado)
 
 Por último se añadió una bandera por cada país, una breve reseña y un link para mayor información, para que la web sea más dinámica.
