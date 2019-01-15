@@ -131,11 +131,8 @@ const compute = (indicador) => {
   const data = Object.entries(indicador.data);
   let sum = 0;
 
-  // se almacena la cantidad de elementos para poder obtener el promedio
-  // una vez que se obtenga la suma
   const length = data.length;
 
-  // se utliza la funcion forEach para recorrer cada uno de los años
   data.forEach(x => {
     const stringValue = x[1];
     let value = 0;
@@ -146,14 +143,24 @@ const compute = (indicador) => {
     sum += value;
   });
 
-  // se calcula el average
   let average = sum / length;
-
-  // se redondea a 2 decimales despues de la coma
   average = Math.round(average * 100) / 100;
 
 
   return average;
+};
+
+const sortData = (data, sortBy) => {
+  let arrayOrder = [];
+  let tempData = [...data];
+  if (sortBy === 'Original') {
+    arrayOrder = tempData;
+  }  else if (sortBy === 'Alfabéticamente') {
+    arrayOrder = tempData.sort((prevEl, nextEl) => {
+      return prevEl.indicatorName < nextEl.indicatorName ? 1 : -1;
+    });
+  }
+  return arrayOrder;
 };
 
 

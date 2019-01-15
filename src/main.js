@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/*/* eslint-disable no-undef */
 // MENÚ DE NAVEGACIÓN
 const inicial = document.getElementById('pagina-inicio');
 const per = document.getElementById('pagina-peru');
@@ -71,6 +71,45 @@ const mexicoTableContainer = document.getElementById('tables-mex');
 const chilTableContainer = document.getElementById('tables-chile');
 const brasilTableContainer = document.getElementById('tables-brasil');
 
+// SELECT
+
+const selectChangeTextPopulationPeru = () => {
+  let elSelect = document.getElementById('populationPeruSelect');
+  let selectOp = elSelect.options[elSelect.selectedIndex].text;
+  peruTableContainer.innerHTML = '';
+
+  let tbl = document.createElement('table');
+  let hrow = tbl.insertRow();
+  createTableCell('Indicador', hrow);
+  createTableCell('Valor', hrow);
+  createTableCell('', hrow);
+
+  let sortedData = sortData(filterPopPer, selectOp);
+
+  for (indicador of sortedData) {
+    // CREAR LINK
+    let link = document.createElement('a');
+    let linkText = document.createTextNode('Ver');
+    link.onclick = function() {
+      showDetalle(code = indicador.indicatorCode);
+    };
+    link.href = '#';
+    link.appendChild(linkText);
+
+    const average = compute(indicador);
+    let row = tbl.insertRow();
+
+    createTableCell(indicador.indicatorName, row);
+    createTableCell(average, row);
+    row.appendChild(link);
+  }
+  peruTableContainer.appendChild(tbl);
+};
+
+// selectValue.addEventListener('click', () => {
+//   let selValue = selectValue.options[selectValue.selectedIndex].text;
+//   console.log('selValue', selValue);
+// });
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
 
@@ -661,7 +700,7 @@ function createTableCell(value, parent) {
 }
 
 
-//let resultsPERU = dataForYear.filter(number => number > 1);
+// let resultsPERU = dataForYear.filter(number => number > 1);
 
 
 const showDetalle = (code) => {
@@ -704,27 +743,25 @@ const showDetalle = (code) => {
     }
   } peruTableContainer.appendChild(tbl);
 
-    for (indicador of filterUnemploymentPer) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
+  for (indicador of filterUnemploymentPer) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } peruTableContainer.appendChild(tbl);
+
+  for (indicador of filterLiteracyPer) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
       }
     } peruTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyPer) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } peruTableContainer.appendChild(tbl);
   }
-
 };
 
 const showDetalleMex = (code) => {
@@ -767,27 +804,25 @@ const showDetalleMex = (code) => {
     }
   } mexicoTableContainer.appendChild(tbl);
 
-    for (indicador of filterUnemploymentMex) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
+  for (indicador of filterUnemploymentMex) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } mexicoTableContainer.appendChild(tbl);
+
+  for (indicador of filterLiteracyMex) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
       }
     } mexicoTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyMex) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } mexicoTableContainer.appendChild(tbl);
   }
-
 };
 
 const showDetalleChil = (code) => {
@@ -830,27 +865,25 @@ const showDetalleChil = (code) => {
     }
   } chilTableContainer.appendChild(tbl);
 
-    for (indicador of filterUnemploymentChl) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
+  for (indicador of filterUnemploymentChl) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } chilTableContainer.appendChild(tbl);
+
+  for (indicador of filterLiteracyChl) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
       }
     } chilTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyChl) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } chilTableContainer.appendChild(tbl);
   }
-
 };
 
 const showDetalleBras = (code) => {
@@ -893,25 +926,23 @@ const showDetalleBras = (code) => {
     }
   } brasilTableContainer.appendChild(tbl);
 
-    for (indicador of filterUnemploymentBrs) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
+  for (indicador of filterUnemploymentBrs) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
+    }
+  } brasilTableContainer.appendChild(tbl);
+
+  for (indicador of filterLiteracyBrs) {
+    if (indicador.indicatorCode === code) {
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
       }
     } brasilTableContainer.appendChild(tbl);
-
-    for (indicador of filterLiteracyBrs) {
-      if (indicador.indicatorCode === code) {
-        for (let i in indicador.data) {
-          let row = tbl.insertRow();
-          createTableCell(i, row);
-          createTableCell(indicador.data[i], row);
-        }
-
-    } brasilTableContainer.appendChild(tbl);
   }
-
 };
