@@ -538,75 +538,6 @@ const outputeducation = [
   },
 ];
 
-const outputjob = [
-  {
-    'data': {
-      '1960': '',
-      '1961': '',
-      '1962': '',
-      '1963': '',
-      '1964': '',
-      '1965': '',
-      '1966': '',
-      '1967': '',
-      '1968': '',
-      '1969': '',
-      '1970': '',
-      '1971': '',
-      '1972': '',
-      '1973': '',
-      '1974': '',
-      '1975': '',
-      '1976': '',
-      '1977': '',
-      '1978': '',
-      '1979': '',
-      '1980': '',
-      '1981': '',
-      '1982': '',
-      '1983': '',
-      '1984': '',
-      '1985': '',
-      '1986': '',
-      '1987': '',
-      '1988': '',
-      '1989': '',
-      '1990': '',
-      '1991': '',
-      '1992': '',
-      '1993': '',
-      '1994': '',
-      '1995': '',
-      '1996': '',
-      '1997': '',
-      '1998': '',
-      '1999': '',
-      '2000': '',
-      '2001': '',
-      '2002': '',
-      '2003': '',
-      '2004': '',
-      '2005': '',
-      '2006': '',
-      '2007': '',
-      '2008': '',
-      '2009': 1,
-      '2010': '',
-      '2011': 1,
-      '2012': '',
-      '2013': 1,
-      '2014': '',
-      '2015': 1,
-      '2016': '',
-      '2017': 1
-    },
-    'countryName': 'Perú',
-    'countryCode': 'PER',
-    'indicatorName': 'Las mujeres no embarazadas y que no amamantan pueden hacer los mismos trabajos que los hombres (1=sí; 0=no)',
-    'indicatorCode': 'SG.JOB.NOPN.EQ'
-  },
-];
-
 const outputunemployment = [
   {
     'data': {
@@ -716,3 +647,27 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
   });
 });
+
+// TEST DE FUNCION PROMEDIO //
+const inputAverage  = {
+  "data": {
+    "2015": 10,
+    "2016": 10,
+    "2017": 10
+  } ,
+  "countryName": "Perú",
+  "countryCode": "PER",
+  "indicatorName": "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)",
+  "indicatorCode": "SL.TLF.PART.FE.ZS"
+} ;
+const outputAverage = 10;
+
+
+describe('compute', () => {
+  it('is a function', () => {
+    expect(typeof compute).toBe('function');
+    });
+
+  it('calculate', () => {
+    const result = compute(inputAverage);
+    expect(result[0]).toBe(outputAverage);

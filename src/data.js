@@ -63,7 +63,7 @@ const testWorldbank = [ {
   },
   'countryName': 'Perú',
   'countryCode': 'PER',
-  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
+  'indicatorName': 'Población de 75 a 79 años, mujeres (% de la población femenina)',
   'indicatorCode': 'SP.POP.7579.FE.5Y'
 },
 {
@@ -330,92 +330,7 @@ const testWorldbank = [ {
   'indicatorName': 'Desempleo, total (% de participación total en la fuerza laboral) (estimación nacional)',
   'indicatorCode': 'SL.UEM.TOTL.NE.ZS'
 },
-      {
-        "data": {
-          "1960": "",
-          "1961": "",
-          "1962": "",
-          "1963": "",
-          "1964": "",
-          "1965": "",
-          "1966": "",
-          "1967": "",
-          "1968": "",
-          "1969": "",
-          "1970": "",
-          "1971": "",
-          "1972": "",
-          "1973": "",
-          "1974": "",
-          "1975": "",
-          "1976": "",
-          "1977": "",
-          "1978": "",
-          "1979": "",
-          "1980": "",
-          "1981": 73.8583374023438,
-          "1982": "",
-          "1983": "",
-          "1984": "",
-          "1985": "",
-          "1986": "",
-          "1987": "",
-          "1988": "",
-          "1989": "",
-          "1990": "",
-          "1991": "",
-          "1992": "",
-          "1993": 81.6587524414063,
-          "1994": "",
-          "1995": "",
-          "1996": "",
-          "1997": "",
-          "1998": "",
-          "1999": "",
-          "2000": "",
-          "2001": "",
-          "2002": "",
-          "2003": "",
-          "2004": 82.0626220703125,
-          "2005": 82.4543685913086,
-          "2006": 83.4548721313477,
-          "2007": 84.6468811035156,
-          "2008": "",
-          "2009": "",
-          "2010": "",
-          "2011": "",
-          "2012": 90.668830871582,
-          "2013": "",
-          "2014": 90.4491806030273,
-          "2015": 91.2465286254883,
-          "2016": 91.1885299682617,
-          "2017": ""
-        },
-        "countryName": "Perú",
-        "countryCode": "PER",
-        "indicatorName": "Tasa de alfabetización, mujeres adultas (% de mujeres de 15 años o más)",
-        "indicatorCode": "SE.ADT.LITR.FE.ZS"
-      },
 ];
-// función de indicadores para pasar test
-const filterByIndicator = (data, filterValue) => {
-  let newData = [];
-  if (filterValue === 'population') {
-    newData = filterPopulation(data);
-  } else if (filterValue === 'violence') {
-    newData = filterViolence(data); 
-  } else if (filterValue === 'education') {
-    newData = filterEducation(data); 
-  } else if (filterValue === 'job') {
-    newData = filterJob(data);
-  } else if (filterValue === 'unemployment') {
-    newData = filterUnemployment(data); 
-  } else if (filterValue === 'literacy') {
-    newData = filterLiteracy(data); 
-  } 
-  // let newData = data.filter(funcFiltroPob);
-  return newData;
-};
 */
 const arrData = Object.entries(WORLDBANK);
 const copyData = (wbank) => {
@@ -428,8 +343,8 @@ const copyData = (wbank) => {
 // INDICADORES DE CADA PAÍS
 const data = copyData(arrData);
 const getData = (arrayDePaises, index) => {
-  const data = arrayDePaises[index];
-  return data['1'].indicators;
+  const data = arrayDePaises[index]; 
+  return data['1'].indicators; 
 };
 
 const indicatorsPER = getData(data, 0);
@@ -454,6 +369,12 @@ const violence = (element) => {
   let codeViolence = element.indicatorCode;
   let initialsViolence = codeViolence.slice(0, 6);
   return initialsViolence === 'SG.VAW';
+};
+
+const job = (element) => {
+  let codeJob = element.indicatorCode;
+  let initialsJob = codeJob.slice(0, 6);
+  return initialsJob === 'SG.JOB';
 };
 
 const unemployment = (element) => {
@@ -485,10 +406,10 @@ const filterEducation = (data) => {
   let arrayFilter = data.filter(education);
   return arrayFilter;
 };
-const filterEduPer = filterEducation(indicatorsPER);
-const filterEduMex = filterEducation(indicatorsMEX);
-const filterEduChl = filterEducation(indicatorsCHL);
-const filterEduBrs = filterEducation(indicatorsBRS);
+const filterEduPer = filterPopulation(indicatorsPER);
+const filterEduMex = filterPopulation(indicatorsMEX);
+const filterEduChl = filterPopulation(indicatorsCHL);
+const filterEduBrs = filterPopulation(indicatorsBRS);
 // console.log(filterEduPeru);
 
 // ----------------- VIOLENCIA----------------- //
@@ -525,16 +446,7 @@ const filterLiteracyMex = filterLiteracy(indicatorsMEX);
 const filterLiteracyChl = filterLiteracy(indicatorsCHL);
 const filterLiteracyBrs = filterLiteracy(indicatorsBRS);
 
-// ORDENADO
-const sortDataUnem = data.sort(function(prev, next) {
-  if (prev.indicatorName > next.indicatorName) {
-    return 1;
-  }
-  if (prev.indicatorName < next.indicatorName) {
-    return -1;
-  }
-  return 0;
-});
+// ORDENADO: Falta crear la función general para aplicar en select
 
 // PROMEDIO
 const compute = (indicador) => {
@@ -566,14 +478,35 @@ const compute = (indicador) => {
   return average;
 };
 
+/* función de indicadores para pasar test
+const filterByIndicator = (data, filterValue) => {
+  let newData = [];
 
+  if (filterValue === 'population') {
+    newData = filterPopulation(data);
+  } else if (filterValue === 'violence') {
+    newData = filterViolence(data); 
+  } else if (filterValue === 'education') {
+    newData = filterEducation(data); 
+  } else if (filterValue === 'job') {
+    newData = filterJob(data);
+  } else if (filterValue === 'unemployment') {
+    newData = filterUnemployment(data); 
+  } else if (filterValue === 'literacy') {
+    newData = filterLiteracy(data); 
+  } 
+  return newData;
+};
+*/
 window.worldbank = {
   population,
   violence,
   education,
   unemployment,
+  filterByIndicator,
   filterPopulation,
   filterViolence,
   filterEducation,
   filterUnemployment,
+  compute,
 };

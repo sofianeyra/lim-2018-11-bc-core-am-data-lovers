@@ -5,6 +5,7 @@ const per = document.getElementById('pagina-peru');
 const mex = document.getElementById('pagina-mexico');
 const chl = document.getElementById('pagina-chile');
 const brsl = document.getElementById('pagina-brasil');
+const footer = document.getElementById('pie-de-pagina');
 
 const inicialb = document.getElementById('inicio');
 const perub = document.getElementById('peru-menu');
@@ -19,6 +20,7 @@ inicialb.addEventListener('click', () => {
   mex.style.display = 'none';
   chl. style.display = 'none';
   brsl.style.display = 'none';
+  footer.style.display = 'block';
 });
 // PANTALLA PERÚ
 perub.addEventListener('click', () => {
@@ -27,6 +29,7 @@ perub.addEventListener('click', () => {
   mex.style.display = 'none';
   chl. style.display = 'none';
   brsl.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA MÉXICO
 mexb.addEventListener('click', () => {
@@ -35,6 +38,7 @@ mexb.addEventListener('click', () => {
   mex.style.display = 'block';
   chl. style.display = 'none';
   brsl.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA CHILE
 chlb.addEventListener('click', () => {
@@ -43,6 +47,7 @@ chlb.addEventListener('click', () => {
   mex.style.display = 'none';
   chl. style.display = 'block';
   brsl.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA BRASIL
 brslb.addEventListener('click', () => {
@@ -51,6 +56,7 @@ brslb.addEventListener('click', () => {
   mex.style.display = 'none';
   chl. style.display = 'none';
   brsl.style.display = 'block';
+  footer.style.display = 'none';
 });
 
 // se da click en el boton de la pantalla inicio para cuando empiece el proyecto
@@ -615,7 +621,6 @@ btnUnemBra.addEventListener('click', () => {
   }
   brasilTableContainer.appendChild(tbl);
 });
-
 
 btnAlfBra.addEventListener('click', () => {
   brasilTableContainer.innerHTML = '';
