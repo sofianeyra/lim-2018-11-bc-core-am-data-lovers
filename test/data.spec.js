@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 require('../src/data.js');
-const input = [ {
+/*const input = [ {
   'data': {
     '1960': 0.567483954656432,
     '1961': 0.580176490663546,
@@ -608,7 +608,7 @@ const outputunemployment = [
 ];
 describe('worldbank', () => {
   it('debería ser un objeto', () => {
-    expect(typeof worldbank).toBe('object');
+    expect(typeof WORLDBANK).toBe('object');
   });
 });
 
@@ -646,5 +646,37 @@ describe('fltrado de unemployment', () => {
   it('debería retornar indicador de acuerdo a indicatorCode', () => {
     expect(worldbank.filterByIndicator(input, 'unemployment')).toEqual(outputunemployment);
   });
-});
+}); */
 
+// TEST DE FUNCION PROMEDIO //
+const inputPromedio = {
+  'data': {
+    '2002': 31.4799995422363,
+    '2003': 29.6299991607666,
+    '2004': 27.6299991607666,
+    '2005': 27.2099990844727,
+    '2006': 26.9699993133545,
+    '2007': 27.6700000762939,
+    '2008': 26.9599990844727,
+    '2009': 27.3600006103516,
+    '2010': 25.3400001525879,
+    '2011': 24.7999992370605,
+    '2012': 25.0400009155273,
+    '2013': 24.0900001525879,
+    '2014': 24.2099990844727,
+    '2015': 21.6800003051758,
+    '2016': 23.7399997711182,
+    '2017': 23.7600002288818
+  }
+};
+
+const outputPromedio = 26.10;
+
+describe('compute es una funcion'), () => {
+  it('deberia ser una función', () => {
+    expect(typeof window.compute).toBe('funcion');
+  });
+};
+it('retorna el promedio de los valores de indicadores'), () => {
+  expect(window.compute(inputPromedio)).toEqual(outputPromedio);
+};

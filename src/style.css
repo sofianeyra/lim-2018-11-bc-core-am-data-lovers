@@ -295,4 +295,10 @@
     .navbar-toggle {
         display: none;
     }
-} 
+}
+
+
+td {
+  color : black;
+  font-family: arial;
+}
