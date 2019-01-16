@@ -568,6 +568,7 @@ const compute = (indicador) => {
 
 
 window.worldbank = {
+  compute,
   population,
   violence,
   education,
