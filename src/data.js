@@ -8,8 +8,8 @@ const copyData = (wbank) => {
 };
 // INDICADORES DE CADA PAÍS
 const getData = (arrayDePaises, index) => {
-  const data = arrayDePaises[index]; 
-  return data['1'].indicators; 
+  const data = arrayDePaises[index];
+  return data['1'].indicators;
 };
 
 // INDICADORES POR CATEGORIA: POBLACIÓN, VIOLENCIA, EDUCACIÓN, EMPLEO Y ALFABETIZACIÓN
@@ -116,7 +116,7 @@ const compute = (indicador) => {
 
     sum += value;
   });
-  
+
   // se calcula el average
   let average = sum / length;
 

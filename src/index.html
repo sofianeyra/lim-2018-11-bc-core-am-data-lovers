@@ -60,7 +60,11 @@
       </div>
       <form id = "order" name="formulario" method="post">
          Ordenar por:
+<<<<<<< HEAD
          <select id="populationPeruSelect" name="ordenar" onchange="selectChangeTextPopulationPeru()">
+=======
+         <select id="populationPeruSelect" name="ordenar" onchange="selectChangeTextPopulation('populationPeruSelect')">
+>>>>>>> 7498c359ff05266cf21a652c0f06166ebc27fb58
             <option value="0" selected>Original</option>
             <option value="3">Alfabéticamente</option>
          </select>
@@ -68,7 +72,6 @@
          <li><a class="indicator-name"></a></li>
          <div id="tables-peru" class = "tables-peru"></div>
    </section>
-
 <!-- PÁGINA DE LA BASE DE DATOS DE MÉXICO-->
    <section id = "pagina-mexico" >
       <div class = "lateral-bar"></div>
@@ -84,17 +87,15 @@
           <button id = "boton-unemploymentMex" type="button">DESEMPLEO</button>
           <button id = "boton-alfabetizacionMex" type="button">ALFABETIZACIÓN</button>
       </div>
-      <form id = "order-2" name="formulario" method="post">
-          Ordenar por:
-          <select name="ordenar">
-             <option value="1" selected>Ascendente</option>
-             <option value="2">Descendente</option>
-          </select>
+      <form id = "order" name="formulario" method="post">
+         Ordenar por:
+         <select id="populationMexSelect" name="ordenar" onchange="selectChangeTextPopulation('populationMexSelect')">
+            <option value="0" selected>Original</option>
+            <option value="3">Alfabéticamente</option>
+         </select>
       </form>
-
          <div id= "tables-mex" class = "tables-mex"></div>
    </section>
-
 <!-- PAGINA DE LA BASE DE DATOS DE CHILE-->
    <section id = "pagina-chile">
       <div class = "lateral-bar"></div>
@@ -112,17 +113,15 @@
           <button id = "boton-unemploymentChil" type="button">DESEMPLEO</button>
           <button id = "boton-alfabetizacionChil" type="button">ALFABETIZACIÓN</button>
       </div>
-       <form id = "order-3" name="formulario" method="post">
-          Ordenar por:
-          <select name="ordenar">
-             <option value="1" selected>Ascendente</option>
-             <option value="2">Descendente</option>
-          </select>
-       </form>
-
+      <form id = "order" name="formulario" method="post">
+         Ordenar por:
+         <select id="populationChileSelect" name="ordenar" onchange="selectChangeTextPopulation('populationChileSelect')">
+            <option value="0" selected>Original</option>
+            <option value="3">Alfabéticamente</option>
+         </select>
+      </form>
            <div id= "tables-chile" class = "tables-chl"></div>
    </section>
-
 <!-- PAGINA DE LA BASE DE DATOS DE BRASIL-->
    <section id = "pagina-brasil">
          <div class = "lateral-bar"></div>
@@ -138,11 +137,11 @@
                <button id = "boton-unemploymentBra" type="button">DESEMPLEO</button>
                <button id = "boton-alfabetizacionBra" type="button">ALFABETIZACIÓN</button>
          </div>
-         <form id = "order-4" name="formulario" method="post">
-               Ordenar por:
-            <select name="ordenar">
-               <option value="1" selected>Ascendente</option>
-               <option value="2">Descendente</option>
+         <form id = "order" name="formulario" method="post">
+            Ordenar por:
+            <select id="populationBrasilSelect" name="ordenar" onchange="selectChangeTextPopulation('populationBrasilSelect')">
+               <option value="0" selected>Original</option>
+               <option value="3">Alfabéticamente</option>
             </select>
          </form>
          <div id= "tables-brasil" class = "tables-brs"></div>

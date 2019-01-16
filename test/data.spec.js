@@ -608,7 +608,7 @@ const outputunemployment = [
 ];
 describe('worldbank', () => {
   it('debería ser un objeto', () => {
-    expect(typeof worldbank).toBe('object');
+    expect(typeof WORLDBANK).toBe('object');
   });
 });
 
@@ -646,9 +646,9 @@ describe('fltrado de unemployment', () => {
   it('debería retornar indicador de acuerdo a indicatorCode', () => {
     expect(worldbank.filterUnemployment(input)).toEqual(outputunemployment);
   });
-});
+}); 
 
-// TEST DE FUNCION PROMEDIO 
+// TEST DE FUNCION PROMEDIO //
 const inputPromedio = {
   'data': {
     '2002': 31.4799995422363,
@@ -669,7 +669,6 @@ const inputPromedio = {
     '2017': 23.7600002288818
   }
 };
-
 const outputPromedio = 26.10;
 
 describe('compute es una funcion'), () => {
