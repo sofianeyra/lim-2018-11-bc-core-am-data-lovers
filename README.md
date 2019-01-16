@@ -115,7 +115,10 @@ Se adjunta a continuación
 
 - __Perú__
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 53801672003ad5d6b1d13859e7f4ad92b5097049
 ![alt text](https://i.ibb.co/DRsMrQR/zeplin-peru.jpg)
 
 

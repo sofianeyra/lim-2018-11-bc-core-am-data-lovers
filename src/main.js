@@ -123,7 +123,8 @@ const brasilTableContainer = document.getElementById('tables-brasil');
 let selectedContainer;// el container por pais
 let selectedData;// el tipo de indicador seleccionado
 
-function crearTablaIndicador(indicadores, contenedor) {
+function crearTablaIndicador(indicadores, contenedor)
+{
   contenedor.innerHTML = ''; // SE LIMPIA LA TABLA//
 
   let tbl = document.createElement('table');
@@ -152,8 +153,9 @@ function crearTablaIndicador(indicadores, contenedor) {
   }
   contenedor.appendChild(tbl);
 
-selectedContainer = contenedor; // cada vez que se da un clic a un indicaddor se guarda el contenedor
+selectedContainer=contenedor; // cada vez que se da un clic a un indicaddor se guarda el contenedor
 selectedData = indicadores; //cada vez que se da un clic a un indicaddor se guarda los datos de ese indicador para poder ordenarlo si desea
+
 }
 
 // CRENADO FUNCOIN QUE SE EJECUTA LA CAMBIAR ELV ALOR DEL SELECTOR EN EL HTML//
@@ -165,19 +167,20 @@ const selectChangeTextPopulation = (id) => { // RECIBE COMO PARAMETRO EL ID DEL 
   let sortedData = sortData(selectedData, selectOp);
 
   crearTablaIndicador(sortedData, selectedContainer)
+
 };
 
 function CrearEventoTablaIndicador(boton,indicadores, contenedor) {
   boton.addEventListener('click', () => {
-    crearTablaIndicador(indicadores,contenedor);
+  crearTablaIndicador(indicadores,contenedor);
   });
 }
 
-CrearEventoTablaIndicador(btnPopulation,filterPopPer,peruTableContainer);
-CrearEventoTablaIndicador(btnViolence,filterViolencePer,peruTableContainer);
-CrearEventoTablaIndicador(btnEducation,filterEduPer,peruTableContainer);
-CrearEventoTablaIndicador(btnUnemployment,filterUnemploymentPer,peruTableContainer);
-CrearEventoTablaIndicador(btnAlfabet,filterLiteracyPer,peruTableContainer);
+CrearEventoTablaIndicador(btnPopulation,filterPopPer,peruTableContainer)
+CrearEventoTablaIndicador(btnViolence,filterViolencePer,peruTableContainer)
+CrearEventoTablaIndicador(btnEducation,filterEduPer,peruTableContainer)
+CrearEventoTablaIndicador(btnUnemployment,filterUnemploymentPer,peruTableContainer)
+CrearEventoTablaIndicador(btnAlfabet,filterLiteracyPer,peruTableContainer)
 
 // ------------------------- MEXICO ----------------------------------- //
 
@@ -191,11 +194,11 @@ const btnAlfMex = document.getElementById('boton-alfabetizacionMex');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopMex,filterPopMex,mexicoTableContainer);
-CrearEventoTablaIndicador(btnVioMex,filterViolenceMex,mexicoTableContainer);
-CrearEventoTablaIndicador(btnEduMex,filterEduMex,mexicoTableContainer);
-CrearEventoTablaIndicador(btnUneMex,filterUnemploymentMex,mexicoTableContainer);
-CrearEventoTablaIndicador(btnAlfMex,filterLiteracyMex,mexicoTableContainer);
+CrearEventoTablaIndicador(btnPopMex,filterPopMex,mexicoTableContainer)
+CrearEventoTablaIndicador(btnVioMex,filterViolenceMex,mexicoTableContainer)
+CrearEventoTablaIndicador(btnEduMex,filterEduMex,mexicoTableContainer)
+CrearEventoTablaIndicador(btnUneMex,filterUnemploymentMex,mexicoTableContainer)
+CrearEventoTablaIndicador(btnAlfMex,filterLiteracyMex,mexicoTableContainer)
 
 // ------------------------- CHILE ----------------------------------- //
 
@@ -209,11 +212,11 @@ const btnAlfCh = document.getElementById('boton-alfabetizacionChil');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopCh,filterPopChl,chilTableContainer);
-CrearEventoTablaIndicador(btnVioCh,filterViolenceChl,chilTableContainer);
-CrearEventoTablaIndicador(btnEduCh,filterEduChl,chilTableContainer);
-CrearEventoTablaIndicador(btnUnemCh,filterUnemploymentChl,chilTableContainer);
-CrearEventoTablaIndicador(btnAlfCh,filterLiteracyChl,chilTableContainer);
+CrearEventoTablaIndicador(btnPopCh,filterPopChl,chilTableContainer)
+CrearEventoTablaIndicador(btnVioCh,filterViolenceChl,chilTableContainer)
+CrearEventoTablaIndicador(btnEduCh,filterEduChl,chilTableContainer)
+CrearEventoTablaIndicador(btnUnemCh,filterUnemploymentChl,chilTableContainer)
+CrearEventoTablaIndicador(btnAlfCh,filterLiteracyChl,chilTableContainer)
 // ------------------------- BRASIL ----------------------------------- //
 
 // botones BRASIL
@@ -224,11 +227,11 @@ const btnUnemBra = document.getElementById('boton-unemploymentBra');
 const btnAlfBra = document.getElementById('boton-alfabetizacionBra');
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopBra,filterPopBrs,brasilTableContainer);
-CrearEventoTablaIndicador(btnVioBra,filterViolenceBrs,brasilTableContainer);
-CrearEventoTablaIndicador(btnEduBra,filterEduBrs,brasilTableContainer);
-CrearEventoTablaIndicador(btnUnemBra,filterUnemploymentBrs,brasilTableContainer);
-CrearEventoTablaIndicador(btnAlfBra,filterLiteracyBrs,brasilTableContainer);
+CrearEventoTablaIndicador(btnPopBra,filterPopBrs,brasilTableContainer)
+CrearEventoTablaIndicador(btnVioBra,filterViolenceBrs,brasilTableContainer)
+CrearEventoTablaIndicador(btnEduBra,filterEduBrs,brasilTableContainer)
+CrearEventoTablaIndicador(btnUnemBra,filterUnemploymentBrs,brasilTableContainer)
+CrearEventoTablaIndicador(btnAlfBra,filterLiteracyBrs,brasilTableContainer)
 
 // MENÚ
 let mainNav = document.getElementById('js-menu');
@@ -260,11 +263,11 @@ const showDetalle = (contenedor,indicador) => {
   createTableCell('Año', hrow);
   createTableCell('Cantidad', hrow);
 
-  for (let i in indicador.data) {
-    let row = tbl.insertRow();
-    createTableCell(i, row);
-    createTableCell(indicador.data[i], row);
-  }
+      for (let i in indicador.data) {
+        let row = tbl.insertRow();
+        createTableCell(i, row);
+        createTableCell(indicador.data[i], row);
+      }
 
   contenedor.appendChild(tbl);
 };
