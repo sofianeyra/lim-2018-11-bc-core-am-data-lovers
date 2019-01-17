@@ -136,5 +136,4 @@ window.worldbank = {
   filterEducation,
   filterUnemployment,
   compute,
-  sortData,
 };

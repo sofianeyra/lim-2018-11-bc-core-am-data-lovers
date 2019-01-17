@@ -646,7 +646,7 @@ describe('fltrado de unemployment', () => {
   it('debería retornar indicador de acuerdo a indicatorCode', () => {
     expect(worldbank.filterUnemployment(input)).toEqual(outputunemployment);
   });
-});
+}); 
 
 // TEST DE FUNCION PROMEDIO
 const inputPromedio = {
@@ -681,6 +681,7 @@ describe('compute es una funcion', () => {
   });
 });
 
+//TEST FUNCIÓN SORT
 const inputOrdenado = [
 
   {"indicatorName": "Población, mujeres (% del total)"},
@@ -750,3 +751,12 @@ describe("sortData es una función", () => {
   expect(worldbank.sortData(inputOrdenado)).toEqual(outputOrdenado);
   });
 });
+=======
+describe('compute es una funcion'), () => {
+  it('deberia ser una función', () => {
+    expect(typeof worldbank.compute).toBe('function');
+  });
+};
+it('retorna el promedio de los valores de indicadores'), () => {
+  expect(worldbank.compute(inputPromedio)).toEqual(outputPromedio);
+};

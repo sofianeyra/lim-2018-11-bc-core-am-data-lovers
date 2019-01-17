@@ -1,104 +1,149 @@
+/*Menú de navegación*/
 
-
-.menu, .navbar, .main-nav, .main-nav li, .logo,
-.navbar-toggle, .active {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+.menu,
+.navbar,
+.main-nav,
+.main-nav li,
+.logo,
+.navbar-toggle,
+.active {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
+
 .menu {
-    font-family: Asap;
+	font-family: Asap;
 }
 
 .navbar {
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-    font-size: 18px;
-    background: white;
-    border: 1px solid #e4e4e4;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	font-size: 18px;
+	background: white;
+	border: 1px solid #e4e4e4;
 }
 
 .main-nav {
-    background: white;
-    list-style-type: none;
-    display: none;
+	background: white;
+	list-style-type: none;
+	display: none;
 }
 
 .main-nav li {
-    text-align: center;
-    margin: 15px auto;
+	text-align: center;
+	margin: 15px auto;
 }
 
 .logo {
-    display: inline-block;
-    width: 18em;
-    height: 4em;
-    margin-left: 1%;
+	display: inline-block;
+	width: 18em;
+	height: 4em;
+	margin-left: 1%;
 }
 
 .navbar-toggle {
-    margin-top: 2.5%;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
+	margin-top: 2.5%;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 24px;
 }
 
 .active {
-    display: block;
+	display: block;
 }
 
-
-#inicio, #peru-menu, #chile-menu,
-#mexico-menu, #brasil-menu {
-    text-decoration: none;
-    color: #1b80c3;
-    padding: 28px;
-    font-family: Asap;
-    font-size: 21px;
+#inicio,
+#peru-menu,
+#chile-menu,
+#mexico-menu,
+#brasil-menu {
+	text-decoration: none;
+	color: #1b80c3;
+	padding: 28px;
+	font-family: Asap;
+	font-weight: bold;
+	font-size: 21px;
 }
 
-
-
-#inicio:hover, #peru-menu:hover, #chile-menu:hover,
-#mexico-menu:hover, #brasil-menu:hover {
-    color: #0e2f53;
+#inicio:hover,
+#peru-menu:hover,
+#chile-menu:hover,
+#mexico-menu:hover,
+#brasil-menu:hover {
+	color: #0e2f53;
 }
 
 @media screen and (min-width: 1170px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
+	}
+	.main-nav {
+		display: flex;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	.main-nav li {
+		margin: 0;
+	}
+	#inicio,
+	#peru-menu,
+	#mexico-menu,
+	#chile-menu,
+	#brasil-menu {
+		margin-left: 40px;
+	}
+	.logo {
+		margin-top: 0;
+	}
+	.navbar-toggle {
+		display: none;
+	}
+}
 
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
 
-    .main-nav li {
-        margin: 0;
-    }
+/* SECCIÓN RESPONSIVE */
 
-    #inicio, #peru-menu, #mexico-menu,
-    #chile-menu, #brasil-menu {
-        margin-left: 40px;
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-
+@media screen and (min-width: 768px) {
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
+	}
+	.main-nav {
+		display: flex;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	.main-nav li {
+		margin: 0;
+	}
+	#inicio,
+	#peru-menu,
+	#mexico-menu,
+	#chile-menu,
+	#brasil-menu {
+		margin-left: 40px;
+	}
+	.logo {
+		margin-top: 0;
+	}
+	.navbar-toggle {
+		display: none;
+	}
 }
