@@ -304,4 +304,14 @@
 td {
   color : black;
   font-family: arial;
+
 }
+
+table{
+  width:110%;
+}
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px;
+  }
