@@ -1,97 +1,145 @@
-/*/* eslint-disable no-undef */
-// MENÚ DE NAVEGACIÓN
-const inicial = document.getElementById('pagina-inicio');
-const per = document.getElementById('pagina-peru');
-const mex = document.getElementById('pagina-mexico');
-const chl = document.getElementById('pagina-chile');
-const brsl = document.getElementById('pagina-brasil');
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 
-const inicialb = document.getElementById('inicio');
-const perub = document.getElementById('peru-menu');
-const mexb = document.getElementById('mexico-menu');
-const chlb = document.getElementById('chile-menu');
-const brslb = document.getElementById('brasil-menu');
+// Obteniendo data worldbank
+const arrayData = Object.entries(WORLDBANK);
+const data = copyData(arrayData);
+
+// Obteniendo indicadores por país
+const indicatorsPERU = getData(data, 0);
+const indicatorsMEXICO = getData(data, 1);
+const indicatorsCHILE = getData(data, 2);
+const indicatorsBRASIL = getData(data, 3);
+
+// Obteniendo indicadores de población
+const filterPopulationPeru = filterPopulation(indicatorsPERU);
+const filterPopulationMexico = filterPopulation(indicatorsMEXICO);
+const filterPopulationChile = filterPopulation(indicatorsCHILE);
+const filterPopulationBrasil = filterPopulation(indicatorsBRASIL);
+
+// Obteniendo indicadores de educación
+const filterEducationPeru = filterEducation(indicatorsPERU);
+const filterEducationMexico = filterEducation(indicatorsMEXICO);
+const filterEducationChile = filterEducation(indicatorsCHILE);
+const filterEducationBrasil = filterEducation(indicatorsBRASIL);
+
+// Obteniendo indicadores de violencia
+const filterViolencePeru = filterViolence(indicatorsPERU);
+const filterViolenceMexico = filterViolence(indicatorsMEXICO);
+const filterViolenceChile = filterViolence(indicatorsCHILE);
+const filterViolenceBrasil = filterViolence(indicatorsBRASIL);
+
+// Obteniendo indicadores de desempleo
+const filterUnemploymentPeru = filterUnemployment(indicatorsPERU);
+const filterUnemploymentMexico = filterUnemployment(indicatorsMEXICO);
+const filterUnemploymentChile = filterUnemployment(indicatorsCHILE);
+const filterUnemploymentBrasil = filterUnemployment(indicatorsBRASIL);
+
+// Obteniendo indicadores de literacy
+const filterLiteracyPeru = filterLiteracy(indicatorsPERU);
+const filterLiteracyMexico = filterLiteracy(indicatorsMEXICO);
+const filterLiteracyChile = filterLiteracy(indicatorsCHILE);
+const filterLiteracyBrasil = filterLiteracy(indicatorsBRASIL);
+
+// MENÚ DE NAVEGACIÓN
+const pageInicial = document.getElementById('pagina-inicio');
+const pagePeru = document.getElementById('pagina-peru');
+const pageMexico = document.getElementById('pagina-mexico');
+const pageChile = document.getElementById('pagina-chile');
+const pageBrasil = document.getElementById('pagina-brasil');
+const footer = document.getElementById('pie-de-pagina');
+
+const inicialButton = document.getElementById('inicio');
+const peruButton = document.getElementById('peru-menu');
+const mexicoButton = document.getElementById('mexico-menu');
+const chileButton = document.getElementById('chile-menu');
+const brasilButton = document.getElementById('brasil-menu');
 
 // PANTALLA INICIO
-inicialb.addEventListener('click', () => {
-  inicial.style.display = 'block';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+inicialButton.addEventListener('click', () => {
+  pageInicial.style.display = 'block';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
+  footer.style.display = 'block';
 });
 // PANTALLA PERÚ
-perub.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'block';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+peruButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'block';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA MÉXICO
-mexb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'block';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+mexicoButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'block';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA CHILE
-chlb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'block';
-  brsl.style.display = 'none';
+chileButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'block';
+  pageBrasil.style.display = 'none';
+  footer.style.display = 'none';
 });
 // PANTALLA BRASIL
-brslb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'block';
+brasilButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'block';
+  footer.style.display = 'none';
 });
 
 // se da click en el boton de la pantalla inicio para cuando empiece el proyecto
-inicialb.click();
+inicialButton.click();
 
 // ------------------------- PERÚ ----------------------------------- //
 
 // BOTONES PERÚ
 
-const btnPopulation = document.getElementById('boton-population');
-const btnViolence = document.getElementById('boton-violence');
-const btnEducation = document.getElementById('boton-education');
-const btnUnemployment = document.getElementById('boton-unemployment');
-const btnAlfabet = document.getElementById('boton-alfabetizacion');
+const buttonPopulation = document.getElementById('boton-population');
+const buttonViolence = document.getElementById('boton-violence');
+const buttonEducation = document.getElementById('boton-education');
+const buttonUnemployment = document.getElementById('boton-unemployment');
+const buttonAlfabet = document.getElementById('boton-alfabetizacion');
 
 const peruTableContainer = document.getElementById('tables-peru');
-const mexicoTableContainer = document.getElementById('tables-mex');
-const chilTableContainer = document.getElementById('tables-chile');
+const mexicoTableContainer = document.getElementById('tables-mexico');
+const chileTableContainer = document.getElementById('tables-chile');
 const brasilTableContainer = document.getElementById('tables-brasil');
 
+// APLICANDO SORT//
 // SELECT
+let selectedContainer;// el container por pais
+let selectedData;// el tipo de indicador seleccionado
 
-const selectChangeTextPopulationPeru = () => {
-  let elSelect = document.getElementById('populationPeruSelect');
-  let selectOp = elSelect.options[elSelect.selectedIndex].text;
-  peruTableContainer.innerHTML = '';
+function crearTablaIndicador(indicadores, contenedor) {
+  contenedor.innerHTML = ''; // SE LIMPIA LA TABLA//
 
   let tbl = document.createElement('table');
   let hrow = tbl.insertRow();
   createTableCell('Indicador', hrow);
   createTableCell('Valor', hrow);
-  createTableCell('', hrow);
+  createTableCell('', hrow);// ESTA VACIO PORQUE NO TIENE TITULO Y AHI VA LONK VER MAS//
 
-  let sortedData = sortData(filterPopPer, selectOp);
 
-  for (indicador of sortedData) {
+  for (indicador of indicadores) {
     // CREAR LINK
     let link = document.createElement('a');
     let linkText = document.createTextNode('Ver');
     link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
+      showDetalle(contenedor, indicador);
     };
     link.href = '#';
     link.appendChild(linkText);
@@ -101,579 +149,87 @@ const selectChangeTextPopulationPeru = () => {
 
     createTableCell(indicador.indicatorName, row);
     createTableCell(average, row);
-    row.appendChild(link);
+    row.appendChild(link); // le asigno el elemento <a> de ver mas //
   }
-  peruTableContainer.appendChild(tbl);
+  contenedor.appendChild(tbl);
+
+  selectedContainer = contenedor; // cada vez que se da un clic a un indicaddor se guarda el contenedor
+  selectedData = indicadores; // cada vez que se da un clic a un indicaddor se guarda los datos de ese indicador para poder ordenarlo si desea
+}
+
+// CRENADO FUNCOIN QUE SE EJECUTA LA CAMBIAR ELV ALOR DEL SELECTOR EN EL HTML//
+const selectChangeTextPopulation = (id) => { // RECIBE COMO PARAMETRO EL ID DEL INDICADORS
+  let elSelect = document.getElementById(id);
+  let selectOp = elSelect.options[elSelect.selectedIndex].text;
+  selectedContainer.innerHTML = '';
+
+  let sortedData = sortData(selectedData, selectOp);
+
+  crearTablaIndicador(sortedData, selectedContainer);
 };
 
+function CrearEventoTablaIndicador(boton, indicadores, contenedor) {
+  boton.addEventListener('click', () => {
+    crearTablaIndicador(indicadores, contenedor);
+  });
+}
 
-btnPopulation.addEventListener('click', () => {
-  peruTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-
-  for (indicador of filterPopPer) {
-    // CREAR LINK
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  peruTableContainer.appendChild(tbl);
-});
-
-btnViolence.addEventListener('click', () => {
-  peruTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-
-  for (indicador of filterViolencePer) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  peruTableContainer.appendChild(tbl);
-});
-
-btnEducation.addEventListener('click', () => {
-  peruTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterEduPer) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  peruTableContainer.appendChild(tbl);
-});
-
-btnUnemployment.addEventListener('click', () => {
-  peruTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterUnemploymentPer) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  peruTableContainer.appendChild(tbl);
-});
-
-btnAlfabet.addEventListener('click', () => {
-  peruTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterLiteracyPer) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  peruTableContainer.appendChild(tbl);
-});
+CrearEventoTablaIndicador(buttonPopulation, filterPopulationPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonViolence, filterViolencePeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonEducation, filterEducationPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonUnemployment, filterUnemploymentPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonAlfabet, filterLiteracyPeru, peruTableContainer);
 
 // ------------------------- MEXICO ----------------------------------- //
 
 
 // BOTONES MÉXICO
-const btnPopMex = document.getElementById('boton-populationMex');
-const btnVioMex = document.getElementById('boton-violenceMex');
-const btnEduMex = document.getElementById('boton-educationMex');
-const btnUneMex = document.getElementById('boton-unemploymentMex');
-const btnAlfMex = document.getElementById('boton-alfabetizacionMex');
+const buttonPopulationMexico = document.getElementById('boton-population-mexico');
+const buttonViolenceMexico = document.getElementById('boton-violence-mexico');
+const buttonEducationMexico = document.getElementById('boton-education-mexico');
+const buttonUnemploymentMexico = document.getElementById('boton-unemployment-mexico');
+const buttonAlfabetMexico = document.getElementById('boton-alfabetizacion-mexico');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-
-btnPopMex.addEventListener('click', () => {
-  mexicoTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterPopMex) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  mexicoTableContainer.appendChild(tbl);
-});
-
-btnVioMex.addEventListener('click', () => {
-  mexicoTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterViolenceMex) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  mexicoTableContainer.appendChild(tbl);
-});
-
-btnEduMex.addEventListener('click', () => {
-  mexicoTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterEduMex) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  mexicoTableContainer.appendChild(tbl);
-});
-
-btnUneMex.addEventListener('click', () => {
-  mexicoTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterUnemploymentMex) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  mexicoTableContainer.appendChild(tbl);
-});
-
-btnAlfMex.addEventListener('click', () => {
-  mexicoTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterLiteracyMex) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleMex(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  mexicoTableContainer.appendChild(tbl);
-});
-
+CrearEventoTablaIndicador(buttonPopulationMexico, filterPopulationMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonViolenceMexico, filterViolenceMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonEducationMexico, filterEducationMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentMexico, filterUnemploymentMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetMexico, filterLiteracyMexico, mexicoTableContainer);
 
 // ------------------------- CHILE ----------------------------------- //
 
 // botones CHILE
 
-const btnPopCh = document.getElementById('boton-populationChil');
-const btnVioCh = document.getElementById('boton-violenceChil');
-const btnEduCh = document.getElementById('boton-educationChil');
-const btnUnemCh = document.getElementById('boton-unemploymentChil');
-const btnAlfCh = document.getElementById('boton-alfabetizacionChil');
+const buttonPopulationChile = document.getElementById('boton-population-chile');
+const ButtonViolenceChile = document.getElementById('boton-violence-chile');
+const buttonEducationChile = document.getElementById('boton-education-chile');
+const buttonUnemploymentChile = document.getElementById('boton-unemployment-chile');
+const buttonAlfabetChile = document.getElementById('boton-alfabetizacion-chile');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-
-
-btnPopCh.addEventListener('click', () => {
-  chilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterPopChl) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  chilTableContainer.appendChild(tbl);
-});
-
-btnVioCh.addEventListener('click', () => {
-  chilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterViolenceChl) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChilc(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  chilTableContainer.appendChild(tbl);
-});
-
-btnEduCh.addEventListener('click', () => {
-  chilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterEduChl) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  chilTableContainer.appendChild(tbl);
-});
-
-btnUnemCh.addEventListener('click', () => {
-  chilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterUnemploymentChl) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  chilTableContainer.appendChild(tbl);
-});
-
-btnAlfCh.addEventListener('click', () => {
-  chilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterLiteracyChl) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleChil(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  chilTableContainer.appendChild(tbl);
-});
-
-
+CrearEventoTablaIndicador(buttonPopulationChile, filterPopulationChile, chileTableContainer);
+CrearEventoTablaIndicador(ButtonViolenceChile, filterViolenceChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonEducationChile, filterEducationChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentChile, filterUnemploymentChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetChile, filterLiteracyChile, chileTableContainer);
 // ------------------------- BRASIL ----------------------------------- //
 
 // botones BRASIL
-
-const btnPopBra = document.getElementById('boton-populationBra');
-const btnVioBra = document.getElementById('boton-violenceBra');
-const btnEduBra = document.getElementById('boton-educationBra');
-const btnUnemBra = document.getElementById('boton-unemploymentBra');
-const btnAlfBra = document.getElementById('boton-alfabetizacionBra');
+const buttonPopulationBrasil = document.getElementById('boton-population-brasil');
+const buttonViolenceBrasil = document.getElementById('boton-violence-brasil');
+const buttonEducationBrasil = document.getElementById('boton-education-brasil');
+const buttonUnemploymentBrasil = document.getElementById('boton-unemployment-brasil');
+const buttonAlfabetBrasil = document.getElementById('boton-alfabetizacion-brasil');
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-
-
-btnPopBra.addEventListener('click', () => {
-  brasilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterPopBrs) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  brasilTableContainer.appendChild(tbl);
-});
-
-btnVioBra.addEventListener('click', () => {
-  brasilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterViolenceBrs) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  brasilTableContainer.appendChild(tbl);
-});
-
-btnEduBra.addEventListener('click', () => {
-  brasilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterEduBrs) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  brasilTableContainer.appendChild(tbl);
-});
-
-btnUnemBra.addEventListener('click', () => {
-  brasilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterUnemploymentBrs) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalle(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  brasilTableContainer.appendChild(tbl);
-});
-
-btnAlfBra.addEventListener('click', () => {
-  brasilTableContainer.innerHTML = '';
-  let tbl = document.createElement('table');
-  let hrow = tbl.insertRow();
-  createTableCell('Indicador', hrow);
-  createTableCell('Valor', hrow);
-  createTableCell('', hrow);
-
-  for (indicador of filterLiteracyBrs) {
-    let link = document.createElement('a');
-    let linkText = document.createTextNode('Ver');
-    link.onclick = function() {
-      showDetalleBras(code = indicador.indicatorCode);
-    };
-    link.href = '#';
-    link.appendChild(linkText);
-
-    const average = compute(indicador);
-    let row = tbl.insertRow();
-    createTableCell(indicador.indicatorName, row);
-    createTableCell(average, row);
-    row.appendChild(link);
-  }
-  brasilTableContainer.appendChild(tbl);
-});
+CrearEventoTablaIndicador(buttonPopulationBrasil, filterPopulationBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonViolenceBrasil, filterViolenceBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonEducationBrasil, filterEducationBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentBrasil, filterUnemploymentBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetBrasil, filterLiteracyBrasil, brasilTableContainer);
 
 // MENÚ
 let mainNav = document.getElementById('js-menu');
@@ -693,250 +249,22 @@ function createTableCell(value, parent) {
   newCell.appendChild(text);
 }
 
-
 // let resultsPERU = dataForYear.filter(number => number > 1);
 
-
-const showDetalle = (code) => {
-  peruTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopPer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduPer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolencePer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterUnemploymentPer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } peruTableContainer.appendChild(tbl);
-
-  for (indicador of filterLiteracyPer) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    } peruTableContainer.appendChild(tbl);
-  }
-};
-
-const showDetalleMex = (code) => {
-  mexicoTableContainer.innerHTML = '';
+const showDetalle = (contenedor, indicador) => {
+  contenedor.innerHTML = '';
 
   let tbl = document.createElement('table');
 
   let hrow = tbl.insertRow();
   createTableCell('Año', hrow);
   createTableCell('Cantidad', hrow);
-  //
 
-  for (indicador of filterPopMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterUnemploymentMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } mexicoTableContainer.appendChild(tbl);
-
-  for (indicador of filterLiteracyMex) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    } mexicoTableContainer.appendChild(tbl);
+  for (let i in indicador.data) {
+    let row = tbl.insertRow();
+    createTableCell(i, row);
+    createTableCell(indicador.data[i], row);
   }
-};
 
-const showDetalleChil = (code) => {
-  chilTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterUnemploymentChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } chilTableContainer.appendChild(tbl);
-
-  for (indicador of filterLiteracyChl) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    } chilTableContainer.appendChild(tbl);
-  }
-};
-
-const showDetalleBras = (code) => {
-  brasilTableContainer.innerHTML = '';
-
-  let tbl = document.createElement('table');
-
-  let hrow = tbl.insertRow();
-  createTableCell('Año', hrow);
-  createTableCell('Cantidad', hrow);
-  //
-
-  for (indicador of filterPopBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterEduBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterViolenceBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterUnemploymentBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    }
-  } brasilTableContainer.appendChild(tbl);
-
-  for (indicador of filterLiteracyBrs) {
-    if (indicador.indicatorCode === code) {
-      for (let i in indicador.data) {
-        let row = tbl.insertRow();
-        createTableCell(i, row);
-        createTableCell(indicador.data[i], row);
-      }
-    } brasilTableContainer.appendChild(tbl);
-  }
+  contenedor.appendChild(tbl);
 };
