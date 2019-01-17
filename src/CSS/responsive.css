@@ -1,0 +1,471 @@
+@media screen and (min-width:200px) and (max-width:500px) {
+	/*Página de inicio */
+	.barra-negra {
+		position: absolute;
+		z-index: 3;
+		width: 70%;
+		height: 10%;
+		left: 0%;
+		bottom: 62%;
+		background: rgba(0, 0, 0, 0.82);
+	}
+	.texto-barra-negra {
+		z-index: 4;
+		position: absolute;
+		width: 75%;
+		height: 11%;
+		left: 1%;
+		top: 27%;
+		font-family: Arial;
+		font-size: 15px;
+		color: white;
+		opacity: 1;
+	}
+	.image-banner {
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		left: 0px;
+		top: 10%;
+	}
+	.mision-container {
+		z-index: 2;
+		background-color: #009fda;
+		bottom: 39%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		font-size: 28px;
+		text-align: center;
+		font-family: Asap;
+		color: white;
+	}
+	.objetivo {
+		z-index: 4;
+		bottom: 32.8%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		font-size: 19px;
+		text-align: center;
+		font-family: Asap;
+		color: white;
+	}
+	.text-mision {
+		z-index: 3;
+		bottom: 37%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		font-size: 17px;
+		text-align: center;
+		font-family: Arial;
+		color: white;
+	}
+	.collage-image {
+		position: absolute;
+		width: 100%;
+		height: 33%;
+		top: 60%;
+		left: 0%;
+	}
+	/* PÁGINAS DE LOS PAÍSES */
+	/* Barra lateral de países */
+	.lateral-bar {
+		position: absolute;
+		width: 40%;
+		height: 130%;
+		left: 0%;
+		top: 10%;
+		background: #0e2f53;
+	}
+	.bandera-peru,
+	.bandera-mexico,
+	.bandera-chile,
+	.bandera-brasil {
+		position: absolute;
+		width: 30%;
+		height: 12%;
+		left: 5%;
+		top: 18%;
+	}
+	.texto-peru,
+	.texto-mexico,
+	.texto-chile,
+	.texto-brasil {
+		position: absolute;
+		width: 20%;
+		left: 11%;
+		top: 32%;
+		color: white;
+		font-family: Asap;
+		font-style: normal;
+		font-weight: bold;
+		line-height: normal;
+		font-size: 20px;
+	}
+	.descripcion-peru,
+	.descripcion-mexico,
+	.descripcion-chile,
+	.descripcion-brasil {
+		position: absolute;
+		width: 36%;
+		left: 1%;
+		top: 38%;
+		color: white;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 16px;
+		text-align: center;
+	}
+	h3 {
+		font-size: 17px;
+		left: 1%;
+		font-family: Asap;
+	}
+	/* Botones de categorías */
+	#boton-population,
+	#boton-violence,
+	#boton-unemployment,
+	#boton-alfabetizacion,
+	#boton-education,
+	#boton-population-mexico,
+	#boton-violence-mexico,
+	#boton-unemployment-mexico,
+	#boton-alfabetizacion-mexico,
+	#boton-education-mexico,
+	#boton-population-chile,
+	#boton-violence-chile,
+	#boton-unemployment-chile,
+	#boton-alfabetizacion-chile,
+	#boton-education-chile,
+	#boton-population-brasil,
+	#boton-violence-brasil,
+	#boton-unemployment-brasil,
+	#boton-alfabetizacion-brasil,
+	#boton-education-brasil {
+		margin: 8% 2% 4%;
+		text-decoration: none;
+		padding: 3%;
+		font-weight: 500;
+		font-family: Asap;
+		font-size: 15px;
+		color: #ffffff;
+		background-color: #0071BC;
+		border-radius: 6px;
+		border: 2px;
+	}
+	/* Tablas de indicadores por país */
+	.tables-of-peru,
+	.tables-of-mexico,
+	.tables-of-chile,
+	.tables-of-brasil {
+		position: absolute;
+		top: 13%;
+		margin-left: 38%;
+		width: 49%;
+		height: 100%
+	}
+	td {
+		color: black;
+		font-family: arial;
+	}
+	.rwd-table {
+		max-width: 200px;
+	}
+	/* Selects de ordenado */
+	#ordenado-peru,
+	#ordenado-mexico,
+	#ordenado-chile,
+	#ordenado-brasil {
+		z-index: 5;
+		position: absolute;
+		color: white;
+		top: 110%;
+		bottom: 150%;
+		left: 5%;
+		font-family: arial;
+	}
+	h4 {
+		font-family: Asap;
+	}
+	select {
+		margin-left: 0%;
+		width: 120px;
+		height: 50px;
+		font-size: 18px;
+		font-family: Asap;
+		font-weight: bold;
+	}
+	/* Pie de página */
+	#pie-de-pagina {
+		position: absolute;
+		width: 100%;
+		height: 8%;
+		left: 0%;
+		bottom: 0%;
+		top: 91%;
+		background: #000000;
+	}
+	.icon-footer {
+		left: 0%;
+		top: 1%;
+		width: 40%;
+		height: 90%;
+	}
+	.texto-footer {
+		z-index: 5;
+		bottom: 40%;
+		margin-top: 5%;
+		margin-left: -25%;
+		position: absolute;
+		color: white;
+		width: 50%;
+		font-size: 10px;
+		font-family: Arial;
+		right: 0%;
+	}
+}
+
+
+/* Para Ipads */
+
+@media screen and (min-width:700px) and (max-width:1024px) {
+	/*Página de inicio */
+	.barra-negra {
+		position: absolute;
+		z-index: 3;
+		width: 60%;
+		height: 10%;
+		left: 0%;
+		bottom: 62%;
+		background: rgba(0, 0, 0, 0.82);
+	}
+	.texto-barra-negra {
+		z-index: 4;
+		position: absolute;
+		width: 75%;
+		height: 11%;
+		left: 1%;
+		top: 27%;
+		font-family: Arial;
+		font-size: 35px;
+		color: white;
+		opacity: 1;
+	}
+	.image-banner {
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: 40%;
+		left: 0px;
+		top: 5%;
+	}
+	.mision-container {
+		z-index: 2;
+		background-color: #009fda;
+		bottom: 40%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		height: 15%;
+		font-size: 42px;
+		text-align: center;
+		font-family: Asap;
+		color: white;
+	}
+	.objetivo {
+		z-index: 4;
+		bottom: 30%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		font-size: 29px;
+		text-align: center;
+		font-family: Asap;
+		color: white;
+	}
+	.text-mision {
+		z-index: 3;
+		bottom: 40%;
+		left: 0%;
+		position: absolute;
+		width: 100%;
+		font-size: 27px;
+		text-align: center;
+		font-family: Arial;
+		color: white;
+	}
+	.collage-image {
+		position: absolute;
+		width: 100%;
+		height: 33%;
+		top: 60%;
+		left: 0%;
+	}
+	/* PÁGINAS DE LOS PAÍSES */
+	/* Barra lateral de países */
+	.lateral-bar {
+		position: absolute;
+		width: 40%;
+		height: 130%;
+		left: 0%;
+		top: 5%;
+		background: #0e2f53;
+	}
+	.bandera-peru,
+	.bandera-mexico,
+	.bandera-chile,
+	.bandera-brasil {
+		position: absolute;
+		width: 30%;
+		height: 12%;
+		left: 5%;
+		top: 10%;
+	}
+	.texto-peru,
+	.texto-mexico,
+	.texto-chile,
+	.texto-brasil {
+		position: absolute;
+		width: 20%;
+		left: 15%;
+		top: 25%;
+		color: white;
+		font-family: Asap;
+		font-style: normal;
+		font-weight: bold;
+		line-height: normal;
+		font-size: 40px;
+	}
+	.descripcion-peru,
+	.descripcion-mexico,
+	.descripcion-chile,
+	.descripcion-brasil {
+		position: absolute;
+		width: 36%;
+		left: 2%;
+		top: 31%;
+		color: white;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		line-height: normal;
+		font-size: 26px;
+		text-align: center;
+	}
+	h3 {
+		font-size: 27px;
+		left: 1%;
+		font-family: Asap;
+	}
+	/* Botones de categorías */
+	#boton-population,
+	#boton-violence,
+	#boton-unemployment,
+	#boton-alfabetizacion,
+	#boton-education,
+	#boton-population-mexico,
+	#boton-violence-mexico,
+	#boton-unemployment-mexico,
+	#boton-alfabetizacion-mexico,
+	#boton-education-mexico,
+	#boton-population-chile,
+	#boton-violence-chile,
+	#boton-unemployment-chile,
+	#boton-alfabetizacion-chile,
+	#boton-education-chile,
+	#boton-population-brasil,
+	#boton-violence-brasil,
+	#boton-unemployment-brasil,
+	#boton-alfabetizacion-brasil,
+	#boton-education-brasil {
+		margin: 8% 2% 4%;
+		text-decoration: none;
+		padding: 7%;
+		font-weight: 500;
+		font-family: Asap;
+		font-size: 22px;
+		color: #ffffff;
+		background-color: #0071BC;
+		border-radius: 6px;
+		border: 2px;
+	}
+	/* Tablas de indicadores por país */
+	.tables-of-peru,
+	.tables-of-mexico,
+	.tables-of-chile,
+	.tables-of-brasil {
+		position: absolute;
+		top: 8%;
+		margin-left: 40%;
+		width: 49%;
+		height: 100%
+	}
+	td {
+		color: black;
+		font-family: arial;
+	}
+	.rwd-table {
+		max-width: 200px;
+	}
+	/* Selects de ordenado */
+	#ordenado-peru,
+	#ordenado-mexico,
+	#ordenado-chile,
+	#ordenado-brasil {
+		z-index: 5;
+		position: absolute;
+		color: white;
+		top: 85%;
+		bottom: 150%;
+		left: 10%;
+		font-family: arial;
+	}
+	h4 {
+		font-family: Asap;
+		font-size: 25px;
+	}
+	select {
+		margin-left: 15%;
+		width: 140px;
+		height: 50px;
+		font-size: 28px;
+		font-family: Asap;
+		font-weight: bold;
+	}
+	/* Pie de página */
+	#pie-de-pagina {
+		position: absolute;
+		width: 100%;
+		height: 8%;
+		left: 0%;
+		bottom: 0%;
+		top: 91%;
+		background: #000000;
+	}
+	.icon-footer {
+		left: 0%;
+		top: 1%;
+		width: 40%;
+		height: 90%;
+	}
+	.texto-footer {
+		z-index: 5;
+		bottom: 20%;
+		margin-top: 7%;
+		margin-left: -25%;
+		position: absolute;
+		color: white;
+		width: 55%;
+		font-size: 30px;
+		font-family: Arial;
+		right: 0%;
+	}
+}

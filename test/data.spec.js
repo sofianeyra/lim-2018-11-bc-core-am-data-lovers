@@ -608,7 +608,7 @@ const outputunemployment = [
 ];
 describe('worldbank', () => {
   it('debería ser un objeto', () => {
-    expect(typeof WORLDBANK).toBe('object');
+    expect(typeof worldbank).toBe('object');
   });
 });
 
@@ -647,7 +647,7 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterUnemployment(input)).toEqual(outputunemployment);
   });
 }); 
-
+/*
 // TEST DE FUNCION PROMEDIO //
 const inputPromedio = {
   'data': {
@@ -679,3 +679,4 @@ describe('compute es una funcion'), () => {
 it('retorna el promedio de los valores de indicadores'), () => {
   expect(worldbank.compute(inputPromedio)).toEqual(outputPromedio);
 };
+*/

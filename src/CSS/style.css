@@ -1,307 +1,268 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
-@import url(menu-navegador.css);
 
-@import url('https://fonts.googleapis.com/css?family=Asap');
-.menu, .navbar, .main-nav, .main-nav li, .logo,
-.navbar-toggle, .active {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/*Página de inicio */
+
+.barra-negra {
+	position: absolute;
+	z-index: 3;
+	width: 30%;
+	height: 12%;
+	left: 0%;
+	bottom: 52%;
+	background: rgba(0, 0, 0, 0.82);
 }
 
-.menu {
-    font-family: Asap;
-}
-
-.navbar {
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    font-size: 18px;
-    background: white;
-    border: 1px solid #e4e4e4;
-}
-
-.main-nav {
-    background: white;
-    list-style-type: none;
-    display: none;
-}
-
-#inicio, #peru-menu, #chile-menu,
-#mexico-menu, #brasil-menu {
-    text-decoration: none;
-    color: #1b80c3;
-    padding: 28px;
-    font-family: Asap;
-    font-size: 21px;
-}
-
-#inicio:hover, #peru-menu:hover, #chile-menu:hover,
-#mexico-menu:hover, #brasil-menu:hover {
-    color: #0e2f53;
-}
-
-.main-nav li {
-    text-align: center;
-    margin: 15px auto;
-}
-
-.logo {
-    display: inline-block;
-    width: 18em;
-    height: 4em;
-    margin-left: 1%;
-}
-
-.navbar-toggle {
-    margin-top: 2.5%;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
-}
-
-.active {
-    display: block;
-}
-
-.tables-peru, .tables-mex, .tables-chl, .tables-brs {
-    position: absolute;
-    top: 11%;
-    margin-left: 35%;
-    width: 50%;
-    height: 100%
-}
-
-.bar-3 {
-    position: absolute;
-    z-index: 3;
-    width: 50%;
-    height: 12%;
-    left: 0%;
-    bottom: 61%;
-    background: rgba(0, 0, 0, 0.82);
-}
-
-.text-bar-3 {
-    z-index: 4;
-    position: absolute;
-    width: 59%;
-    height: 11%;
-    left: 1%;
-    top: 29.2%;
-    font-family: Arial;
-    font-size: 20px;
-    color: white;
-    opacity: 1;
+.texto-barra-negra {
+	z-index: 4;
+	position: absolute;
+	width: 59%;
+	height: 11%;
+	left: 1%;
+	top: 36%;
+	font-family: Arial;
+	font-size: 20px;
+	color: white;
+	opacity: 1;
 }
 
 .image-banner {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 46%;
-    left: 0px;
-    top: 10%;
-}
-
-.objetivo {
-    z-index: 4;
-    bottom: 30%;
-    left: 0%;
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    font-size: 23px;
-    text-align: center;
-    font-family: Asap;
-    color: white;
-}
-.text-mision {
-    z-index: 3;
-    bottom: 41%;
-    left: 0%;
-    position: absolute;
-    width: 100%;
-    font-size: 19px;
-    text-align: center;
-    font-family: Arial;
-    color: white;
-}
-
-.collage-image {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    top: 63%;
-    left: 0%;
-}
-
-.lateral-bar {
-    position: absolute;
-    width: 35%;
-    height: 130%;
-    left: 0%;
-    top: 10%;
-    background: #0e2f53;
-    mix-blend-mode: normal;
-}
-
-.bandera-peru, .bandera-mexico,
-.bandera-chile, .bandera-brasil {
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    left: 8%;
-    top: 15%;
-    mix-blend-mode: normal;
-}
-
-.texto-peru, .texto-mexico,
-.texto-chile, .texto-brasil {
-    position: absolute;
-    width: 20%;
-    height: 29px;
-    left: 15%;
-    top: 38%;
-    color: white;
-    font-family: Asap;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 1.5em;
-}
-
-.descripcion-peru, .descripcion-mexico,
-.descripcion-chile, .descripcion-brasil {
-    position: absolute;
-    width: 32%;
-    left: 1%;
-    top: 44%;
-    color: white;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 16px;
-    text-align: center;
-}
-
-#order, #order-2, #order-3,
-#order-4 {
-    z-index: 5;
-    position: absolute;
-    color: white;
-    top: 125%;
-    bottom: 120%;
-    left: 9%;
-    font-family: arial;
-}
-
-#boton-population, #boton-violence, #boton-unemployment,
-#boton-alfabetizacion, #boton-education,
-#boton-populationMex, #boton-violenceMex,
-#boton-unemploymentMex, #boton-alfabetizacionMex,
-#boton-educationMex, #boton-populationChil,
-#boton-violenceChil, #boton-unemploymentChil,
-#boton-alfabetizacionChil, #boton-educationChil,
-#boton-populationBra, #boton-violenceBra,
-#boton-unemploymentBra, #boton-alfabetizacionBra,
-#boton-educationBra {
-  margin: 8% 2% 4%;
-  text-decoration: none;
-  padding: 6%;
-  font-weight: 500;
-  font-family: Asap;
-  font-size: 20px;
-  color: #ffffff;
-  background-color: #0071BC;
-  border-radius: 6px; border: 2px;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	left: 0px;
+	top: 10%;
 }
 
 .mision-container {
-    z-index: 2;
-    background-color: #009fda;
-    bottom: 37%;
-    left: 0%;
-    position: absolute;
-    width: 100%;
-    height: 24%;
-    font-size: 33px;
-    text-align: center;
-    font-family: Asap;
-    color: white;
-
+	z-index: 2;
+	background-color: #009fda;
+	bottom: 25%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	height: 24%;
+	font-size: 33px;
+	text-align: center;
+	font-family: Asap;
+	color: white;
 }
 
+.objetivo {
+	z-index: 4;
+	bottom: 22%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	font-size: 23px;
+	text-align: center;
+	font-family: Asap;
+	color: white;
+}
+
+.text-mision {
+	z-index: 3;
+	bottom: 26%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	font-family: Arial;
+	color: white;
+}
+
+.collage-image {
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top: 69%;
+	left: 0%;
+}
+
+
+/* PÁGINAS DE LOS PAÍSES */
+
+
+/* Barra lateral de países */
+
+.lateral-bar {
+	position: absolute;
+	width: 35%;
+	height: 130%;
+	left: 0%;
+	top: 10%;
+	background: #0e2f53;
+}
+
+.bandera-peru,
+.bandera-mexico,
+.bandera-chile,
+.bandera-brasil {
+	position: absolute;
+	width: 18%;
+	height: 18%;
+	left: 8%;
+	top: 15%;
+}
+
+.texto-peru,
+.texto-mexico,
+.texto-chile,
+.texto-brasil {
+	position: absolute;
+	width: 20%;
+	height: 29px;
+	left: 14%;
+	top: 35%;
+	color: white;
+	font-family: Asap;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 2em;
+}
+
+.descripcion-peru,
+.descripcion-mexico,
+.descripcion-chile,
+.descripcion-brasil {
+	position: absolute;
+	width: 32%;
+	left: 1%;
+	top: 44%;
+	color: white;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 18px;
+	text-align: center;
+}
+
+
+/*Selects de ordenado */
+
+#ordenado-peru,
+#ordenado-mexico,
+#ordenado-chile,
+#ordenado-brasil {
+	z-index: 5;
+	position: absolute;
+	color: white;
+	top: 115%;
+	bottom: 120%;
+	left: 12%;
+	font-family: arial;
+}
+
+h4 {
+	font-family: Asap;
+	font-size: 1.2em;
+}
+
+select {
+	margin-left: -18%;
+	width: 170px;
+	height: 50px;
+	font-size: 18px;
+	font-family: Asap;
+	font-weight: bold;
+}
+
+
+/* Botones de categorías */
+
+#boton-population,
+#boton-violence,
+#boton-unemployment,
+#boton-alfabetizacion,
+#boton-education,
+#boton-population-mexico,
+#boton-violence-mexico,
+#boton-unemployment-mexico,
+#boton-alfabetizacion-mexico,
+#boton-education-mexico,
+#boton-population-chile,
+#boton-violence-chile,
+#boton-unemployment-chile,
+#boton-alfabetizacion-chile,
+#boton-education-chile,
+#boton-population-brasil,
+#boton-violence-brasil,
+#boton-unemployment-brasil,
+#boton-alfabetizacion-brasil,
+#boton-education-brasil {
+	margin: 8% 2% 4%;
+	text-decoration: none;
+	padding: 5%;
+	font-weight: 500;
+	font-family: Asap;
+	font-size: 15px;
+	color: #ffffff;
+	background-color: #0071BC;
+	border-radius: 6px;
+	border: 2px;
+}
+
+h3 {
+	font-family: Asap;
+	margin-top: 5%;
+}
+
+
+/* Tablas de indicadores por país */
+
+.tables-of-peru,
+.tables-of-mexico,
+.tables-of-chile,
+.tables-of-brasil {
+	position: absolute;
+	top: 13%;
+	margin-left: 35%;
+	width: 50%;
+	height: 100%
+}
+
+td {
+	color: black;
+	font-family: arial;
+}
+
+table {
+	width: 110%;
+}
+
+.rwd-table {
+	margin: 1em 0;
+	min-width: 300px;
+}
+
+
+/* Pie de página */
+
 #pie-de-pagina {
-    position: absolute;
-    width: 100%;
-    height: 8%;
-    left: 0%;
-    bottom: 0%;
-    top: 140%;
-    background: #000000;
+	position: absolute;
+	width: 100%;
+	height: 8%;
+	left: 0%;
+	bottom: 0%;
+	top: 145%;
+	background: #000000;
 }
 
 .icon-footer {
-    left: 0%;
+	left: 0%;
 }
 
 .texto-footer {
-    z-index: 5;
-    bottom: 40%;
-    left: 70%;
-    position: absolute;
-    color: white;
-    font-size: 12px;
-    font-family: Arial;
-    right: 0%;
-}
-
-/* RESPONSIVE */
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
-
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .main-nav li {
-        margin: 0;
-    }
-
-    #inicio, #peru-menu, #mexico-menu,
-    #chile-menu, #brasil-menu {
-        margin-left: 40px;
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-}
-
-
-td {
-  color : black;
-  font-family: arial;
+	z-index: 5;
+	bottom: 40%;
+	left: 70%;
+	position: absolute;
+	color: white;
+	font-size: 14px;
+	font-family: Arial;
+	right: 0%;
 }

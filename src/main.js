@@ -1,121 +1,122 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// Obteniendo data worldbank
-const arrData = Object.entries(WORLDBANK);
-const data = copyData(arrData);
 
-// Obteniendo indicadores por pais
-const indicatorsPER = getData(data, 0);
-const indicatorsMEX = getData(data, 1);
-const indicatorsCHL = getData(data, 2);
-const indicatorsBRS = getData(data, 3);
+// Obteniendo data worldbank
+const arrayData = Object.entries(WORLDBANK);
+const data = copyData(arrayData);
+
+// Obteniendo indicadores por país
+const indicatorsPERU = getData(data, 0);
+const indicatorsMEXICO = getData(data, 1);
+const indicatorsCHILE = getData(data, 2);
+const indicatorsBRASIL = getData(data, 3);
 
 // Obteniendo indicadores de población
-const filterPopPer = filterPopulation(indicatorsPER);
-const filterPopMex = filterPopulation(indicatorsMEX);
-const filterPopChl = filterPopulation(indicatorsCHL);
-const filterPopBrs = filterPopulation(indicatorsBRS);
+const filterPopulationPeru = filterPopulation(indicatorsPERU);
+const filterPopulationMexico = filterPopulation(indicatorsMEXICO);
+const filterPopulationChile = filterPopulation(indicatorsCHILE);
+const filterPopulationBrasil = filterPopulation(indicatorsBRASIL);
 
 // Obteniendo indicadores de educación
-const filterEduPer = filterEducation(indicatorsPER);
-const filterEduMex = filterEducation(indicatorsMEX);
-const filterEduChl = filterEducation(indicatorsCHL);
-const filterEduBrs = filterEducation(indicatorsBRS);
+const filterEducationPeru = filterEducation(indicatorsPERU);
+const filterEducationMexico = filterEducation(indicatorsMEXICO);
+const filterEducationChile = filterEducation(indicatorsCHILE);
+const filterEducationBrasil = filterEducation(indicatorsBRASIL);
 
 // Obteniendo indicadores de violencia
-const filterViolencePer = filterViolence(indicatorsPER);
-const filterViolenceMex = filterViolence(indicatorsMEX);
-const filterViolenceChl = filterViolence(indicatorsCHL);
-const filterViolenceBrs = filterViolence(indicatorsBRS);
+const filterViolencePeru = filterViolence(indicatorsPERU);
+const filterViolenceMexico = filterViolence(indicatorsMEXICO);
+const filterViolenceChile = filterViolence(indicatorsCHILE);
+const filterViolenceBrasil = filterViolence(indicatorsBRASIL);
 
 // Obteniendo indicadores de desempleo
-const filterUnemploymentPer = filterUnemployment(indicatorsPER);
-const filterUnemploymentMex = filterUnemployment(indicatorsMEX);
-const filterUnemploymentChl = filterUnemployment(indicatorsCHL);
-const filterUnemploymentBrs = filterUnemployment(indicatorsBRS);
+const filterUnemploymentPeru = filterUnemployment(indicatorsPERU);
+const filterUnemploymentMexico = filterUnemployment(indicatorsMEXICO);
+const filterUnemploymentChile = filterUnemployment(indicatorsCHILE);
+const filterUnemploymentBrasil = filterUnemployment(indicatorsBRASIL);
 
 // Obteniendo indicadores de literacy
-const filterLiteracyPer = filterLiteracy(indicatorsPER);
-const filterLiteracyMex = filterLiteracy(indicatorsMEX);
-const filterLiteracyChl = filterLiteracy(indicatorsCHL);
-const filterLiteracyBrs = filterLiteracy(indicatorsBRS);
+const filterLiteracyPeru = filterLiteracy(indicatorsPERU);
+const filterLiteracyMexico = filterLiteracy(indicatorsMEXICO);
+const filterLiteracyChile = filterLiteracy(indicatorsCHILE);
+const filterLiteracyBrasil = filterLiteracy(indicatorsBRASIL);
 
 // MENÚ DE NAVEGACIÓN
-const inicial = document.getElementById('pagina-inicio');
-const per = document.getElementById('pagina-peru');
-const mex = document.getElementById('pagina-mexico');
-const chl = document.getElementById('pagina-chile');
-const brsl = document.getElementById('pagina-brasil');
+const pageInicial = document.getElementById('pagina-inicio');
+const pagePeru = document.getElementById('pagina-peru');
+const pageMexico = document.getElementById('pagina-mexico');
+const pageChile = document.getElementById('pagina-chile');
+const pageBrasil = document.getElementById('pagina-brasil');
 const footer = document.getElementById('pie-de-pagina');
 
-const inicialb = document.getElementById('inicio');
-const perub = document.getElementById('peru-menu');
-const mexb = document.getElementById('mexico-menu');
-const chlb = document.getElementById('chile-menu');
-const brslb = document.getElementById('brasil-menu');
+const inicialButton = document.getElementById('inicio');
+const peruButton = document.getElementById('peru-menu');
+const mexicoButton = document.getElementById('mexico-menu');
+const chileButton = document.getElementById('chile-menu');
+const brasilButton = document.getElementById('brasil-menu');
 
 // PANTALLA INICIO
-inicialb.addEventListener('click', () => {
-  inicial.style.display = 'block';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+inicialButton.addEventListener('click', () => {
+  pageInicial.style.display = 'block';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
   footer.style.display = 'block';
 });
 // PANTALLA PERÚ
-perub.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'block';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+peruButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'block';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
   footer.style.display = 'none';
 });
 // PANTALLA MÉXICO
-mexb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'block';
-  chl. style.display = 'none';
-  brsl.style.display = 'none';
+mexicoButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'block';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'none';
   footer.style.display = 'none';
 });
 // PANTALLA CHILE
-chlb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'block';
-  brsl.style.display = 'none';
+chileButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'block';
+  pageBrasil.style.display = 'none';
   footer.style.display = 'none';
 });
 // PANTALLA BRASIL
-brslb.addEventListener('click', () => {
-  inicial.style.display = 'none';
-  per.style.display = 'none';
-  mex.style.display = 'none';
-  chl. style.display = 'none';
-  brsl.style.display = 'block';
+brasilButton.addEventListener('click', () => {
+  pageInicial.style.display = 'none';
+  pagePeru.style.display = 'none';
+  pageMexico.style.display = 'none';
+  pageChile. style.display = 'none';
+  pageBrasil.style.display = 'block';
   footer.style.display = 'none';
 });
 
 // se da click en el boton de la pantalla inicio para cuando empiece el proyecto
-inicialb.click();
+inicialButton.click();
 
 // ------------------------- PERÚ ----------------------------------- //
 
 // BOTONES PERÚ
 
-const btnPopulation = document.getElementById('boton-population');
-const btnViolence = document.getElementById('boton-violence');
-const btnEducation = document.getElementById('boton-education');
-const btnUnemployment = document.getElementById('boton-unemployment');
-const btnAlfabet = document.getElementById('boton-alfabetizacion');
+const buttonPopulation = document.getElementById('boton-population');
+const buttonViolence = document.getElementById('boton-violence');
+const buttonEducation = document.getElementById('boton-education');
+const buttonUnemployment = document.getElementById('boton-unemployment');
+const buttonAlfabet = document.getElementById('boton-alfabetizacion');
 
 const peruTableContainer = document.getElementById('tables-peru');
-const mexicoTableContainer = document.getElementById('tables-mex');
-const chilTableContainer = document.getElementById('tables-chile');
+const mexicoTableContainer = document.getElementById('tables-mexico');
+const chileTableContainer = document.getElementById('tables-chile');
 const brasilTableContainer = document.getElementById('tables-brasil');
 
 // APLICANDO SORT//
@@ -173,62 +174,62 @@ function CrearEventoTablaIndicador(boton, indicadores, contenedor) {
   });
 }
 
-CrearEventoTablaIndicador(btnPopulation, filterPopPer, peruTableContainer);
-CrearEventoTablaIndicador(btnViolence, filterViolencePer, peruTableContainer);
-CrearEventoTablaIndicador(btnEducation, filterEduPer, peruTableContainer);
-CrearEventoTablaIndicador(btnUnemployment, filterUnemploymentPer, peruTableContainer);
-CrearEventoTablaIndicador(btnAlfabet, filterLiteracyPer, peruTableContainer);
+CrearEventoTablaIndicador(buttonPopulation, filterPopulationPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonViolence, filterViolencePeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonEducation, filterEducationPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonUnemployment, filterUnemploymentPeru, peruTableContainer);
+CrearEventoTablaIndicador(buttonAlfabet, filterLiteracyPeru, peruTableContainer);
 
 // ------------------------- MEXICO ----------------------------------- //
 
 
 // BOTONES MÉXICO
-const btnPopMex = document.getElementById('boton-populationMex');
-const btnVioMex = document.getElementById('boton-violenceMex');
-const btnEduMex = document.getElementById('boton-educationMex');
-const btnUneMex = document.getElementById('boton-unemploymentMex');
-const btnAlfMex = document.getElementById('boton-alfabetizacionMex');
+const buttonPopulationMexico = document.getElementById('boton-population-mexico');
+const buttonViolenceMexico = document.getElementById('boton-violence-mexico');
+const buttonEducationMexico = document.getElementById('boton-education-mexico');
+const buttonUnemploymentMexico = document.getElementById('boton-unemployment-mexico');
+const buttonAlfabetMexico = document.getElementById('boton-alfabetizacion-mexico');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopMex, filterPopMex, mexicoTableContainer);
-CrearEventoTablaIndicador(btnVioMex, filterViolenceMex, mexicoTableContainer);
-CrearEventoTablaIndicador(btnEduMex, filterEduMex, mexicoTableContainer);
-CrearEventoTablaIndicador(btnUneMex, filterUnemploymentMex, mexicoTableContainer);
-CrearEventoTablaIndicador(btnAlfMex, filterLiteracyMex, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonPopulationMexico, filterPopulationMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonViolenceMexico, filterViolenceMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonEducationMexico, filterEducationMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentMexico, filterUnemploymentMexico, mexicoTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetMexico, filterLiteracyMexico, mexicoTableContainer);
 
 // ------------------------- CHILE ----------------------------------- //
 
 // botones CHILE
 
-const btnPopCh = document.getElementById('boton-populationChil');
-const btnVioCh = document.getElementById('boton-violenceChil');
-const btnEduCh = document.getElementById('boton-educationChil');
-const btnUnemCh = document.getElementById('boton-unemploymentChil');
-const btnAlfCh = document.getElementById('boton-alfabetizacionChil');
+const buttonPopulationChile = document.getElementById('boton-population-chile');
+const ButtonViolenceChile = document.getElementById('boton-violence-chile');
+const buttonEducationChile = document.getElementById('boton-education-chile');
+const buttonUnemploymentChile = document.getElementById('boton-unemployment-chile');
+const buttonAlfabetChile = document.getElementById('boton-alfabetizacion-chile');
 
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopCh, filterPopChl, chilTableContainer);
-CrearEventoTablaIndicador(btnVioCh, filterViolenceChl, chilTableContainer);
-CrearEventoTablaIndicador(btnEduCh, filterEduChl, chilTableContainer);
-CrearEventoTablaIndicador(btnUnemCh, filterUnemploymentChl, chilTableContainer);
-CrearEventoTablaIndicador(btnAlfCh, filterLiteracyChl, chilTableContainer);
+CrearEventoTablaIndicador(buttonPopulationChile, filterPopulationChile, chileTableContainer);
+CrearEventoTablaIndicador(ButtonViolenceChile, filterViolenceChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonEducationChile, filterEducationChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentChile, filterUnemploymentChile, chileTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetChile, filterLiteracyChile, chileTableContainer);
 // ------------------------- BRASIL ----------------------------------- //
 
 // botones BRASIL
-const btnPopBra = document.getElementById('boton-populationBra');
-const btnVioBra = document.getElementById('boton-violenceBra');
-const btnEduBra = document.getElementById('boton-educationBra');
-const btnUnemBra = document.getElementById('boton-unemploymentBra');
-const btnAlfBra = document.getElementById('boton-alfabetizacionBra');
+const buttonPopulationBrasil = document.getElementById('boton-population-brasil');
+const buttonViolenceBrasil = document.getElementById('boton-violence-brasil');
+const buttonEducationBrasil = document.getElementById('boton-education-brasil');
+const buttonUnemploymentBrasil = document.getElementById('boton-unemployment-brasil');
+const buttonAlfabetBrasil = document.getElementById('boton-alfabetizacion-brasil');
 
 // MOSTRAR DATA FILTRADA EN LOS DIVS DEL HTML
-CrearEventoTablaIndicador(btnPopBra, filterPopBrs, brasilTableContainer);
-CrearEventoTablaIndicador(btnVioBra, filterViolenceBrs, brasilTableContainer);
-CrearEventoTablaIndicador(btnEduBra, filterEduBrs, brasilTableContainer);
-CrearEventoTablaIndicador(btnUnemBra, filterUnemploymentBrs, brasilTableContainer);
-CrearEventoTablaIndicador(btnAlfBra, filterLiteracyBrs, brasilTableContainer);
+CrearEventoTablaIndicador(buttonPopulationBrasil, filterPopulationBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonViolenceBrasil, filterViolenceBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonEducationBrasil, filterEducationBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonUnemploymentBrasil, filterUnemploymentBrasil, brasilTableContainer);
+CrearEventoTablaIndicador(buttonAlfabetBrasil, filterLiteracyBrasil, brasilTableContainer);
 
 // MENÚ
 let mainNav = document.getElementById('js-menu');
@@ -247,7 +248,6 @@ function createTableCell(value, parent) {
   let text = document.createTextNode(value);
   newCell.appendChild(text);
 }
-
 
 // let resultsPERU = dataForYear.filter(number => number > 1);
 
