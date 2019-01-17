@@ -647,8 +647,8 @@ describe('fltrado de unemployment', () => {
     expect(worldbank.filterUnemployment(input)).toEqual(outputunemployment);
   });
 }); 
-/*
-// TEST DE FUNCION PROMEDIO //
+
+// TEST DE FUNCION PROMEDIO
 const inputPromedio = {
   'data': {
     '2002': 31.4799995422363,
@@ -669,8 +669,89 @@ const inputPromedio = {
     '2017': 23.7600002288818
   }
 };
+
 const outputPromedio = 26.10;
 
+describe('compute es una funcion', () => {
+  it('deberia ser una función', () => {
+    expect(typeof worldbank.compute).toBe('function');
+  });
+  it('retorna el promedio de los valores de indicadores', () => {
+  expect(worldbank.compute(inputPromedio)).toEqual(outputPromedio);
+  });
+});
+
+//TEST FUNCIÓN SORT
+const inputOrdenado = [
+
+  {"indicatorName": "Población, mujeres (% del total)"},
+  {"indicatorName": "Población, mujeres"},
+  {"indicatorName": "Proporción de sexos al nacer (mujeres cada 1000 hombres)"},
+  {"indicatorName": "Población de 80 años en adelante, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 75 a 79 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 70 a 74 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 65 años de edad y más, mujeres (% del total)"},
+  {"indicatorName": "Población de 65 años de edad y más, mujeres"},
+  {"indicatorName": "Población de 65 a 69 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 50 a 64 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 55 a 59 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 50 a 54 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 45 a 49 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 40 a 44 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 35 a 39 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 30 a 34 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 25 a 29 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 20 a 24 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población entre 15 y 64 años de edad, mujeres (% del total)"},
+  {"indicatorName": "Población entre 15 y 64 años de edad, mujeres"},
+  {"indicatorName": "Población de 15 a 19 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 10 a 14 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población de 5 a 9 años, mujeres (% de la población femenina)"},
+  {"indicatorName": "Población entre 0 y 14 años de edad, mujeres (% del total)"},
+  {"indicatorName": "Población entre 0 y 14 años de edad, mujeres"},
+  {"indicatorName": "Población de 0 a 4 años, mujeres (% de la población femenina)"},
+];
+
+const outputOrdenado = [
+
+  { "indicatorName": 'Población de 0 a 4 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 10 a 14 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 15 a 19 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 20 a 24 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 25 a 29 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 30 a 34 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 35 a 39 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 40 a 44 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 45 a 49 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 5 a 9 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 50 a 54 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 50 a 64 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 55 a 59 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 65 a 69 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 65 años de edad y más, mujeres' },
+  { "indicatorName": 'Población de 65 años de edad y más, mujeres (% del total)' },
+  { "indicatorName": 'Población de 70 a 74 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 75 a 79 años, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población de 80 años en adelante, mujeres (% de la población femenina)' },
+  { "indicatorName": 'Población entre 0 y 14 años de edad, mujeres' },
+  { "indicatorName": 'Población entre 0 y 14 años de edad, mujeres (% del total)' },
+  { "indicatorName": 'Población entre 15 y 64 años de edad, mujeres' },
+  { "indicatorName": 'Población entre 15 y 64 años de edad, mujeres (% del total)' },
+  { "indicatorName": 'Población, mujeres' },
+  { "indicatorName": 'Población, mujeres (% del total)' },
+  { "indicatorName": 'Proporción de sexos al nacer (mujeres cada 1000 hombres)'}
+];
+
+
+describe("sortData es una función", () => {
+  it("debería ser una función", () => {
+    expect(typeof worldbank.sortData).toBe("function");
+  });
+  it("retorna los indicadores ordenados alfábeticamente", () => {
+  expect(worldbank.sortData(inputOrdenado)).toEqual(outputOrdenado);
+  });
+});
+=======
 describe('compute es una funcion'), () => {
   it('deberia ser una función', () => {
     expect(typeof worldbank.compute).toBe('function');
@@ -679,4 +760,3 @@ describe('compute es una funcion'), () => {
 it('retorna el promedio de los valores de indicadores'), () => {
   expect(worldbank.compute(inputPromedio)).toEqual(outputPromedio);
 };
-*/
