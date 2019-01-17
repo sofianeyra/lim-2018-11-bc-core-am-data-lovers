@@ -21,20 +21,14 @@ const population = (element) => {
 
 const education = (element) => {
   let codeEducation = element.indicatorCode;
-  let initialsEducation = codeEducation.slice(0, 2);
-  return initialsEducation === 'SE';
+  let initialsEducation = codeEducation.slice(0, 6);
+  return initialsEducation === 'SE.PRM';
 };
 
 const violence = (element) => {
   let codeViolence = element.indicatorCode;
   let initialsViolence = codeViolence.slice(0, 6);
   return initialsViolence === 'SG.VAW';
-};
-
-const job = (element) => {
-  let codeJob = element.indicatorCode;
-  let initialsJob = codeJob.slice(0, 6);
-  return initialsJob === 'SG.JOB';
 };
 
 const unemployment = (element) => {
@@ -91,7 +85,7 @@ const sortData = (data, sortBy) => {
     arrayOrder = tempData;
   } else if (sortBy === 'Alfabéticamente') {
     arrayOrder = tempData.sort((prevEl, nextEl) => {
-      return prevEl.indicatorName < nextEl.indicatorName ? 1 : -1;
+      return prevEl.indicatorName > nextEl.indicatorName ? 1 : -1;
     });
   }
   return arrayOrder;
@@ -131,9 +125,12 @@ window.worldbank = {
   violence,
   education,
   unemployment,
+  literacy,
   filterPopulation,
   filterViolence,
   filterEducation,
   filterUnemployment,
+  filterLiteracy,
   compute,
+  sortData,
 };
